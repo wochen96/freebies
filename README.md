@@ -6,4 +6,4 @@ Support: Everyone
 
 Mission Statement: One stop shop for the best locations to rest/study on campus!
 
-Problem Statement: 
+Problem Statement:
