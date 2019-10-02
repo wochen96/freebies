@@ -1,6 +1,8 @@
 # uwchill
 Jimmy Tran - role: Engineer / CTO 
-Calvin Chen - role: Designer / CDO / Product Manager
+
+Calvin Chen - role: Designer / CDO / Product Manager 
+
 Wobin Chen - role: Product Manager / Design / CEO
 Support: Everyone
 
