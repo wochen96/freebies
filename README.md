@@ -1,9 +1,10 @@
 # uwchill
-Jimmy Tran - role: Engineer / CTO 
+Jimmy Tran - Role: Engineer / CTO 
 
-Calvin Chen - role: Designer / CDO / Product Manager 
+Calvin Chen - Role: Designer / CDO / Product Manager 
 
-Wobin Chen - role: Product Manager / Design / CEO
+Wobin Chen - Role: Product Manager / Design / CEO
+
 Support: Everyone
 
 Mission Statement: One stop shop for the best locations to rest/study on campus!
