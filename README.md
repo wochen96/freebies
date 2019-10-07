@@ -3,7 +3,7 @@ Jimmy Tran - Role: Engineer / CTO
 
 Calvin Chen - Role: Designer / CDO / Product Manager 
 
-Wo Bin Chen - Role: Product Manager / Design / CEO
+Wo Bin Chen - Role: Project Manager / Design / CEO
 
 Support: Everyone
 
