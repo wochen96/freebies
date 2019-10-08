@@ -1,6 +1,4 @@
-# uwchill
-
-![logo]()
+# uwchill <img src="img/favicon.svg" width="50" height="50" />
 
 ## Team
 
