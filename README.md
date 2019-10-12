@@ -12,7 +12,7 @@ Support: Everyone
 
 ## Mission Statement
 
-Our mission is to best utilize your time for academic purposes on campus. As studying is a big aspect in college life, optimizing your quality of studying is the first step approaching this issue! It's not about the quantitiy, but the quality of studying. One stop shop for the best locations to rest/study on campus!
+Our mission is to help students take advantage of the free resources that the UW campus provides.
 
 ## Problem Statement
 
