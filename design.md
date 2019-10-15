@@ -37,6 +37,10 @@ The dashboard will be the default page when the user sees upon login. Here, the 
 <img src="img/design/dashboard.jpg" width="300" height="300" />
 
 
+Home Button:
+If the user clicks on the home button at the top left of the page, the user will be brought back the dashboard default page with any new update.
+The home button will be present for all pages during any interactions with users.
+
 Search
 Search bar will be located on the top-mid section of the page 
 User does not need to be signed in to use search functionality
@@ -82,10 +86,20 @@ If the user clicks cancel or the ‘X’ located on the top right of the modal, 
 
 
 
+
+Editing Post:
+The posts can only be edited by the posting login user and the administrators.
+When clicking on a post, the user who created the post will have an option to edit it at the bottom at the post. After clicking it, the user will be transferred to a new page which look similar to the create post and she/he can start editing the post. After the user clicks summit, the post will be updated from the database. And the user will be shown back to the dashboard default page with the updated post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
+The administrators also have the power to edit the post. When the administrator clicks on a post on the dashboard page, the option to edit the post will also show at bottom at post modal just like the posting user. The administrator will edit the post following the same procedure like above.
+For the time being all past post that has been edited will not show any history of the editing. And there will be no record of the past posts which is stored in the database. All posts edit to the current time with past information is gone.
+
 Delete Post
 The posts can only be deleted by the posting login user and the administrators.
 When clicking on a post, the user who created the post will have an option to delete it at the bottom at the post. After clicking it, there will show a message asking if the user really want to delete the post, “yes” or “cancel”. If user clicks “yes”, the post will be removed from the database. And the user will be shown back to the dashboard default page with the update without the post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
 The administrators also have the power to delete the post. When the administrator clicks on a post on the dashboard page, the option to delete the post will also show at bottom at post modal just like the posting user. The administrator will delete the post following the same procedure like above.
+For the time being all past post that has been deleted will not show any history of the deletion. And there will be no record of the past posts which is stored in the database. All posts delete to the current time with past information is gone.
+
+
 
 
 Tile Grid Display
@@ -118,6 +132,9 @@ The right side of the footer will contain a ‘contact’
 Contact will contain href links to personal linkedIn accounts
 Left side of the footer will contain an ‘about us’ section
 About us will give a brief description of what our product functions as. It aims to tackle a problem and provides an intuitive solution
+
+
+
 
 Points of Interaction:
 
