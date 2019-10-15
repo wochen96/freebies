@@ -1,23 +1,13 @@
 ## Problem Statement:
 
-Students, especially Freshmen upon coming to UW, are unaware of the free resources that the campus provides that are available to them. The free resources help reduce additional cost for students who are living in a frugal fashion to maintain their financial budgets. To get the most out of college life, resources that do not require additional money spending should be taken advantage of because tuition and living expenses are already expensive enough. Taking advantage of these resources will save them a lot of money and give them a head start on their education at UW. To solve the problem, our mission is to help students navigate all the resources that UW campus has to offer.
+Students, especially Freshmen upon coming to UW, *are unaware of the free resources that the campus provides that are available to them.* The free resources help reduce additional cost for students who are living in a frugal fashion to maintain their financial budgets. To get the most out of college life, resources that do not require additional money spending should be taken advantage of because tuition and living expenses are already expensive enough. Taking advantage of these resources will save them a lot of money and give them a head start on their education at UW. To solve the problem, our mission is to help students navigate all the resources that UW campus has to offer.
 
-In a study done about collegiate resources and college completion, it was found that the less resources there were per student, there is a lower rate for students for completing a Bachelor’s degree. There has been a rise in college enrollment, but the completion rate has not been proportionate. Instead, there has been a decline in the completion rate. This an alarming trend, since we should expect the rate to be proportionate.
+In a [study done about collegiate resources and college completion](
+https://pubs.aeaweb.org/doi/pdfplus/10.1257/app.2.3.129), it was found that the less resources there were per student, there is a lower rate for students for completing a Bachelor’s degree. There has been a rise in college enrollment, but the completion rate has not been proportionate. Instead, there has been a decline in the completion rate. This an alarming trend, since we should expect the rate to be proportionate.
 
-https://pubs.aeaweb.org/doi/pdfplus/10.1257/app.2.3.129
-
-Students lose opportunity due to limited resources in their school. This problem is especially worse for people located in areas of concentrated poverty. Based on a report there has been worse outcomes (low test scores and college enrollment) for those faced with poverty. Although this report is about high school students, it shows significance on how a lack of resources affects success.
-
-https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-resources-worse-outcomes-for-students-in-schools-with-concentrated-poverty/
+Students lose opportunity due to limited resources in their school. This problem is especially worse for people located in areas of concentrated poverty. Based on a [report on unequal opportunities for students in high school](https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-resources-worse-outcomes-for-students-in-schools-with-concentrated-poverty/), there has been worse outcomes (low test scores and college enrollment) for those faced with poverty. Although this report is about high school students, it shows significance on how a lack of resources affects success.
 
 It can be seen that resources affect the success of students. With the lack of resources, there is a lowered rate of success. In order to mitigate this, it is important to provide students with access to free resources.
-
-Past Literature:
-
-https://www.sciencedirect.com/science/article/pii/S0272775713000885
-
-https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-resources-worse-outcomes-for-students-in-schools-with-concentrated-poverty/
-
 
 ## Solution:
 
@@ -200,5 +190,5 @@ From the user that we have interviewed which we will named Mark (omitting the na
 
 ## Our thoughts after the interview:
 
-we really appreciate the inputs from Mark. He gives us some good suggestions. But, for the time being, we will only focus on the tasks which were prescribed by the design. We would not add more features like notification because it would make our project too big to be accomplished for the time being. We also will not worry about marketing the product for now. Instead, we hope to create the minimum functioning website that can be used true to our design. If we have more time at the end of the quarter, we will continue to improve the product further. This decision is because we have little time to explore all possibilities; meeting the deadline is a constraint we must follow.
+We really appreciate the inputs from Mark. He gives us some good suggestions. But, for the time being, we will only focus on the tasks which were prescribed by the design. We would not add more features like notification because it would make our project too big to be accomplished for the time being. We also will not worry about marketing the product for now. Instead, we hope to create the minimum functioning website that can be used true to our design. If we have more time at the end of the quarter, we will continue to improve the product further. This decision is because we have little time to explore all possibilities; meeting the deadline is a constraint we must follow.
 
