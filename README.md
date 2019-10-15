@@ -2,7 +2,9 @@
 
 ## Team
 
-Jimmy Tran - Role: Engineer / CTO 
+Jimmy Tran - Role: Engineer / CTO
+
+Saurav Kharb - Role : Engineer
 
 Calvin Chen - Role: Designer / CDO / Product Manager 
 
