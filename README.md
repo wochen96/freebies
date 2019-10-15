@@ -1,4 +1,4 @@
-# uwchill <img src="img/favicon.svg" width="50" height="50" />
+# Freebies <img src="img/favicon.svg" width="50" height="50" />
 
 ## Team
 
