@@ -10,29 +10,37 @@ Students lose opportunity due to limited resources in their school. This problem
 
 https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-resources-worse-outcomes-for-students-in-schools-with-concentrated-poverty/
 
+It can be seen that resources affect the success of students. With the lack of resources, there is a lowered rate of success. In order to mitigate this, it is important to provide students with access to free resources.
+
+Past Literature:
+
+https://www.sciencedirect.com/science/article/pii/S0272775713000885
+
+https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-resources-worse-outcomes-for-students-in-schools-with-concentrated-poverty/
+
 
 ## Solution:
 
 Our solution will be in the form of a responsive web page in efforts to cater to a diverse audience. We chose a responsive web page because it will support Windows, Mac, and iOS. All of which are popular operating system platforms that majority of users use. To promote the use of accessibility and ease of access, our solution will provide a mobile-first design approach. Being able to access quick information regarding free stuff on campus, the higher the chance in acquiring free resources. The solution will provide quicker access to information and recent updates to where free resources are being passed. Thus, students will become more aware of the resources that are available to students so that they can take advantage of them.  
 
-Solution Priorities:
+### Solution Priorities:
 
-Correctness: We have to make sure that the website would work properly and exactly as we prescribe in our design. Also, we have to make sure that the program we’re implementing doesn’t have an unexpected action.
+1. Correctness: We have to make sure that the website would work properly and exactly as we prescribe in our design. Also, we have to make sure that the program we’re implementing doesn’t have an unexpected action.
 
-Reliability: our website need to work properly without crashing too often.
+2. Reliability: our website need to work properly without crashing too often.
 
-Performance: We expect the search feature to work fast.
+3. Performance: We expect the search feature to work fast.
 
-Learnability: We want users to learn to use the website really fast with minimal time to learn or time to do research what the website do.
+4. Learnability: We want users to learn to use the website really fast with minimal time to learn or time to do research what the website do.
 
-Usefulness: We expect the website to beneficial to users (students) in UW.
+5. Usefulness: We expect the website to beneficial to users (students) in UW.
 
 
 ### Features:
 
 Dashboard:
 
-The dashboard will be the default page when the user sees upon login. Here, the user will see posts in regards to free resources/free stuff that’ll be posted by other students/users across campus. The posts are displayed in card view.
+- The dashboard will be the default page when the user sees upon login. Here, the user will see posts in regards to free resources/free stuff that’ll be posted by other students/users across campus. The posts are displayed in card view.
 
 <p align="center">
   <img src="img/design/dashboard.jpg" width="300" height="300" />
@@ -41,9 +49,9 @@ The dashboard will be the default page when the user sees upon login. Here, the 
 
 Home Button:
 
-If the user clicks on the home button at the top left of the page, the user will be brought back the dashboard default page with any new update.
+* If the user clicks on the home button at the top left of the page, the user will be brought back the dashboard default page with any new update.
 
-The home button will be present for all pages during any interactions with users.
+* The home button will be present for all pages during any interactions with users.
 
 Search:
 
