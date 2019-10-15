@@ -90,16 +90,16 @@ Login/Sign up:
 
 Create Post:
 
-Users are able to create posts to share any resources by clicking the “Add Post” button. If the user has not logged in, she/he will be transferred to Login/Sign up page.
-When creating a post, a modal pops up and the user provides information for the post. 
-The modal will prompt the user to add their title, description, location, and optional picture
-Prompt user to add type in a title, description location, and date
-Title, Description, Location, and Date will put textFields
-If any fields appear to be blank, an error message will be shown
-Optional picture will require a fileSelector to allow users to select an image from their end of the device
-Clicking submit without any information prompts the user to fill in the missing fields(optional picture is excluded from this prompt).
-After successfully submitting, the dashboard is updated with the user’s post.
-If the user clicks cancel or the ‘X’ located on the top right of the modal, users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”. If yes, the modal disappears and the original screen(dashboard) behind will be shown. If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
+* Users are able to create posts to share any resources by clicking the “Add Post” button. If the user has not logged in, she/he will be transferred to Login/Sign up page.
+* When creating a post, a modal pops up and the user provides information for the post. 
+* The modal will prompt the user to add their title, description, location, and optional picture
+	- Prompt user to add type in a title, description location, and date
+		+ Title, Description, Location, and Date will put textFields
+		+ If any fields appear to be blank, an error message will be shown
+		+ Optional picture will require a fileSelector to allow users to select an image from their end of the device
+	- Clicking submit without any information prompts the user to fill in the missing fields(optional picture is excluded from this prompt).
+	- After successfully submitting, the dashboard is updated with the user’s post.
+	- If the user clicks cancel or the ‘X’ located on the top right of the modal, users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”. If yes, the modal disappears and the original screen(dashboard) behind will be shown. If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
 <p align="center">
   <img src="img/design/add-post.png" width="300" height="300" />
@@ -108,17 +108,17 @@ If the user clicks cancel or the ‘X’ located on the top right of the modal, 
 
 Editing Post:
 
-The posts can only be edited by the posting login user and the administrators.
-When clicking on a post, the user who created the post will have an option to edit it at the bottom at the post. After clicking it, the user will be transferred to a new page which look similar to the create post and she/he can start editing the post. After the user clicks summit, the post will be updated from the database. And the user will be shown back to the dashboard default page with the updated post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
-The administrators also have the power to edit the post. When the administrator clicks on a post on the dashboard page, the option to edit the post will also show at bottom at post modal just like the posting user. The administrator will edit the post following the same procedure like above.
-For the time being all past post that has been edited will not show any history of the editing. And there will be no record of the past posts which is stored in the database. All posts edit to the current time with past information is gone.
+* The posts can only be edited by the posting login user and the administrators.
+* When clicking on a post, the user who created the post will have an option to edit it at the bottom at the post. After clicking it, the user will be transferred to a new page which look similar to the create post and she/he can start editing the post. After the user clicks submit, the post will be updated from the database. And the user will be shown back to the dashboard default page with the updated post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
+* The administrators also have the power to edit the post. When the administrator clicks on a post on the dashboard page, the option to edit the post will also show at bottom at post modal just like the posting user. The administrator will edit the post following the same procedure like above.
+* For the time being all past post that has been edited will not show any history of the editing. And there will be no record of the past posts which is stored in the database. All posts edit to the current time with past information is gone.
 
 Delete Post:
 
-The posts can only be deleted by the posting login user and the administrators.
-When clicking on a post, the user who created the post will have an option to delete it at the bottom at the post. After clicking it, there will show a message asking if the user really want to delete the post, “yes” or “cancel”. If user clicks “yes”, the post will be removed from the database. And the user will be shown back to the dashboard default page with the update without the post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
-The administrators also have the power to delete the post. When the administrator clicks on a post on the dashboard page, the option to delete the post will also show at bottom at post modal just like the posting user. The administrator will delete the post following the same procedure like above.
-For the time being all past post that has been deleted will not show any history of the deletion. And there will be no record of the past posts which is stored in the database. All posts delete to the current time with past information is gone.
+* The posts can only be deleted by the posting login user and the administrators.
+* When clicking on a post, the user who created the post will have an option to delete it at the bottom at the post. After clicking it, there will show a message asking if the user really want to delete the post, “yes” or “cancel”. If user clicks “yes”, the post will be removed from the database. And the user will be shown back to the dashboard default page with the update without the post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
+* The administrators also have the power to delete the post. When the administrator clicks on a post on the dashboard page, the option to delete the post will also show at bottom at post modal just like the posting user. The administrator will delete the post following the same procedure like above.
+* For the time being all past post that has been deleted will not show any history of the deletion. And there will be no record of the past posts which is stored in the database. All posts delete to the current time with past information is gone.
 
 <p align="center">
   <img src="img/design/delete_edit.jpg" width="300" height="300" />
@@ -127,24 +127,26 @@ For the time being all past post that has been deleted will not show any history
 
 Tile Grid Display:
 
-Once create post is created by the user, the website will refresh and their post will be added to the right side of the screen
-A singular Tile will display its title, location, date on the upper left hand side, and picture as it’s background. If no optional picture is uploaded by its user, then there will be a default picture automatically uploaded with the post
-Title, Location, and Date will be a textLabel
-Image will be an image
-Tile will be a button itself with an event listener that will respond to a click to have a modal pop up for additional information
-Tile will contain width and length - this will determine how many tiles to display horizontally and vertically
-Tile display will be sorted by left to right(grid) by the time it was created for its default view
-The more recent the post is, the more left the card will be positioned
-Scrolling down on the card display will see cards that are posted later
+* Once create post is created by the user, the website will refresh and their post will be added to the right side of the screen
+* A singular Tile will display its title, location, date on the upper left hand side, and picture as it’s background. If no optional picture is uploaded by its user, then there will be a default picture automatically uploaded with the post
+	+ Title, Location, and Date will be a textLabel
+	+ Image will be an image
+	+ Tile will be a button itself with an event listener that will respond to a click to have a modal pop up for additional information
+	+ Tile will contain width and length - this will determine how many tiles to display horizontally and vertically
+* Tile display will be sorted by left to right(grid) by the time it was created for its default view
+* The more recent the post is, the more left the card will be positioned
+* Scrolling down on the card display will see cards that are posted later
 
 
 Interacting with Post:
 
-When the user clicks on a post on the dashboard, a modal pops up. The modal shows information about the post. The information includes a title, location, date, picture and description.
-Clicking the location in the modal opens up a new tab to the location on Google Maps.
-Users can remove visibility on posts for themselves by clicking the ‘X’ on the top right of a post
+* When the user clicks on a post on the dashboard, a modal pops up. The modal shows information about the post. The information includes a title, location, date, picture and description.
+* Clicking the location in the modal opens up a new tab to the location on Google Maps.
+* Users can remove visibility on posts for themselves by clicking the ‘X’ on the top right of a post
+
 Closing a Modal:
-Users can close the modal by click out of the modal or clicking the ‘X’ on the top right corner of the modal. If the user clicks anywhere else, the model will not close.
+
+* Users can close the modal by click out of the modal or clicking the ‘X’ on the top right corner of the modal. If the user clicks anywhere else, the model will not close.
 
 <p align="center">
   <img src="img/design/view-post.jpg" width="300" height="300" />
@@ -152,16 +154,16 @@ Users can close the modal by click out of the modal or clicking the ‘X’ on t
 
 Database:
 
-Database on our backend will contain User objects
-Stores information about user credentials and their personal posts
-Delete Post
+* Database on our backend will contain User objects
+	+ Stores information about user credentials and their personal posts
+	+ Delete Post
 
 Footer:
 
-The right side of the footer will contain a ‘contact’
-Contact will contain href links to personal linkedIn accounts
-Left side of the footer will contain an ‘about us’ section
-About us will give a brief description of what our product functions as. It aims to tackle a problem and provides an intuitive solution
+* The right side of the footer will contain a ‘contact’
+	+ Contact will contain href links to personal linkedIn accounts
+* Left side of the footer will contain an ‘about us’ section
+	+ About us will give a brief description of what our product functions as. It aims to tackle a problem and provides an intuitive solution
 
 <p align="center">
   <img src="img/design/aboutus.jpg" width="300" height="300" />
@@ -171,14 +173,14 @@ About us will give a brief description of what our product functions as. It aims
 
 Points of Interaction:
 
-Create Post
-Create Title of Post
-Create Date of Post
-Create Location of Post
-Create Description of Post
-Optional Upload of Picture 
-Delete Post
-Click on Post
+* Create Post
+* Create Title of Post
+* Create Date of Post
+* Create Location of Post
+* Create Description of Post
+* Optional Upload of Picture 
+* Delete Post
+* Click on Post
 
 
 
