@@ -155,8 +155,11 @@ Closing a Modal:
 Database:
 
 * Database on our backend will contain User objects
-	+ Stores information about user credentials and their personal posts
-	+ Delete Post
+
+	- Stores information about user credentials and their personal posts.
+	- The database will store users’ email, phone and other personal information.
+	- It will not store any deleted or edited posts. All past posts will be deleted.
+
 
 Footer:
 
