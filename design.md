@@ -40,21 +40,33 @@ The dashboard will be the default page when the user sees upon login. Here, the 
 
 
 Home Button:
+
 If the user clicks on the home button at the top left of the page, the user will be brought back the dashboard default page with any new update.
+
 The home button will be present for all pages during any interactions with users.
 
-Search
-Search bar will be located on the top-mid section of the page 
+Search:
+
+Search bar will be located on the top-mid section of the page
+
 User does not need to be signed in to use search functionality
+
 The user inputs a term and the dashboard is filtered out to show the posts that contain the term. The search looks at titles, descriptions, and locations.
+
 Will have a query string and a textfield to type query
+
 Query will filter down results given user input, meaning that results will load based on user input from search functionality
+
 When none of the posts contain the input, the user is prompted that no results were found.
 
-Login/Sign up
+Login/Sign up:
+
 If not signed in, website will display Login/SignUp
+
 Clicking on the “Login/SignUp” button at the top opens up a modal where the user provides login credentials.
+
 Log-in Component allows user to log into their account
+
 Prompt with “Enter your email” or “Enter your password”
 User will input an email
 User will input a password
@@ -65,16 +77,22 @@ If incorrect, an error message will be given invalid username/password
 If no fields, or any field for that matter is blank, and is submitted, website will return an error message
 
 Sign-up is located near the bottom of the modal. The user provides information (email and password) when creating an account. Sign-up page will be in a different page, away from the main page.
+
 Prompt the user to type in an email, phone, password, and password confirmation all of which require a textfield
 Password confirmation is to double-check if user has typed their intended password and if it doesn’t match, an error message will be displayed
 If email does not match, the user will be shown an error message
 If any fields appear to be blank, an error message will be shown
+
 Being logged in gives users the ability to create posts, replacing the log in with username and sign out button
 
+<p align="center">
+  <img src="img/design/signup.jpg" width="300" height="300" />
+  <img src="img/design/login.jpg" width="300" height="300" />
+</p>
 
 
+Create Post:
 
-Create Post
 Users are able to create posts to share any resources by clicking the “Add Post” button. If the user has not logged in, she/he will be transferred to Login/Sign up page.
 When creating a post, a modal pops up and the user provides information for the post. 
 The modal will prompt the user to add their title, description, location, and optional picture
@@ -86,7 +104,9 @@ Clicking submit without any information prompts the user to fill in the missing 
 After successfully submitting, the dashboard is updated with the user’s post.
 If the user clicks cancel or the ‘X’ located on the top right of the modal, users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”. If yes, the modal disappears and the original screen(dashboard) behind will be shown. If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
-
+<p align="center">
+  <img src="img/design/add-post.jpg" width="300" height="300" />
+</p>
 
 
 Editing Post:
