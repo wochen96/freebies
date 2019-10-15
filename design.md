@@ -55,43 +55,42 @@ Home Button:
 
 Search:
 
-Search bar will be located on the top-mid section of the page
+* Search bar will be located on the top-mid section of the page
 
-User does not need to be signed in to use search functionality
+* User does not need to be signed in to use search functionality
 
-The user inputs a term and the dashboard is filtered out to show the posts that contain the term. The search looks at titles, descriptions, and locations.
+* The user inputs a term and the dashboard is filtered out to show the posts that contain the term. The search looks at titles, descriptions, and locations.
+	- Will have a query string and a textfield to type query
 
-Will have a query string and a textfield to type query
+	- Query will filter down results given user input, meaning that results will load based on user input from search functionality
 
-Query will filter down results given user input, meaning that results will load based on user input from search functionality
-
-When none of the posts contain the input, the user is prompted that no results were found.
+* When none of the posts contain the input, the user is prompted that no results were found.
 
 Login/Sign up:
 
-If not signed in, website will display Login/SignUp
+* If not signed in, website will display Login/SignUp
 
-Clicking on the “Login/SignUp” button at the top opens up a modal where the user provides login credentials.
+* Clicking on the “Login/SignUp” button at the top opens up a modal where the user provides login credentials.
 
-Log-in Component allows user to log into their account
+* Log-in Component allows user to log into their account
 
-Prompt with “Enter your email” or “Enter your password”
-User will input an email
-User will input a password
-Both Require text fields
-Check if username and password is correct
-If correct, signs the user in
-If incorrect, an error message will be given invalid username/password
-If no fields, or any field for that matter is blank, and is submitted, website will return an error message
+	- Prompt with “Enter your email” or “Enter your password”
+	- User will input an email
+	- User will input a password
+	- Both Require text fields
+	- Check if username and password is correct
+		+ If correct, signs the user in
+		+ If incorrect, an error message will be given invalid username/password
+		+ If no fields, or any field for that matter is blank, and is submitted, website will return an error message
 
-Sign-up is located near the bottom of the modal. The user provides information (email and password) when creating an account. Sign-up page will be in a different page, away from the main page.
+* Sign-up is located near the bottom of the modal. The user provides information (email and password) when creating an account. Sign-up page will be in a different page, away from the main page.
 
-Prompt the user to type in an email, phone, password, and password confirmation all of which require a textfield
-Password confirmation is to double-check if user has typed their intended password and if it doesn’t match, an error message will be displayed
-If email does not match, the user will be shown an error message
-If any fields appear to be blank, an error message will be shown
+	- Prompt the user to type in an email, phone, password, and password confirmation all of which require a textfield
+	- Password confirmation is to double-check if user has typed their intended password and if it doesn’t match, an error message will be displayed
+	- If email does not match, the user will be shown an error message
+	- If any fields appear to be blank, an error message will be shown
 
-Being logged in gives users the ability to create posts, replacing the log in with username and sign out button
+* Being logged in gives users the ability to create posts, replacing the log in with username and sign out button
 
 <p align="center">
   <img src="img/design/signup.jpg" width="300" height="300" />
