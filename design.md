@@ -105,7 +105,7 @@ After successfully submitting, the dashboard is updated with the user’s post.
 If the user clicks cancel or the ‘X’ located on the top right of the modal, users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”. If yes, the modal disappears and the original screen(dashboard) behind will be shown. If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
 <p align="center">
-  <img src="img/design/add-post.jpg" width="300" height="300" />
+  <img src="img/design/add-post.png" width="300" height="300" />
 </p>
 
 
