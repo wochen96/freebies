@@ -16,17 +16,25 @@ https://www.thecommonwealthinstitute.org/2017/10/26/unequal-opportunities-fewer-
 Our solution will be in the form of a responsive web page in efforts to cater to a diverse audience. We chose a responsive web page because it will support Windows, Mac, and iOS. All of which are popular operating system platforms that majority of users use. To promote the use of accessibility and ease of access, our solution will provide a mobile-first design approach. Being able to access quick information regarding free stuff on campus, the higher the chance in acquiring free resources. The solution will provide quicker access to information and recent updates to where free resources are being passed. Thus, students will become more aware of the resources that are available to students so that they can take advantage of them.  
 
 Solution Priorities:
-Correctness: We have to make sure that the website would work properly and exactly as we prescribe in our design. Also, we have to make sure that the program we’re implementing doesn’t have an unexpected action. 
+
+Correctness: We have to make sure that the website would work properly and exactly as we prescribe in our design. Also, we have to make sure that the program we’re implementing doesn’t have an unexpected action.
+
 Reliability: our website need to work properly without crashing too often.
-Performance: We expect the search feature to work fast. 
+
+Performance: We expect the search feature to work fast.
+
 Learnability: We want users to learn to use the website really fast with minimal time to learn or time to do research what the website do.
+
 Usefulness: We expect the website to beneficial to users (students) in UW.
 
 
-Features:
-Dashboard 
+### Features:
+
+Dashboard:
+
 The dashboard will be the default page when the user sees upon login. Here, the user will see posts in regards to free resources/free stuff that’ll be posted by other students/users across campus. The posts are displayed in card view.
 
+<img src="img/design/dashboard.jpg" width="300" height="300" />
 
 
 Search
