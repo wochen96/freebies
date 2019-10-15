@@ -187,7 +187,7 @@ Click on Post
 
 
 
-## User Feedback: (from Jimmy’s interview)
+## User Feedback:
 
 From the user that we have interviewed which we will named Mark (omitting the name of the interviewee due to privacy reason), he is a third-year student who majors in Biology. The interview was conducted in Odegaard Library for 20 minutes. The idea of the project seems very interesting to him. The design of the website is very simple that he can navigate through it without much trouble. Thanks to him, we also get out of some very interesting feedback. For one, the add button on our site originally only include a plus button with no “Add” word on it. He thinks that it was quite confusing for what purpose is this button do. So, our team decide to include to the word “Add” to give it some context. Moreover, he advises us to add more feature that can improve interaction with users more like notifying the users if a new post is added. He also hopes that we can add filter feature base on time beside key words on the search function. One more interesting perspective that we got from the interview is that we should have a marketing plan in place to make sure the website a success if we decide to launch it, like how would we advertise to students for example.
 
