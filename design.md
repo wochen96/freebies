@@ -152,13 +152,16 @@ Closing a Modal:
   <img src="img/design/view-post.jpg" width="300" height="300" />
 </p>
 
+	
 Database:
 
-* Database on our backend will contain User objects
+* Database on our backend will contain User, Post objects
 
 	- Stores information about user credentials and their personal posts.
 	- The database will store users’ email, phone and other personal information.
 	- It will not store any deleted or edited posts. All past posts will be deleted.
+	- Post objects will represent information about a post such as its text, title, tags, image, start and end time etc.
+
 
 
 Footer:
