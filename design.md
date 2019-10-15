@@ -34,7 +34,9 @@ Dashboard:
 
 The dashboard will be the default page when the user sees upon login. Here, the user will see posts in regards to free resources/free stuff that’ll be posted by other students/users across campus. The posts are displayed in card view.
 
-<img align="center" src="img/design/dashboard.jpg" width="300" height="300" />
+<p align="center">
+  <img src="img/design/dashboard.jpg" width="300" height="300" />
+</p>
 
 
 Home Button:
