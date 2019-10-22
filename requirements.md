@@ -174,23 +174,23 @@ There are two cases to consider:
 
 * **Case 1:**
 
-* If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description.
+	- If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description.
 
-* The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
+	- The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
 
-The user can also upload an image from her/his local device.
+	- The user can also upload an image from her/his local device.
 
-If no image is uploaded the default picture will be shown in the box space. 
+	- If no image is uploaded the default picture will be shown in the box space. 
 
-**Case 2:**
+* **Case 2:**
 
-* If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text.
+	- If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text.
 
-* The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
+	- The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
 
-* The user can also upload an image from her/his local device.
+	- The user can also upload an image from her/his local device.
 
-* If no image is uploaded the default picture will be shown in the box space.
+	- If no image is uploaded the default picture will be shown in the box space.
 
 After the user has finished editing the post, the user can click on the submit button at the bottom of the module:
 
@@ -206,9 +206,9 @@ After the user has finished editing the post, the user can click on the submit b
 
 * If there are any changes to the database like some users add new posts or delete posts, the position of the edited post will change accordingly:
 
-* If a new post is added, the edited post will move one position to the right or down on the dashboard.
+	- If a new post is added, the edited post will move one position to the right or down on the dashboard.
 
-* If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+	- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
 
 If the user clicks “cancel” button (at the bottom-right of the modal next to the summit button) or the ‘X’ located on the top right of the modal:
 
@@ -218,9 +218,9 @@ If the user clicks “cancel” button (at the bottom-right of the modal next to
 
 * The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
 
-* If a new post is added, the edited post will move one position to the right or down on the dashboard.
+	- If a new post is added, the edited post will move one position to the right or down on the dashboard.
 
-* If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+	- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
 
 * If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
