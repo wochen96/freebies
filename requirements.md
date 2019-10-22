@@ -120,6 +120,9 @@ The modal will prompt the user to add their title, description, location, date (
 	- All the textfields will be stored in Firebase as String.
 * There will also be one image that is uploaded by the user. The picture will require a fileSelector to allow users to select an image from their end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
 
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/hWZpEBHB_400x400.png" width="300" height="300" />
+</p>
 (Source: https://twitter.com/uw) (default picture)
 
 * Also, the picture that upload need to be have the size 300pix x 300pix (this is an optional feature that can be changed based on the engineer choice and user feedback later).
@@ -149,7 +152,9 @@ If the user clicks “cancel” button (at the bottom-right of the modal next to
 The database in Firebase will store all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
 
-
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/create_post.jpg" width="300" height="300" />
+</p>
 
 
 **Editing Post**
@@ -226,10 +231,9 @@ If the user clicks “cancel” button (at the bottom-right of the modal next to
 
 The database in Firebase will stored all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
-
-
-
-
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/view_post.jpg" width="300" height="300" />
+</p>
 
 
 
@@ -284,15 +288,6 @@ The users branch would include information about each user that has signed up fo
 * Downvotes
 
 
-
-
-
-
-
-
-
-
-
 <p align="center">
-  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/landing_page.jpg" width="300" height="300" />
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/about_us.jpg" width="300" height="300" />
 </p>
