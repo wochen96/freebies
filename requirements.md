@@ -119,7 +119,7 @@ If the user use indefinite, they don’t have to enter date and time.
 All the textfields will be stored in Firebase as String.
 There will also be one image that is uploaded by the user. The picture will require a fileSelector to allow users to select an image from their end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
 
- (Source: https://twitter.com/uw) (default picture)
+(Source: https://twitter.com/uw) (default picture)
 
 Also, the picture that upload need to be have the size 300pix x 300pix (this is an optional feature that can be changed based on the engineer choice and user feedback later).
 The user may also add one optional tags (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as tag in Firebase.
@@ -151,48 +151,77 @@ The database in Firebase will store all the fields as String and images in png o
 
 
 
-Editing Post
+**Editing Post**
 
 After the user clicking on a post, the module that shows all the information about the post will will be popup in front of the user.
 
-The post will contain the information: title, location, definite or indefinite, description and an optional image. If the post has definite property, it also has two more required fields: date and time (start and end). If it is indefinite, it will just show the indefinite property.
+The post will contain the information: title, location, definite or indefinite, description and an optional image.
 
-Also, the post will have a field where the user email will show up at the bottom left corner of module.
-The user email can be used to check if the user is the one who create the post by storing String and compare them with the user email String in the top-left corner of the web page.
-If the post is created by the user, the button “Edit” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Delete” button.
+If the post has definite property, it also has two more required fields: date and time (start and end). 
+
+If it is indefinite, it will just show the indefinite property.
+
+The post will have a field where the user email will show up at the bottom left corner of module.
+
+* The user email can be used to check if the user is the one who create the post by storing String and compare them with the user email String in the top-left corner of the web page.
+
+* If the post is created by the user, the button “Edit” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Delete” button.
 
 After the user clicks on the “Edit” button, the module will change into the module that can let the user change the text on all the fields that were entered by the user earlier.
 
 There are two cases to consider:
 
-Case 1: 
-If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description.
-The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
+* **Case 1:**
+
+* If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description.
+
+* The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
+
 The user can also upload an image from her/his local device.
+
 If no image is uploaded the default picture will be shown in the box space. 
-Case 2:
-If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text.
-The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
-The user can also upload an image from her/his local device.
-If no image is uploaded the default picture will be shown in the box space.
+
+**Case 2:**
+
+* If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text.
+
+* The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post.
+
+* The user can also upload an image from her/his local device.
+
+* If no image is uploaded the default picture will be shown in the box space.
 
 After the user has finished editing the post, the user can click on the submit button at the bottom of the module:
-If any of the required fields are missing, an error message will show up to prompt the user enters these fields.
-After successfully submitting, the modal will disappear and the original screen(dashboard) behind will be shown.
-The dashboard will be updated with the new post.
-The database in Firebase will also need to be updated with the new post
-The edit post is located on the same position of the Middle Post Section.
-If there are any changes to the database like some users add new posts or delete posts, the position of the edited post will change accordingly:
-If a new post is added, the edited post will move one position to the right or down on the dashboard.
- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+
+* If any of the required fields are missing, an error message will show up to prompt the user enters these fields.
+
+* After successfully submitting, the modal will disappear and the original screen(dashboard) behind will be shown.
+
+* The dashboard will be updated with the new post.
+
+* The database in Firebase will also need to be updated with the new post
+
+* The edit post is located on the same position of the Middle Post Section.
+
+* If there are any changes to the database like some users add new posts or delete posts, the position of the edited post will change accordingly:
+
+* If a new post is added, the edited post will move one position to the right or down on the dashboard.
+
+* If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
 
 If the user clicks “cancel” button (at the bottom-right of the modal next to the summit button) or the ‘X’ located on the top right of the modal:
-Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
-If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown.
-The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
-If a new post is added, the edited post will move one position to the right or down on the dashboard.
- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
-If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
+
+* Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
+
+* If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown.
+
+* The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
+
+* If a new post is added, the edited post will move one position to the right or down on the dashboard.
+
+* If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+
+* If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
 The database in Firebase will stored all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
@@ -203,43 +232,55 @@ The database in Firebase will stored all the fields as String and images in png 
 
 
 
-Delete Post
+**Delete Post**
 
 After the user clicking on a post, the module that shows all the information about the post will will be popup in front of the user.
 
 The post will contain the information: title, location, definite or indefinite, description and an optional image. If the post has definite property, it also has two more required fields: date and time (start and end). If it is indefinite, it will just show the indefinite property.
 
 Also, the post will have a field where the user email will show up at the bottom left corner of module.
-The user email can be used to check if the user is the one who create the post by storing String and compare them with the user email String in the top-left corner of the web page.
-If the post is created by the user, the button “Delete” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Edit” button.
+
+* The user email can be used to check if the user is the one who create the post by storing String and compare them with the user email String in the top-left corner of the web page.
+
+* If the post is created by the user, the button “Delete” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Edit” button.
 
 After the user clicks on the “Delete” button, users are prompted to confirm if they want to delete by a pop-up indicating “yes” or “no”:
 
-If yes, the modal disappears and the original screen(dashboard) behind will be shown with the update without the deleted post.
-The dashboard will be updated with the new post.
-The database in Firebase will also need to be updated with the new post
+* If yes, the modal disappears and the original screen(dashboard) behind will be shown with the update without the deleted post.
+
+* The dashboard will be updated with the new post.
+
+* The database in Firebase will also need to be updated with the new post
 At the same time, the record of the post in the database in Firebase will be permanently deleted.
-If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
+
+* If no, the yes/no prompt will disappear and the pop-up modal will be shown back again.
 
 The database in Firebase will stored all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
-Database
-The database will be a non-relational database due to the inherent structure of our data. Particularly, we will use Firebase Realtime Database. The data is structured in the form of a JSON tree. The main branches of the tree would include users and posts. The users branch would include information about each user that has signed up for our service. The posts branch would include data points related to each individual post. (see below for details)
+**Database**
 
-User
-Data points obtained from Google Sign-in Authorization web client
+The database will be a non-relational database due to the inherent structure of our data. 
 
-Post
-Title
-isDefinite
-Start time
-End time
-Location
-Description
-Picture
-Tag
-Upvotes
-Downvotes
+Particularly, we will use Firebase Realtime Database. The data is structured in the form of a JSON tree. 
+
+The main branches of the tree would include users and posts. 
+
+The users branch would include information about each user that has signed up for our service. The posts branch would include data points related to each individual post. (see below for details)
+
+**User**
+* Data points obtained from Google Sign-in Authorization web client
+
+**Post**
+* Title
+* isDefinite
+* Start time
+* End time
+* Location
+* Description
+* Picture
+* Tag
+* Upvotes
+* Downvotes
 
 
 
