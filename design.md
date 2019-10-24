@@ -141,7 +141,7 @@ Description: Current and prospective Math and ACMS students are encouraged to me
 **Editing Post:**
 * The posts can only be edited by the posting login user and the administrators.
 * When clicking on a post, the user who created the post will have an option to edit it at the bottom of the post. After clicking it, the user will be transferred to a new page which look similar to the create post and she/he can start editing the post. After the user clicks summit, the post will be updated from the database. And the user will be shown back to the dashboard default page with the updated post. If the user clicks “cancel”, she/he will be shown back to the dashboard default page with nothing happen.
-The administrators also have the power to edit the post. When the administrator clicks on a post on the dashboard page, the option to edit the post will also show at bottom at post modal just like the posting user. The administrator will edit the post following the same procedure like above.
+* The administrators also have the power to edit the post. When the administrator clicks on a post on the dashboard page, the option to edit the post will also show at bottom at post modal just like the posting user. The administrator will edit the post following the same procedure like above.
 * All past post that has been edited will not show any history of the editing. And there will be no record of the past posts which is stored in the database. All posts edit to the current time with past information is gone.
 
 **Delete Post:**
@@ -151,7 +151,7 @@ The administrators also have the power to edit the post. When the administrator 
 * All past post that has been deleted will not show any history of the deletion. And there will be no record of the past posts which is stored in the database. All posts delete to the current time with past information is gone.
 
 <p align="center">
-  <img src="img/design/view_post.jpg" width="450" height="300" />
+  <img src="img/new_design/view_post.jpg" width="450" height="300" />
 </p>
 
 **Interacting with Post:**
