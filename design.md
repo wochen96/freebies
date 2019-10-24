@@ -47,7 +47,7 @@ Our solution consists of a crowdsourcing hub, which allows users to share free r
 
 **Dashboard:**
 * The dashboard will be the default page when the user sees upon login. Here, the user will see posts in regards to free resources/free stuff that’ll be posted by other students/users across campus. The posts are displayed in card view.
-* See Grid Display for Post information
+* Posts will follow the Grid Display.
 
 **Tile Grid Display:**
 * Once create post is created by the user, the website will refresh and their post will be added to the right side of the screen
