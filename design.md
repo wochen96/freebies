@@ -155,14 +155,10 @@ Description: Current and prospective Math and ACMS students are encouraged to me
 </p>
 
 **Interacting with Post:**
-* When the user clicks on a post on the dashboard, a modal pops up. The modal shows information about the post. The information includes a title, location, date, picture, description and tags.
+* When the user clicks on a post on the dashboard, a modal pops up. The modal shows information about the post. The information includes a title, location, date, picture, description and tags. (Similar to above but without the edit/delete buttons)
 * Closing a Modal:
 	* Users can close the modal by click out of the modal or clicking the ‘X’ on the top right corner of the modal. If the user clicks anywhere else, the model will not close.
 
-<p align="center">
-  <img src="img/design/view-post.jpg" width="450" height="300" />
-</p>
-	
 **Database:**
 * Database on our backend will contain User, Post objects
 * Stores information about user credentials and their personal posts.
@@ -170,12 +166,12 @@ Description: Current and prospective Math and ACMS students are encouraged to me
 * Post objects will represent information about a post such as its text, title, tags, image, start and end time, upvote, downvote.
 
 **Footer:**
-* The right side of the footer will contain contact information
-* Left side of the footer will contain an ‘about us’ section
+* The left side of the footer will contain contact information
+* Right side of the footer will contain an ‘about us’ section
 	* About us will give a brief description of what our product functions as. It aims to tackle a problem and provides an intuitive solution
 
 <p align="center">
-  <img src="img/design/aboutus.jpg" width="450" height="300" />
+  <img src="img/new_design/about_us.jpg" width="450" height="300" />
 </p>
 
 **Points of Interaction:**
