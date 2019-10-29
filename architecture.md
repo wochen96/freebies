@@ -184,12 +184,12 @@ The work will focus mostly on creating architecture requirements for building a 
 
 ### *Footer - Component*
 
-###  *About Us - VIEW*
+####  *About Us - VIEW*
   - This component will show the view of the information about the creators and project
   
   - This component resides in the client-side.
   
-###  *Contact Us - VIEW*
+####  *Contact Us - VIEW*
 
   - This component will show the view of the information that users can use to contact us.
   
