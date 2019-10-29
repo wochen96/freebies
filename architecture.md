@@ -180,19 +180,35 @@ Delete component Button if clicked, will communicate with another pop-up (view) 
 Yes - Will communicate with the database using DeleteData to erase the information regarding a specific post under the user. Then it will communicate with the Display Section by using Definite Button, displaying all the post to the display view. definite(): input(void), return(void).
 No - Will communicate with the Post view by redirecting the user to it.
 
-Footer - Component
-About Us - VIEW
-This component will show the view of the information about the creators and project
-This component resides in the client-side.
-Contact Us - VIEW
-This component will show the view of the information that users can use to contact us.
-This component resides in the client-side.
-Database - MODEL
-This is a component that stores all the posts under a userEmail.
-The component resides in the server-side.
-This component is responsible for saving the most recent state of our application. The database model talks only to other controllers which either send in or ask for stored information in the database. 
-The Database component interact with GetData, AddData, DeleteData and EditData:
-GetData can ask for the data from the Database model.
-AddData is used when the user wants to add a post.
-DeleteData is used when the user wants to delete a post.
-EditData is used when the user wants to edit a post.
+### *Footer - Component*
+
+###  *About Us - VIEW*
+  - This component will show the view of the information about the creators and project
+  
+  - This component resides in the client-side.
+  
+###  *Contact Us - VIEW*
+
+  - This component will show the view of the information that users can use to contact us.
+  
+  - This component resides in the client-side.
+  
+###  *Database - MODEL*
+
+  - This is a component that stores all the posts under a userEmail.
+  
+  - The component resides in the server-side.
+  
+  - This component is responsible for saving the most recent state of our application. 
+  
+  - The database model talks only to other controllers which either send in or ask for stored information in the database. 
+  
+  - The Database component interact with GetData, AddData, DeleteData and EditData:
+  
+    - *GetData can ask for the data from the Database model.*
+     
+    - *AddData is used when the user wants to add a post.*
+     
+    - *DeleteData is used when the user wants to delete a post.*
+     
+    - *EditData is used when the user wants to edit a post.*
