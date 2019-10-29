@@ -209,4 +209,4 @@ No - Will communicate with the Post view by redirecting the user to it.
      
     - *DeleteData is used when the user wants to delete a post.*
      
-    - *EditData is used when the user wants to edit a post.
+    - *EditData is used when the user wants to edit a post.*
