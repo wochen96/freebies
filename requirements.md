@@ -25,7 +25,7 @@ Homework 3 - Requirements
 * User will be logged in under their google account.
 * If intended email is not listed on the list of accounts, an option to add account button is located on the bottom 
 * If there are no errors during the login process, the user is signed in and directed to the dashboard. 
-* If the user clicks on the sign out button, the user will be signed out and the log in will appear back in their original position. 
+* If the user clicks on the sign out button, the user will be signed out and the log in will appear back to the landing page. 
 * Signed out user will be be directed back to the landing page. 
 
 <p align="center">
