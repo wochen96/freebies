@@ -6,13 +6,6 @@ INFO 442 - Co-op Software Dev
 
 Homework 3 - Requirements
 
-**Overall**
-
-* Website is built primarily using HTML, CSS, and JavaScript.
-* The website needs to be responsive for different devices such as computers, mobile devices or tablets.
-* If the website server is down, it should display an appropriate error message.
-* The website uses Firebase as the database to store login and post information.
-
 **Log-in/Landing Page**
 
 * Login Page will be the landing page
