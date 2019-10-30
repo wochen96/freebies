@@ -62,6 +62,7 @@ Homework 3 - Requirements
 	- If the user presses enter, this will trigger a filtering function that will filter based on the search query.
 	- By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
 	- If the input is valid, the system shows the queried results in order from newest to latest (left to right and descending)
+	- The user enters certain keywords term like “cookies”. The search function will query all of the JSON text to find words that match that of ‘cookies’. This means that it looks for ‘cookie’ in the title, location, date, time, description, and tags. 
 * **Radio Buttons (Definite/Indefinite):**
 	- There will be two radio buttons located after the search bar, lined up horizontally
 	- The first button will be the definite and the second will be the indefinite
@@ -126,7 +127,7 @@ The modal will prompt the user to add their title, description, location, date (
 (Source: https://twitter.com/uw) (default picture)
 
 * Also, the picture that upload need to be have the size 300pix x 300pix (this is an optional feature that can be changed based on the engineer choice and user feedback later).
-* The user may also add one optional tags (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as tag in Firebase.
+* The user may also add one optional tags (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as tag / String in Firebase. This will help specify a search result for example, if a type of food is difficult to remember, the "food" tag allows the user to filter results within a specific type. It is additional information being asked from the user to make a post more descriptive. 
 * Among all of these fields, title, description and location are required to be entered. Date, time, a tag and a picture are optional to enter by the users.
 * If any required fields appear to be blank, an error message will be shown prompting the user to re-enter the missing fields.
 
