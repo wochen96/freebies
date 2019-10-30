@@ -57,7 +57,7 @@ Homework 3 - Requirements
 	- The search bar has to located at the top of the website.
 	- On the right of the search bar, there should be a clickable search icon that submits the search query
 	- The user has to input any characters in search.
-	- The system has to be able to query for strings in titles, descriptions, tags, and locations from every posts in the database
+	- We are sending keywords to our search algorithm that returns the relevant posts back to the user. The system has to be able to look at the keywords in titles, descriptions, tags, and locations from every posts in the database.
 	- Clicking the search bar allows for plain text from the user that will filter out results to be shown on the dashboard
 	- If the user presses enter, this will trigger a filtering function that will filter based on the search query.
 	- By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
