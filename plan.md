@@ -301,63 +301,63 @@ Manual Test: If the user is redirected to the dashboard, this will be considered
 If the user is the creator of the post, they can edit or delete the post (check edit/delete post section)
 Manual Test: the test involves checking if the user-email in the json object match the username stores in top-left corner.
 
-Grid Display/Responsiveness
+**Grid Display/Responsiveness**
 
 We will be utilizing a Grid System to display posts on our dashboard. A grid system helps create a series of containers, rows, and columns to layout and align content. This will allow our dashboard to be responsive to different screen widths. So whether a user on a mobile phone flips their screen, or if the website is used on different devices, the grid system will keep the posts well defined and resized accordingly. For this project, we intend to use Bootstrap, an open-source CSS framework that utilizes powerful mobile-first flexbox grid to build layouts of all shapes and sizes. We will leverage Bootstrap’s 12 column layout system to switch between the number of columns displayed based on the screen width. This grid system will ensure a bug free-scrolling/post-viewing experience for users with almost any device. 
-Uses flexbox to build the layout
-Uses Bootstrap’s 12 column layout system to switch a number of columns displayed based on the screen width (i.e a phone screen will display fewer items compared to a wider computer monitor)
-Test: This is a very easily verified by just adding some posts like 10 or 20 and see if all the grid display are working as we describe them.
+- Uses flexbox to build the layout
+- Uses Bootstrap’s 12 column layout system to switch a number of columns displayed based on the screen width (i.e a phone screen will display fewer items compared to a wider computer monitor)
+- Test: This is a very easily verified by just adding some posts like 10 or 20 and see if all the grid display are working as we describe them.
 
-Create Post
+**Create Post**
 
 Users are able to create posts to share any resources by clicking the “Add Post” button on the top right corner of the page from anywhere in the website (except the landing/login page).
-Test: test manually by seeing if the add post button is included.
+- Test: test manually by seeing if the add post button is included.
 
 When creating a post, a modal pops up and the user provides information for the post. The rendering of the module looks like the picture below. The “CREATE POST” appear in the center of the modal.
-Test: see if the modal appear manually.
+- Test: see if the modal appear manually.
 
 The modal will prompt the user to add their title, description, location, date (optional), time (optional), tags and picture (optional)
-Prompt user to add a title, a description, a location. These fields will require text input from the users. The information will be stored as a “string” in the database. These are required fields.
-Test: test to see if all the fields are present to be fill.
-One section with radio buttons that will make the user choose two options: definite and indefinite. Users will only pick one options.
-The definite will be picked at default and the user will need to enter the required fields of date and time (start and end) as text.
-If the user uses indefinite, they don’t have to enter date and time.
-All the text fields will be stored in Firebase as String.
-Test: the manual test to see if all information is entered when we click on either definite or indefinite.
-There will also be one image that is uploaded by the user. The picture will require a file selector to allow users to select an image from the end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
-Test: test to see if the default picture shows up by creating a post with no picture and see if the picture show.
+- Prompt user to add a title, a description, a location. These fields will require text input from the users. The information will be stored as a “string” in the database. These are required fields.
+	- Test: test to see if all the fields are present to be fill.
+- One section with radio buttons that will make the user choose two options: definite and indefinite. Users will only pick one options.
+	- The definite will be picked at default and the user will need to enter the required fields of date and time (start and end) as text.
+	- If the user uses indefinite, they don’t have to enter date and time.
+	- All the text fields will be stored in Firebase as String.
+	- Test: the manual test to see if all information is entered when we click on either definite or indefinite.
+- There will also be one image that is uploaded by the user. The picture will require a file selector to allow users to select an image from the end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
+	- Test: test to see if the default picture shows up by creating a post with no picture and see if the picture show.
 
  (Source: https://twitter.com/uw) (default picture)
 
-Also, the picture that upload need to behave the size 300pix x 300pix (this is an optional feature that can be changed based on the engineering choice and user feedback later).
-Test: test to see if the picture have size 300pix by 300pix. Passing bigger picture or smaller picture to test.
-The user may also add one optional tag (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as a tag in Firebase.
-Test: test if the tag work.
-Among all of these fields, title, description, and location are required to be entered. Date, time, a tag and a picture are optional to enter by the users.
-Test: test if the tag work or show up.
-If any required fields appear to be blank, an error message will be shown prompting the user to re-enter the missing fields.
-Test: test if the error message would show up if required fields are missing.
+- Also, the picture that upload need to behave the size 300pix x 300pix (this is an optional feature that can be changed based on the engineering choice and user feedback later).
+	- Test: test to see if the picture have size 300pix by 300pix. Passing bigger picture or smaller picture to test.
+- The user may also add one optional tag (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as a tag in Firebase.
+	- Test: test if the tag work.
+- Among all of these fields, title, description, and location are required to be entered. Date, time, a tag and a picture are optional to enter by the users.
+	- Test: test if the tag work or show up.
+- If any required fields appear to be blank, an error message will be shown prompting the user to re-enter the missing fields.
+	- Test: test if the error message would show up if required fields are missing.
 
 They’re also a submit button at the bottom of the modal. Clicking submits without any information in the required fields will prompt the user to fill in the missing fields.
 
 After successfully submitting:
-The modal will disappear and the original screen(dashboard) behind will be shown.
-The dashboard will be updated with the new post.
-The database in Firebase will also need to be updated with the new post
-The new post will be located on the top-left of the Middle Post Section.
-If the user is on the “Contact” or “About Us” page before clicking on the “Add +” button (creating the post):
-she/he will be transferred to the dashboard with definite selected if the new post is definite.
-she/he will be transferred to the dashboard with indefinite selected if the new post is indefinite.
-Test: to check if the whole post appear by adding post and verify if all the information is correct.
+- The modal will disappear and the original screen(dashboard) behind will be shown.
+- The dashboard will be updated with the new post.
+- The database in Firebase will also need to be updated with the new post
+- The new post will be located on the top-left of the Middle Post Section.
+- If the user is on the “Contact” or “About Us” page before clicking on the “Add +” button (creating the post):
+	- she/he will be transferred to the dashboard with definite selected if the new post is definite.
+	- she/he will be transferred to the dashboard with indefinite selected if the new post is indefinite.
+	- Test: to check if the whole post appear by adding post and verify if all the information is correct.
 
 If the user clicks “cancel” button (at the bottom-right of the modal next to the submit button) or the ‘X’ located on the top right of the modal:
-Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
-If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown.
-The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
-If a new post is added, the edited post will move one position to the right or down on the dashboard.
- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
-If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
-Test: manually test all the cancel function by checking if each of the above functionality work.
+- Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
+- If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown.
+- The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
+	- If a new post is added, the edited post will move one position to the right or down on the dashboard.
+	- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+- If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
+- Test: manually test all the cancel function by checking if each of the above functionality work.
 
 The database in Firebase will store all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
