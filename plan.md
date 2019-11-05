@@ -27,7 +27,6 @@
 2. **What tools will you use to communicate?**
 
 For each, articulate the alternatives and why that is the best choice.
-
 	* We will use Slack as our main tool of communication. Slack is convenient and easy to share code.
 	* We will communicate whenever someone is confused and needs help, verification (see below)  
 	* If a person in our group is MIA there will be a contingency: an overview a person being MIA(Missing in Action)
