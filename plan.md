@@ -82,36 +82,56 @@
 		
 	Below we went through all of our requirements to meet these questions.
 
-For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
-Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
+* For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
 
-Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
+	* Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
 
-Log-in/Landing Page
+	* Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
 
-Testing: Log-in is handled by Google. Because of this, we will have to manually test everything to see if it is working with how we intended it to be.
+**Log-in/Landing Page**
+	* Testing: Log-in is handled by Google. Because of this, we will have to manually test everything to see if it is working with how we intended it to be.
 
-Login Page will be the landing page
-Test: We will make this the first page that people will see. If someone is not logged in and enters the website, they will be redirected to the landing page. We will test this manually by entering the dashboard without being logged in. The test is passed if it successfully redirects us to the landing page.
-The login/landing page will be split into two halves, vertically down.
-On the left side of the page, the top middle will show a ‘login’ text and below it will have a google sign in button. The button will be aligned in the middle on the left side. The button will say “g+ Sign in with Google”. Below will give instructions on how to log in and also aligned with the google sign in button. “Please click the above link to sign in with your Google account”
-Test: we will manually test to see if the design is how we want it to look.
-On the middle/top right side will display text that says ‘about us’. Under that will display a brief amount of text that discusses who we are. Below that will display text that says ‘contact us’, providing our phone number and email
-Test: we will manually test to see if the contents are there as intended
-Log In Button will require integration of Google sign-in (and is handled by google themselves)
-Test: we will manually test to see if it correctly uses Google accounts as a log in
-If the user presses on the Google sign in button, a new window opens up showing which Google account you want to log in with
-Test: this will be manually tested by clicking on the sign in button to see if the window opens up
-User will click an account that is on the list and the window will close
-Test: we will manually test to see if a list of accounts shows up.
-Users will be logged in under their Google account.
-Test: we will not test this feature because the user-email is on Google database. We just assume that it works; the user log into our dashboard with a string return from the call.
-If intended email is not listed on the list of accounts, an option to add account button is located on the bottom 
-Test: we will manually test by going on ‘Incognito mode’ and adding account to the list of accounts
-If there are no errors during the login process, the user is signed in and directed to the dashboard.
-Test: we will manually test to see if we are directed to the dashboard after login
-If the user clicks on the sign out button, users will be directed back to the landing page. 
-test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
+* Login Page will be the landing page
+
+	* Test: We will make this the first page that people will see. If someone is not logged in and enters the website, they will be redirected to the landing page. We will test this manually by entering the dashboard without being logged in. The test is passed if it successfully redirects us to the landing page.
+	
+* The login/landing page will be split into two halves, vertically down.
+
+	* On the left side of the page, the top middle will show a ‘login’ text and below it will have a google sign in button. The button will be aligned in the middle on the left side. The button will say “g+ Sign in with Google”. Below will give instructions on how to log in and also aligned with the google sign in button. “Please click the above link to sign in with your Google account”
+	
+	* Test: we will manually test to see if the design is how we want it to look.
+	
+* On the middle/top right side will display text that says ‘about us’. Under that will display a brief amount of text that discusses who we are. Below that will display text that says ‘contact us’, providing our phone number and email
+
+	* Test: we will manually test to see if the contents are there as intended
+	
+* Log In Button will require integration of Google sign-in (and is handled by google themselves)
+
+	* Test: we will manually test to see if it correctly uses Google accounts as a log in
+	
+* If the user presses on the Google sign in button, a new window opens up showing which Google account you want to log in with
+
+	* Test: this will be manually tested by clicking on the sign in button to see if the window opens up
+	
+* User will click an account that is on the list and the window will close
+
+	* Test: we will manually test to see if a list of accounts shows up.
+	
+* Users will be logged in under their Google account.
+
+	* Test: we will not test this feature because the user-email is on Google database. We just assume that it works; the user log into our dashboard with a string return from the call.
+	
+* If intended email is not listed on the list of accounts, an option to add account button is located on the bottom 
+
+	* Test: we will manually test by going on ‘Incognito mode’ and adding account to the list of accounts
+	
+* If there are no errors during the login process, the user is signed in and directed to the dashboard.
+
+	* Test: we will manually test to see if we are directed to the dashboard after login
+	
+* If the user clicks on the sign out button, users will be directed back to the landing page. 
+
+	* test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
 
 
 **Upper/Top-Navigation**
