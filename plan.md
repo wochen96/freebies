@@ -26,40 +26,40 @@
 		3. If there are any complications that are hindering our work, meetings will be held via Slack audio meeting will be held somewhat immediately if our group cannot physically make it. These meetings will be held later in the evening because that is when a majority of our group is free during that time. 
 2. **What tools will you use to communicate?**
 
-For each, articulate the alternatives and why that is the best choice.
-	* We will use Slack as our main tool of communication. Slack is convenient and easy to share code.
-	* We will communicate whenever someone is confused and needs help, verification (see below)  
-	* If a person in our group is MIA there will be a contingency: an overview a person being MIA(Missing in Action)
-		- Project Manager will check-up on the tasks
-		- If the tasks are approaching the deadline and cannot reach the person after realizing they’re off the grid
-		- Notify the rest of the group and also inform the professor to organize a meeting to re-assign work
-		- Discuss the work they are currently working on and their future work
-		- A request of who should the work then be directed to 
-	* If a person in our group is SICK there will be a contingency: an overview a person being SICK
-		- Communication with the team via our communication channels from sick person
-		- PM to organize  a brief meeting of the work they’re working on
-		- Request who should the work then be directed to
-		- Request the person to stay in touch
-		- Request the sick person to transfer the knowledge on how to do the work they’re doing
-		- Inform Professors that person is sick and just not slacking
-	* If there are bugs that needs to be taken care of there will be a process:
-		a. A person with the bug will request assistance from the other team members
-		b. A person with the bug have choices to fix it:
-Person will handle the overall bug meaning that they’ll research and work on it provided the knowledge from other teammates
-Have multiple people work on it
-Ask for outside help via friends/professors/any other resources
-Who will own components in your architecture?
-Owning them means being responsible for writing them and making sure they are functional and correct.
-https://docs.google.com/spreadsheets/d/1MWctJIVicAaHCjoEO9CI-hn3R7SYuk683G629gahoIc/edit?usp=sharing
-For each component, list the one person who is in charge of getting it done.
-https://docs.google.com/spreadsheets/d/1MWctJIVicAaHCjoEO9CI-hn3R7SYuk683G629gahoIc/edit?usp=sharing
-What is your timeline?
-Include a list of milestones you'll reach and deadlines for each.
-Milestones will consist of the components that will need to be built to get the product in production with each component requiring a due date. 
-The timeline will be provided via a link - (INSERT LINK HERE). Each person will need to color in their tasks once they’re finished
-Will include Project Title, Who’s working on what, Date that needs to be finished
-Highlight things in green that are finished
-Highlight things in yellow that are in progress
-Highlight things in red that need to be assisted with
-This is where the PM looks at projects and determine if milestones are not met 
+	* For each, articulate the alternatives and why that is the best choice.
+		- We will use Slack as our main tool of communication. Slack is convenient and easy to share code.
+		- We will communicate whenever someone is confused and needs help, verification (see below)  
+		- If a person in our group is MIA there will be a contingency: an overview a person being MIA(Missing in Action)
+			- Project Manager will check-up on the tasks
+			- If the tasks are approaching the deadline and cannot reach the person after realizing they’re off the grid
+			- Notify the rest of the group and also inform the professor to organize a meeting to re-assign work
+			- Discuss the work they are currently working on and their future work
+			- A request of who should the work then be directed to 
+		- If a person in our group is SICK there will be a contingency: an overview a person being SICK
+			- Communication with the team via our communication channels from sick person
+			- PM to organize  a brief meeting of the work they’re working on
+			- Request who should the work then be directed to
+			- Request the person to stay in touch
+			- Request the sick person to transfer the knowledge on how to do the work they’re doing
+			- Inform Professors that person is sick and just not slacking
+		- If there are bugs that needs to be taken care of there will be a process:
+			a. A person with the bug will request assistance from the other team members
+			b. A person with the bug have choices to fix it:
+				- Person will handle the overall bug meaning that they’ll research and work on it provided the knowledge from other teammates
+				- Have multiple people work on it
+				- Ask for outside help via friends/professors/any other resources
+3. **Who will own components in your architecture?**
+	* Owning them means being responsible for writing them and making sure they are functional and correct.
+		- https://docs.google.com/spreadsheets/d/1MWctJIVicAaHCjoEO9CI-hn3R7SYuk683G629gahoIc/edit?usp=sharing
+	* For each component, list the one person who is in charge of getting it done.
+		- https://docs.google.com/spreadsheets/d/1MWctJIVicAaHCjoEO9CI-hn3R7SYuk683G629gahoIc/edit?usp=sharing
+4. **What is your timeline?**
+	* Include a list of milestones you'll reach and deadlines for each.
+		1. Milestones will consist of the components that will need to be built to get the product in production with each component requiring a due date. 
+		2. The timeline will be provided via a link - (INSERT LINK HERE). Each person will need to color in their tasks once they’re finished
+			- Will include Project Title, Who’s working on what, Date that needs to be finished
+			- Highlight things in green that are finished
+			- Highlight things in yellow that are in progress
+			- Highlight things in red that need to be assisted with
+		3. This is where the PM looks at projects and determine if milestones are not met 
 
