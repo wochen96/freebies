@@ -76,15 +76,14 @@
 			- For a particular function, does it return the correct output? and handle any errors or exceptions properly?
 			- For a function working with our database, is it correctly writing/reading from the database? And handling errors and exceptions accordingly?
 
-	* If you propose to conduct reviews or inspections, how will you analyze the code?
-	* If you write a proof, what property will you prove?
-	* If you conduct a review or inspection, what aspects of the code will you inspect to verify the requirement is met?
+		- If you propose to conduct reviews or inspections, how will you analyze the code?
+		- If you write a proof, what property will you prove?
+		- If you conduct a review or inspection, what aspects of the code will you inspect to verify the requirement is met?
 		
-		* Below we went through all of our requirements to meet these questions.
+	Below we went through all of our requirements to meet these questions.
 
-	* For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
-	
-		* Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
+For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
+Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
 
 Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
 
@@ -115,52 +114,97 @@ If the user clicks on the sign out button, users will be directed back to the la
 test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
 
 
-Upper/Top-Navigation
-Home Button
-The home button will be an icon of a home
-Test: when you open the website, we want to make sure the home icon button is displayed to the user - we can do a manual test to see if the home icon is correctly displayed on the screen
-If the user clicks on the icon, then the page will automatically refresh
-Test: when you click on the home button, the dashboard should refresh with content with a pop up message saying that everything is loaded
-If user clicks on home, refreshing the website/application will render new post by definitive posts 
-Test: clicking the home button should refresh the dashboard and direct the user to the definitive post - we can do a manual test by using two devices, one device creates a post and the other clicks the home button to see if the contents are updated
-Display email name:
-On the right side of the home, a button will have text that says ‘welcome, [insert email here]!
-Test: what the user used for their gmail for google authentication should display their gmail after the welcome - we can do a manual test by logging in and see if the welcome text is displayed 
-Email will be acquired from the google authentication and shows  who the user is logged in as
-Test: from the back-end, we will know if an account is made if there is an email within the database
-Test: if authentication is verified, then the user will be directed to the dashboard
-Sign Out Button
-The sign out button will be located right after the welcome message
-Test: We can manually test to see if the button is correctly displayed at the right location
-The button must display ‘Sign Out’
-Test: There will be a signout button after the welcome message
-Test: The sign out button will direct the user back to the landing/sign in page
-Test: If user clicks on sign-in and is authenticated, then this will be considered a pass
-If the user clicks on the sign out button, the user will be directed back to the landing/login page.
-Test: We will manually test by logging in and click the sign out button to see if we are directed back to the landing page
-Search Functionality:
-The search bar has to be located at the top of the website.
-Test: there will be a field input that the user can use to search for things
-Test: once the user clicks enter, or the search button, results should resemble that of the search
-On the right of the search bar, there should be a clickable search icon that submits the search query
-Test: there should be a magnifying/search icon inside on the right side of the field input for users to filter out results
-Test: if the results are returning string matches, then this will be considered a pass. For example, if a user types in pizza, then anything that has the word pizza in it will then be displayed. 
-The user has to input any characters in search.
-Test: we will make sure that this is a text field
-Test: If the user is able to type in any characters in this text field, then this can be verified as a pass
-We are sending keywords to our search algorithm that returns the relevant posts back to the user. The system has to be able to look at the keywords in titles, descriptions, tags, and locations from every posts in the database.
-Test: we will make sure this works by querying words from each category(title, description, date, time,etc). If the query search by string returns the correct results(by string match), then it will constitute as a pass. 
-Clicking the search bar allows for plain text from the user that will filter out results to be shown on the dashboard
-Test: if the results are displayed from the search result onto the dashboard based on the query string search by most familiar, then this would be a pass. 
-If the user presses enter, this will trigger a filtering function that will filter based on the search query.
-Test: once the user clicks enter after inputting text into the textfield, then the user should new results showing to that of the search text. 
-Test: If there are no unique results, then a message on the dashboard should say no results found for “inset user text input here”
-By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
-Test: See above
-If the input is valid, the system shows the queried results in order from newest to latest (left to right and descending)
-Results should be a string match, but the results displayed should be arranged where the tiles are in left to right, displaying by when the post was posted. 
-The user enters certain keywords term like “cookies”. The search function will query all of the JSON text to find words that match that of ‘cookies’. This means that it looks for ‘cookie’ in the title, location, date, time, description, and tags.
-Test: the test for this requirement is hard to do because we can not be sure the search function would return all the correct post for the query. But, we will try a manual test where we will basically create 20 posts in the database and with two posts that have the word cookies in title and description. Then, if the search function return those two posts, then test passes.
+**Upper/Top-Navigation**
+
+*Home Button*
+	
+		a. The home button will be an icon of a home
+		
+			Test: when you open the website, we want to make sure the home icon button is displayed to the user - we can do a manual test to see if the home icon is correctly displayed on the screen
+		
+		b.  If the user clicks on the icon, then the page will automatically refresh
+		
+			Test: when you click on the home button, the dashboard should refresh with content with a pop up message saying that everything is loaded
+			
+		c. If user clicks on home, refreshing the website/application will render new post by definitive posts 
+		
+		Test: clicking the home button should refresh the dashboard and direct the user to the definitive post - we can do a manual test by using two devices, one device creates a post and the other clicks the home button to see if the contents are updated
+		
+*Display email name:*
+	
+		a. On the right side of the home, a button will have text that says ‘welcome, [insert email here]!
+			Test: what the user used for their gmail for google authentication should display their gmail after the welcome - we can do a manual test by logging in and see if the welcome text is displayed 
+		
+		b. Email will be acquired from the google authentication and shows  who the user is logged in as
+	
+			Test: from the back-end, we will know if an account is made if there is an email within the database
+		
+			Test: if authentication is verified, then the user will be directed to the dashboard
+		
+*Sign Out Button*
+	
+		a. The sign out button will be located right after the welcome message
+		
+			Test: We can manually test to see if the button is correctly displayed at the right location
+			
+		b. The button must display ‘Sign Out’
+		
+			Test: There will be a signout button after the welcome message
+			
+			Test: The sign out button will direct the user back to the landing/sign in page
+			
+			Test: If user clicks on sign-in and is authenticated, then this will be considered a pass
+			
+		c. If the user clicks on the sign out button, the user will be directed back to the landing/login page.
+		
+			Test: We will manually test by logging in and click the sign out button to see if we are directed back to the landing page
+			
+*Search Functionality:*
+	
+		a. The search bar has to be located at the top of the website.
+		
+			Test: there will be a field input that the user can use to search for things
+			
+			Test: once the user clicks enter, or the search button, results should resemble that of the search
+			
+		b. On the right of the search bar, there should be a clickable search icon that submits the search query
+		
+			Test: there should be a magnifying/search icon inside on the right side of the field input for users to filter out results
+			
+			Test: if the results are returning string matches, then this will be considered a pass. For example, if a user types in pizza, then anything that has the word pizza in it will then be displayed. 
+			
+		c. The user has to input any characters in search.
+		
+			Test: we will make sure that this is a text field
+			
+			Test: If the user is able to type in any characters in this text field, then this can be verified as a pass
+			
+		d. We are sending keywords to our search algorithm that returns the relevant posts back to the user. The system has to be able to look at the keywords in titles, descriptions, tags, and locations from every posts in the database.
+		
+			Test: we will make sure this works by querying words from each category(title, description, date, time,etc). If the query search by string returns the correct results(by string match), then it will constitute as a pass. 
+			
+		e. Clicking the search bar allows for plain text from the user that will filter out results to be shown on the dashboard
+		
+			Test: if the results are displayed from the search result onto the dashboard based on the query string search by most familiar, then this would be a pass. 
+			
+		f. If the user presses enter, this will trigger a filtering function that will filter based on the search query.
+
+			Test: once the user clicks enter after inputting text into the textfield, then the user should new results showing to that of the search text. 
+			
+			Test: If there are no unique results, then a message on the dashboard should say no results found for “inset user text input here”
+			
+		g. By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
+		
+			Test: See above
+			
+		h. If the input is valid, the system shows the queried results in order from newest to latest (left to right and descending)
+		
+		i. Results should be a string match, but the results displayed should be arranged where the tiles are in left to right, displaying by when the post was posted. 
+		
+		j. The user enters certain keywords term like “cookies”. The search function will query all of the JSON text to find words that match that of ‘cookies’. This means that it looks for ‘cookie’ in the title, location, date, time, description, and tags.
+		
+			Test: the test for this requirement is hard to do because we can not be sure the search function would return all the correct post for the query. But, we will try a manual test where we will basically create 20 posts in the database and with two posts that have the word cookies in title and description. Then, if the search function return those two posts, then test passes.
+			
 Radio Buttons (Definite/Indefinite):
 There will be two radio buttons located after the search bar, lined up horizontally
 Test: there will be two buttons located after the search bar when once the user is authenticated from the gmail login landing page
