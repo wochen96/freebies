@@ -280,6 +280,89 @@ Test: We write a test where that the dashboard should display a certain amount o
 Posts are organized from left to right, descending from newest to latest
 Test: We will write a simple test where we will make sure that the tile to the left should be a newer than compared to that of the right. If this test breaks, then the test will fail. 
 
+Interacting with Post:
+Users can interact with a post by clicking on a post on their dashboard. Once they click on a post, a modal box appears describing relevant information (description, start/end time etc) about that post.
+Manual Test: We will write a test where we can check to set if the modal that pops up for the post view is the correct data being displayed
+There are primarily two ways a user can interact with a post. 
+The first is an option to upvote or downvote a post. This is enabled by the presence of two arrow buttons (Up arrow icon for an upvote, down arrow icon for downvote). We do this to help maintain quality of posts, allow filtering search results by vote count in our dashboard, and create trends by interesting/disinteresting posts by measuring vote activity.
+The user can only vote an individual post once
+Manual Test: We can manually test to see if the upvote/downvote works and its properties are working if we create a boolean function to see if the user either already clicked the upvote/downvote. If they did, then the boolean will switch to false, and the user cannot vote again. If this renders true and the user cannot vote, this will classify itself as a pass. 
+The user can only either upvote or downvote an individual post
+Manual Test: We can test this by writing an algorithm to see if the post that is not theirs, and thus have the permission to vote. 
+Any post that belongs to the user will not be able to vote on their own post. 
+Users can change their vote by clicking the opposite arrow
+Manual Test: A test can be made where that if the user clicks an upvote, then the upvote onclick will be disabled. If this hinders the user from clicking the upvote again, this will classify as a pass. 
+When the user upvotes or downvotes, the total displayed votes will change (i.e. the total votes increase when you upvote and decrease when you downvote). This will be located on the bottom right of each tile. If the post does not have any upvote downvote, then there will be nothing to display but the arrows itself. 
+Manual Test: We can physically see if clicked on either upvote/downvote, the integer will change corresponding with the button pressed. If the integer is -1 or +1 of the original integer, then this will classify as a pass. 
+Upvote/downvote can be positive or negative integers. It will be the sum of total votes combined
+Manual Test: We can test this by having adding the cumulative of upvotes/downvotes and if the sum is correct, the test will pass. 
+The second option is to exit out of the modal. A user can do this by clicking on the ‘X’ button on the modal, and then replying to the ‘Are you sure’ prompt. This will allow users to exit out of an individual post, and prevent accidental exits. 
+Manual Test: If the user is redirected to the dashboard, this will be considered a pass
+If the user is the creator of the post, they can edit or delete the post (check edit/delete post section)
+Manual Test: the test involves checking if the user-email in the json object match the username stores in top-left corner.
+
+Grid Display/Responsiveness
+
+We will be utilizing a Grid System to display posts on our dashboard. A grid system helps create a series of containers, rows, and columns to layout and align content. This will allow our dashboard to be responsive to different screen widths. So whether a user on a mobile phone flips their screen, or if the website is used on different devices, the grid system will keep the posts well defined and resized accordingly. For this project, we intend to use Bootstrap, an open-source CSS framework that utilizes powerful mobile-first flexbox grid to build layouts of all shapes and sizes. We will leverage Bootstrap’s 12 column layout system to switch between the number of columns displayed based on the screen width. This grid system will ensure a bug free-scrolling/post-viewing experience for users with almost any device. 
+Uses flexbox to build the layout
+Uses Bootstrap’s 12 column layout system to switch a number of columns displayed based on the screen width (i.e a phone screen will display fewer items compared to a wider computer monitor)
+Test: This is a very easily verified by just adding some posts like 10 or 20 and see if all the grid display are working as we describe them.
+
+Create Post
+
+Users are able to create posts to share any resources by clicking the “Add Post” button on the top right corner of the page from anywhere in the website (except the landing/login page).
+Test: test manually by seeing if the add post button is included.
+
+When creating a post, a modal pops up and the user provides information for the post. The rendering of the module looks like the picture below. The “CREATE POST” appear in the center of the modal.
+Test: see if the modal appear manually.
+
+The modal will prompt the user to add their title, description, location, date (optional), time (optional), tags and picture (optional)
+Prompt user to add a title, a description, a location. These fields will require text input from the users. The information will be stored as a “string” in the database. These are required fields.
+Test: test to see if all the fields are present to be fill.
+One section with radio buttons that will make the user choose two options: definite and indefinite. Users will only pick one options.
+The definite will be picked at default and the user will need to enter the required fields of date and time (start and end) as text.
+If the user uses indefinite, they don’t have to enter date and time.
+All the text fields will be stored in Firebase as String.
+Test: the manual test to see if all information is entered when we click on either definite or indefinite.
+There will also be one image that is uploaded by the user. The picture will require a file selector to allow users to select an image from the end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
+Test: test to see if the default picture shows up by creating a post with no picture and see if the picture show.
+
+ (Source: https://twitter.com/uw) (default picture)
+
+Also, the picture that upload need to behave the size 300pix x 300pix (this is an optional feature that can be changed based on the engineering choice and user feedback later).
+Test: test to see if the picture have size 300pix by 300pix. Passing bigger picture or smaller picture to test.
+The user may also add one optional tag (such as “food”, “free”, “drinks”) to their posts. Adding tag will help organize search results based on tag categories. The tag will be stored as a tag in Firebase.
+Test: test if the tag work.
+Among all of these fields, title, description, and location are required to be entered. Date, time, a tag and a picture are optional to enter by the users.
+Test: test if the tag work or show up.
+If any required fields appear to be blank, an error message will be shown prompting the user to re-enter the missing fields.
+Test: test if the error message would show up if required fields are missing.
+
+They’re also a submit button at the bottom of the modal. Clicking submits without any information in the required fields will prompt the user to fill in the missing fields.
+
+After successfully submitting:
+The modal will disappear and the original screen(dashboard) behind will be shown.
+The dashboard will be updated with the new post.
+The database in Firebase will also need to be updated with the new post
+The new post will be located on the top-left of the Middle Post Section.
+If the user is on the “Contact” or “About Us” page before clicking on the “Add +” button (creating the post):
+she/he will be transferred to the dashboard with definite selected if the new post is definite.
+she/he will be transferred to the dashboard with indefinite selected if the new post is indefinite.
+Test: to check if the whole post appear by adding post and verify if all the information is correct.
+
+If the user clicks “cancel” button (at the bottom-right of the modal next to the submit button) or the ‘X’ located on the top right of the modal:
+Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
+If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown.
+The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
+If a new post is added, the edited post will move one position to the right or down on the dashboard.
+ If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again.
+Test: manually test all the cancel function by checking if each of the above functionality work.
+
+The database in Firebase will store all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
+
+
+
 
 
 **Editing Post**
@@ -407,8 +490,11 @@ The database in Firebase will store all the fields as String and images in png o
 	- Test: automatic test. One unit test to check for information if the json object would start with the keyword as the user-email. If it is, then the test passes.
 - The users branch would include information about each user that has signed up for our service. The posts branch would include data points related to each individual post. (see below for details)
 	- Test: automatic test. Ten unit tests to check for each of the information entered in the post would match. We will use “assert” to check for each fields. For example, if we enter Title=”free cookies”, then in our unit test when we call assert, it should return true if the json object hold string value “free cookies” in the title.
+	
 **User**
+
 Data points obtained from Google Sign-in Authorization web client
+
 **Post**
 - Title
 - isDefinite
