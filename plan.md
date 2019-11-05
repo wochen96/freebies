@@ -76,14 +76,15 @@
 			- For a particular function, does it return the correct output? and handle any errors or exceptions properly?
 			- For a function working with our database, is it correctly writing/reading from the database? And handling errors and exceptions accordingly?
 
-		- If you propose to conduct reviews or inspections, how will you analyze the code?
-		- If you write a proof, what property will you prove?
-		- If you conduct a review or inspection, what aspects of the code will you inspect to verify the requirement is met?
+	* If you propose to conduct reviews or inspections, how will you analyze the code?
+	* If you write a proof, what property will you prove?
+	* If you conduct a review or inspection, what aspects of the code will you inspect to verify the requirement is met?
 		
-	Below we went through all of our requirements to meet these questions.
+		* Below we went through all of our requirements to meet these questions.
 
-For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
-Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
+	* For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
+	
+		* Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
 
 Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
 
