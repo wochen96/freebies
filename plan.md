@@ -82,100 +82,178 @@
 		
 	Below we went through all of our requirements to meet these questions.
 
-For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
-Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
+* For all of the requirements, how will your verifications be integrated into your process? Will you run automated tests after every build? Before every commit? When will you conduct inspections and who will be involved?
 
-Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
+	* Before we commit, we will run our tests to make sure they pass. We will check if all the automated tests are passed and that manual tests are passed as intended. In order to test all our requirements, we will do an inspection of reading all the codes and make sure each part play a role in our big program picture. We plan to conduct inspections in a way as noted above. We will conduct these inspections after a component is pushed, involving the team to see if the requirements are met. At the same time, we will do a user testing of 10 users who can come from our class, Info 442. We will collect all the feedback and revise the program as we conduct more user testing.
 
-Log-in/Landing Page
+	* Generally, most of the tests will be done manually. After coding in UI elements, we will look if they are correctly displayed on the website. However, in some cases we will make automatic tests, unit tests, to check if the functionalities are working correctly. Whoever writes code, they must check if it is functioning as intended and has to meet our requirements.
 
-Testing: Log-in is handled by Google. Because of this, we will have to manually test everything to see if it is working with how we intended it to be.
+**Log-in/Landing Page**
+	* Testing: Log-in is handled by Google. Because of this, we will have to manually test everything to see if it is working with how we intended it to be.
 
-Login Page will be the landing page
-Test: We will make this the first page that people will see. If someone is not logged in and enters the website, they will be redirected to the landing page. We will test this manually by entering the dashboard without being logged in. The test is passed if it successfully redirects us to the landing page.
-The login/landing page will be split into two halves, vertically down.
-On the left side of the page, the top middle will show a ‘login’ text and below it will have a google sign in button. The button will be aligned in the middle on the left side. The button will say “g+ Sign in with Google”. Below will give instructions on how to log in and also aligned with the google sign in button. “Please click the above link to sign in with your Google account”
-Test: we will manually test to see if the design is how we want it to look.
-On the middle/top right side will display text that says ‘about us’. Under that will display a brief amount of text that discusses who we are. Below that will display text that says ‘contact us’, providing our phone number and email
-Test: we will manually test to see if the contents are there as intended
-Log In Button will require integration of Google sign-in (and is handled by google themselves)
-Test: we will manually test to see if it correctly uses Google accounts as a log in
-If the user presses on the Google sign in button, a new window opens up showing which Google account you want to log in with
-Test: this will be manually tested by clicking on the sign in button to see if the window opens up
-User will click an account that is on the list and the window will close
-Test: we will manually test to see if a list of accounts shows up.
-Users will be logged in under their Google account.
-Test: we will not test this feature because the user-email is on Google database. We just assume that it works; the user log into our dashboard with a string return from the call.
-If intended email is not listed on the list of accounts, an option to add account button is located on the bottom 
-Test: we will manually test by going on ‘Incognito mode’ and adding account to the list of accounts
-If there are no errors during the login process, the user is signed in and directed to the dashboard.
-Test: we will manually test to see if we are directed to the dashboard after login
-If the user clicks on the sign out button, users will be directed back to the landing page. 
-test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
+* Login Page will be the landing page
+
+	* Test: We will make this the first page that people will see. If someone is not logged in and enters the website, they will be redirected to the landing page. We will test this manually by entering the dashboard without being logged in. The test is passed if it successfully redirects us to the landing page.
+	
+* The login/landing page will be split into two halves, vertically down.
+
+	* On the left side of the page, the top middle will show a ‘login’ text and below it will have a google sign in button. The button will be aligned in the middle on the left side. The button will say “g+ Sign in with Google”. Below will give instructions on how to log in and also aligned with the google sign in button. “Please click the above link to sign in with your Google account”
+	
+	* Test: we will manually test to see if the design is how we want it to look.
+	
+* On the middle/top right side will display text that says ‘about us’. Under that will display a brief amount of text that discusses who we are. Below that will display text that says ‘contact us’, providing our phone number and email
+
+	* Test: we will manually test to see if the contents are there as intended
+	
+* Log In Button will require integration of Google sign-in (and is handled by google themselves)
+
+	* Test: we will manually test to see if it correctly uses Google accounts as a log in
+	
+* If the user presses on the Google sign in button, a new window opens up showing which Google account you want to log in with
+
+	* Test: this will be manually tested by clicking on the sign in button to see if the window opens up
+	
+* User will click an account that is on the list and the window will close
+
+	* Test: we will manually test to see if a list of accounts shows up.
+	
+* Users will be logged in under their Google account.
+
+	* Test: we will not test this feature because the user-email is on Google database. We just assume that it works; the user log into our dashboard with a string return from the call.
+	
+* If intended email is not listed on the list of accounts, an option to add account button is located on the bottom 
+
+	* Test: we will manually test by going on ‘Incognito mode’ and adding account to the list of accounts
+	
+* If there are no errors during the login process, the user is signed in and directed to the dashboard.
+
+	* Test: we will manually test to see if we are directed to the dashboard after login
+	
+* If the user clicks on the sign out button, users will be directed back to the landing page. 
+
+	* test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
 
 
-Upper/Top-Navigation
-Home Button
-The home button will be an icon of a home
-Test: when you open the website, we want to make sure the home icon button is displayed to the user - we can do a manual test to see if the home icon is correctly displayed on the screen
-If the user clicks on the icon, then the page will automatically refresh
-Test: when you click on the home button, the dashboard should refresh with content with a pop up message saying that everything is loaded
-If user clicks on home, refreshing the website/application will render new post by definitive posts 
-Test: clicking the home button should refresh the dashboard and direct the user to the definitive post - we can do a manual test by using two devices, one device creates a post and the other clicks the home button to see if the contents are updated
-Display email name:
-On the right side of the home, a button will have text that says ‘welcome, [insert email here]!
-Test: what the user used for their gmail for google authentication should display their gmail after the welcome - we can do a manual test by logging in and see if the welcome text is displayed 
-Email will be acquired from the google authentication and shows  who the user is logged in as
-Test: from the back-end, we will know if an account is made if there is an email within the database
-Test: if authentication is verified, then the user will be directed to the dashboard
-Sign Out Button
-The sign out button will be located right after the welcome message
-Test: We can manually test to see if the button is correctly displayed at the right location
-The button must display ‘Sign Out’
-Test: There will be a signout button after the welcome message
-Test: The sign out button will direct the user back to the landing/sign in page
-Test: If user clicks on sign-in and is authenticated, then this will be considered a pass
-If the user clicks on the sign out button, the user will be directed back to the landing/login page.
-Test: We will manually test by logging in and click the sign out button to see if we are directed back to the landing page
-Search Functionality:
-The search bar has to be located at the top of the website.
-Test: there will be a field input that the user can use to search for things
-Test: once the user clicks enter, or the search button, results should resemble that of the search
-On the right of the search bar, there should be a clickable search icon that submits the search query
-Test: there should be a magnifying/search icon inside on the right side of the field input for users to filter out results
-Test: if the results are returning string matches, then this will be considered a pass. For example, if a user types in pizza, then anything that has the word pizza in it will then be displayed. 
-The user has to input any characters in search.
-Test: we will make sure that this is a text field
-Test: If the user is able to type in any characters in this text field, then this can be verified as a pass
-We are sending keywords to our search algorithm that returns the relevant posts back to the user. The system has to be able to look at the keywords in titles, descriptions, tags, and locations from every posts in the database.
-Test: we will make sure this works by querying words from each category(title, description, date, time,etc). If the query search by string returns the correct results(by string match), then it will constitute as a pass. 
-Clicking the search bar allows for plain text from the user that will filter out results to be shown on the dashboard
-Test: if the results are displayed from the search result onto the dashboard based on the query string search by most familiar, then this would be a pass. 
-If the user presses enter, this will trigger a filtering function that will filter based on the search query.
-Test: once the user clicks enter after inputting text into the textfield, then the user should new results showing to that of the search text. 
-Test: If there are no unique results, then a message on the dashboard should say no results found for “inset user text input here”
-By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
-Test: See above
-If the input is valid, the system shows the queried results in order from newest to latest (left to right and descending)
-Results should be a string match, but the results displayed should be arranged where the tiles are in left to right, displaying by when the post was posted. 
-The user enters certain keywords term like “cookies”. The search function will query all of the JSON text to find words that match that of ‘cookies’. This means that it looks for ‘cookie’ in the title, location, date, time, description, and tags.
-Test: the test for this requirement is hard to do because we can not be sure the search function would return all the correct post for the query. But, we will try a manual test where we will basically create 20 posts in the database and with two posts that have the word cookies in title and description. Then, if the search function return those two posts, then test passes.
-Radio Buttons (Definite/Indefinite):
-There will be two radio buttons located after the search bar, lined up horizontally
-Test: there will be two buttons located after the search bar when once the user is authenticated from the gmail login landing page
-The first button will be definite and the second will be the indefinite
-Test: Once the user is authenticated from the landing page and transitions into the dashboard, the dashboard will display two radio buttons with the left button indicating that is a definitive and the right button indicating it is non-definitive. 
-Test: if the user clicks on each, the results should be displayed with the appropriate button.
+**Upper/Top-Navigation**
+
+*Home Button*
+	
+* The home button will be an icon of a home
+		
+	* Test: when you open the website, we want to make sure the home icon button is displayed to the user - we can do a manual test to see if the home icon is correctly displayed on the screen
+		
+* If the user clicks on the icon, then the page will automatically refresh
+		
+	* Test: when you click on the home button, the dashboard should refresh with content with a pop up message saying that everything is loaded
+			
+* If user clicks on home, refreshing the website/application will render new post by definitive posts 
+		
+	* Test: clicking the home button should refresh the dashboard and direct the user to the definitive post - we can do a manual test by using two devices, one device creates a post and the other clicks the home button to see if the contents are updated
+		
+*Display email name:*
+	
+* On the right side of the home, a button will have text that says ‘welcome, [insert email here]!
+
+	* Test: what the user used for their gmail for google authentication should display their gmail after the welcome - we can do a manual test by logging in and see if the welcome text is displayed 
+		
+* Email will be acquired from the google authentication and shows  who the user is logged in as
+	
+	* Test: from the back-end, we will know if an account is made if there is an email within the database
+		
+	* Test: if authentication is verified, then the user will be directed to the dashboard
+		
+*Sign Out Button*
+	
+* The sign out button will be located right after the welcome message
+		
+	* Test: We can manually test to see if the button is correctly displayed at the right location
+			
+* The button must display ‘Sign Out’
+		
+	* Test: There will be a signout button after the welcome message
+			
+	* Test: The sign out button will direct the user back to the landing/sign in page
+			
+	* Test: If user clicks on sign-in and is authenticated, then this will be considered a pass
+			
+* If the user clicks on the sign out button, the user will be directed back to the landing/login page.
+		
+	* Test: We will manually test by logging in and click the sign out button to see if we are directed back to the landing page
+			
+*Search Functionality:*
+	
+* The search bar has to be located at the top of the website.
+		
+	* Test: there will be a field input that the user can use to search for things
+			
+	* Test: once the user clicks enter, or the search button, results should resemble that of the search
+			
+* On the right of the search bar, there should be a clickable search icon that submits the search query
+		
+	* Test: there should be a magnifying/search icon inside on the right side of the field input for users to filter out results
+			
+	* Test: if the results are returning string matches, then this will be considered a pass. For example, if a user types in pizza, then anything that has the word pizza in it will then be displayed. 
+			
+* The user has to input any characters in search.
+		
+	* Test: we will make sure that this is a text field
+			
+	* Test: If the user is able to type in any characters in this text field, then this can be verified as a pass
+			
+* We are sending keywords to our search algorithm that returns the relevant posts back to the user. The system has to be able to look at the keywords in titles, descriptions, tags, and locations from every posts in the database.
+		
+	* Test: we will make sure this works by querying words from each category(title, description, date, time,etc). If the query search by string returns the correct results(by string match), then it will constitute as a pass. 
+			
+* Clicking the search bar allows for plain text from the user that will filter out results to be shown on the dashboard
+		
+	* Test: if the results are displayed from the search result onto the dashboard based on the query string search by most familiar, then this would be a pass. 
+			
+* If the user presses enter, this will trigger a filtering function that will filter based on the search query.
+
+	* Test: once the user clicks enter after inputting text into the textfield, then the user should new results showing to that of the search text. 
+			
+	* Test: If there are no unique results, then a message on the dashboard should say no results found for “inset user text input here”
+			
+* By pressing enter or clicking the search icon and if the input is invalid, the system has to display to the user an empty dashboard and that there were no search results found.
+		
+	* Test: See above
+			
+* If the input is valid, the system shows the queried results in order from newest to latest (left to right and descending)
+		
+* Results should be a string match, but the results displayed should be arranged where the tiles are in left to right, displaying by when the post was posted. 
+		
+* The user enters certain keywords term like “cookies”. The search function will query all of the JSON text to find words that match that of ‘cookies’. This means that it looks for ‘cookie’ in the title, location, date, time, description, and tags.
+		
+	* Test: the test for this requirement is hard to do because we can not be sure the search function would return all the correct post for the query. But, we will try a manual test where we will basically create 20 posts in the database and with two posts that have the word cookies in title and description. Then, if the search function return those two posts, then test passes.
+			
+**Radio Buttons (Definite/Indefinite):**
+
+* There will be two radio buttons located after the search bar, lined up horizontally
+
+	* Test: there will be two buttons located after the search bar when once the user is authenticated from the gmail login landing page
+	
+* The first button will be definite and the second will be the indefinite
+
+	* Test: Once the user is authenticated from the landing page and transitions into the dashboard, the dashboard will display two radio buttons with the left button indicating that is a definitive and the right button indicating it is non-definitive. 
+	
+	* Test: if the user clicks on each, the results should be displayed with the appropriate button.
 The definite button will be automatically filled as the default
-Test: Once the user is logged in from the landing page, then the initial results that are seen will be that of the definitive post.
-Test: We will check if it is definitive by looking to see if the results displayed matches with the definitive tag in our database
-When the user clicks on one of the buttons, the button will fill, and will follow the grid display (check grid display). The dashboard will display the respective type (definite/indefinite) that is selected
-Test: Clicking on a non-filled radio button will automatically refresh the page with the corresponding button.
-Test: We can check if it is the correct respective type by looking at the back-end to see if the post matches with either definite or indefinite. 
-Only one button can be selected. When the definite button is on, the indefinite button is off. When the indefinite button is on, the definite button is off. 
-Test: The user cannot click on both definitive and indefinite buttons at once. Only one should be filled in and the other is not. We will create a test where if the user clicks on both and is filled, then the test will fail. 
-Test: We will write a test where that if the user clicks on definite and the results are non-definite, then the test will fail
-Test: We will write a test where that if the button being clicked is filtering out the respective type, then the test will pass. 
+	* Test: Once the user is logged in from the landing page, then the initial results that are seen will be that of the definitive post.
+	* Test: We will check if it is definitive by looking to see if the results displayed matches with the definitive tag in our database
+	
+* When the user clicks on one of the buttons, the button will fill, and will follow the grid display (check grid display). The dashboard will display the respective type (definite/indefinite) that is selected
+
+	* Test: Clicking on a non-filled radio button will automatically refresh the page with the corresponding button.
+	
+	* Test: We can check if it is the correct respective type by looking at the back-end to see if the post matches with either definite or indefinite. 
+	
+* Only one button can be selected. When the definite button is on, the indefinite button is off. When the indefinite button is on, the definite button is off. 
+
+	* Test: The user cannot click on both definitive and indefinite buttons at once. Only one should be filled in and the other is not. We will create a test where if the user clicks on both and is filled, then the test will fail. 
+	
+	* Test: We will write a test where that if the user clicks on definite and the results are non-definite, then the test will fail
+	
+	* Test: We will write a test where that if the button being clicked is filtering out the respective type, then the test will pass. 
 
 **Creating Post Button**
 - On the top right side of the website, will be a right-aligned add button. This button will say Add with a ‘+’ icon next to it
