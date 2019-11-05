@@ -256,50 +256,91 @@ The definite button will be automatically filled as the default
 	* Test: We will write a test where that if the button being clicked is filtering out the respective type, then the test will pass. 
 
 **Creating Post Button**
-- On the top right side of the website, will be a right-aligned add button. This button will say Add with a ‘+’ icon next to it
-	- Test: We will write a test where if the user clicks on the “add +“ icon, the user should be directed with a popup modal requesting user for information. 
-- If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form.
-	- Test: We will create a test where if the popup modal is the correct modal, then the test will pass
-	- Test: The pop-up modal should include everything that we need from the user to create a post
-Creating Post will have a detailed explanation below
-Post Section:
-Each post will be a tile in a grid format(check grid display)
-Test: We will create a test in the create a post section indicating that if all the requirements are met from requesting the users information, then the test will pass. 
-Test: If the user does not fill in all of the text input, then the test will fail. 
-Test: The tile should be displayed on the dashboard once the user clicks submit in the create a post modal. 
-Each tile will have inside it: 
-Top right-hand corner vertically aligned with title, location, date
-Test: We will confirm this by writing css code for aesthetics and looking at it physically to make sure the tile is consistent to our descriptions. 
-The tile should will be filled with a picture
-Test: We will confirm this by writing CSS code for aesthetics and looking at it physically to make sure the picture is filled up within the tile
-The size of each tile will scale up depending on the browser size (Having it response - check responsiveness)
-Test: We will write css code for browser size and accessing the website on different devices to make sure the website scales appropriately.
-Test: If the aesthetics does not match our intended satisfaction(from our requirements above), then it will be considered a fail.
-Scrolling down on the page will display more post into the grid along with the original dimensions of each tile. 
-Test: We write a test where that the dashboard should display a certain amount of tiles and if the user scrolls down, then more post should be displayed
-Posts are organized from left to right, descending from newest to latest
-Test: We will write a simple test where we will make sure that the tile to the left should be a newer than compared to that of the right. If this test breaks, then the test will fail. 
 
-Interacting with Post:
-Users can interact with a post by clicking on a post on their dashboard. Once they click on a post, a modal box appears describing relevant information (description, start/end time etc) about that post.
-Manual Test: We will write a test where we can check to set if the modal that pops up for the post view is the correct data being displayed
-There are primarily two ways a user can interact with a post. 
-The first is an option to upvote or downvote a post. This is enabled by the presence of two arrow buttons (Up arrow icon for an upvote, down arrow icon for downvote). We do this to help maintain quality of posts, allow filtering search results by vote count in our dashboard, and create trends by interesting/disinteresting posts by measuring vote activity.
-The user can only vote an individual post once
-Manual Test: We can manually test to see if the upvote/downvote works and its properties are working if we create a boolean function to see if the user either already clicked the upvote/downvote. If they did, then the boolean will switch to false, and the user cannot vote again. If this renders true and the user cannot vote, this will classify itself as a pass. 
-The user can only either upvote or downvote an individual post
-Manual Test: We can test this by writing an algorithm to see if the post that is not theirs, and thus have the permission to vote. 
-Any post that belongs to the user will not be able to vote on their own post. 
-Users can change their vote by clicking the opposite arrow
-Manual Test: A test can be made where that if the user clicks an upvote, then the upvote onclick will be disabled. If this hinders the user from clicking the upvote again, this will classify as a pass. 
-When the user upvotes or downvotes, the total displayed votes will change (i.e. the total votes increase when you upvote and decrease when you downvote). This will be located on the bottom right of each tile. If the post does not have any upvote downvote, then there will be nothing to display but the arrows itself. 
-Manual Test: We can physically see if clicked on either upvote/downvote, the integer will change corresponding with the button pressed. If the integer is -1 or +1 of the original integer, then this will classify as a pass. 
-Upvote/downvote can be positive or negative integers. It will be the sum of total votes combined
-Manual Test: We can test this by having adding the cumulative of upvotes/downvotes and if the sum is correct, the test will pass. 
-The second option is to exit out of the modal. A user can do this by clicking on the ‘X’ button on the modal, and then replying to the ‘Are you sure’ prompt. This will allow users to exit out of an individual post, and prevent accidental exits. 
-Manual Test: If the user is redirected to the dashboard, this will be considered a pass
-If the user is the creator of the post, they can edit or delete the post (check edit/delete post section)
-Manual Test: the test involves checking if the user-email in the json object match the username stores in top-left corner.
+* On the top right side of the website, will be a right-aligned add button. This button will say Add with a ‘+’ icon next to it
+	* Test: We will write a test where if the user clicks on the “add +“ icon, the user should be directed with a popup modal requesting user for information. 
+	
+* If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form.
+
+	* Test: We will create a test where if the popup modal is the correct modal, then the test will pass
+	
+	* Test: The pop-up modal should include everything that we need from the user to create a post
+	
+* Creating Post will have a detailed explanation below
+
+* Post Section:
+
+* Each post will be a tile in a grid format(check grid display)
+
+	* Test: We will create a test in the create a post section indicating that if all the requirements are met from requesting the users information, then the test will pass. 
+	
+	* Test: If the user does not fill in all of the text input, then the test will fail. 
+	
+	* Test: The tile should be displayed on the dashboard once the user clicks submit in the create a post modal. 
+	
+* Each tile will have inside it: 
+
+* Top right-hand corner vertically aligned with title, location, date
+
+	* Test: We will confirm this by writing css code for aesthetics and looking at it physically to make sure the tile is consistent to our descriptions. 
+	
+* The tile should will be filled with a picture
+
+	* Test: We will confirm this by writing CSS code for aesthetics and looking at it physically to make sure the picture is filled up within the tile
+	
+* The size of each tile will scale up depending on the browser size (Having it response - check responsiveness)
+
+	* Test: We will write css code for browser size and accessing the website on different devices to make sure the website scales appropriately.
+	
+	* Test: If the aesthetics does not match our intended satisfaction(from our requirements above), then it will be considered a fail.
+	
+* Scrolling down on the page will display more post into the grid along with the original dimensions of each tile. 
+
+	* Test: We write a test where that the dashboard should display a certain amount of tiles and if the user scrolls down, then more post should be displayed
+	
+* Posts are organized from left to right, descending from newest to latest
+
+	* Test: We will write a simple test where we will make sure that the tile to the left should be a newer than compared to that of the right. If this test breaks, then the test will fail. 
+
+**Interacting with Post:**
+
+* Users can interact with a post by clicking on a post on their dashboard. Once they click on a post, a modal box appears describing relevant information (description, start/end time etc) about that post.
+
+	* Manual Test: We will write a test where we can check to set if the modal that pops up for the post view is the correct data being displayed
+
+* There are primarily two ways a user can interact with a post. 
+
+* The first is an option to upvote or downvote a post. This is enabled by the presence of two arrow buttons (Up arrow icon for an upvote, down arrow icon for downvote). We do this to help maintain quality of posts, allow filtering search results by vote count in our dashboard, and create trends by interesting/disinteresting posts by measuring vote activity.
+
+* The user can only vote an individual post once
+
+	* Manual Test: We can manually test to see if the upvote/downvote works and its properties are working if we create a boolean function to see if the user either already clicked the upvote/downvote. If they did, then the boolean will switch to false, and the user cannot vote again. If this renders true and the user cannot vote, this will classify itself as a pass. 
+	
+* The user can only either upvote or downvote an individual post
+
+	* Manual Test: We can test this by writing an algorithm to see if the post that is not theirs, and thus have the permission to vote. 
+	
+* Any post that belongs to the user will not be able to vote on their own post. 
+
+* Users can change their vote by clicking the opposite arrow
+
+	* Manual Test: A test can be made where that if the user clicks an upvote, then the upvote onclick will be disabled. If this hinders the user from clicking the upvote again, this will classify as a pass. 
+	
+* When the user upvotes or downvotes, the total displayed votes will change (i.e. the total votes increase when you upvote and decrease when you downvote). This will be located on the bottom right of each tile. If the post does not have any upvote downvote, then there will be nothing to display but the arrows itself. 
+
+	* Manual Test: We can physically see if clicked on either upvote/downvote, the integer will change corresponding with the button pressed. If the integer is -1 or +1 of the original integer, then this will classify as a pass. 
+	
+* Upvote/downvote can be positive or negative integers. It will be the sum of total votes combined
+
+	* Manual Test: We can test this by having adding the cumulative of upvotes/downvotes and if the sum is correct, the test will pass. 
+	
+* The second option is to exit out of the modal. A user can do this by clicking on the ‘X’ button on the modal, and then replying to the ‘Are you sure’ prompt. This will allow users to exit out of an individual post, and prevent accidental exits.
+
+	* Manual Test: If the user is redirected to the dashboard, this will be considered a pass
+	
+* If the user is the creator of the post, they can edit or delete the post (check edit/delete post section)
+
+	* Manual Test: the test involves checking if the user-email in the json object match the username stores in top-left corner.
 
 Grid Display/Responsiveness
 
