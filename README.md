@@ -6,9 +6,9 @@ Jimmy Tran - Role: Engineer / CTO
 
 Saurav Kharb - Role : Engineer
 
-Calvin Chen - Role: Designer / CDO / Product Manager 
+Calvin Chen - Role: Designer / CDO / Project Manager 
 
-Wo Bin Chen - Role: Project Manager / Design / CEO
+Wo Bin Chen - Role: Design / CEO
 
 Support: Everyone
 
