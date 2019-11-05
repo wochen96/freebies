@@ -56,7 +56,7 @@
 4. **What is your timeline?**
 	* Include a list of milestones you'll reach and deadlines for each.
 		1. Milestones will consist of the components that will need to be built to get the product in production with each component requiring a due date. 
-		2. The timeline will be provided via a link - (INSERT LINK HERE). Each person will need to color in their tasks once they’re finished
+		2. The timeline can be found in the link above. Each person will need to color in their tasks once they’re finished
 			- Will include Project Title, Who’s working on what, Date that needs to be finished
 			- Highlight things in green that are finished
 			- Highlight things in yellow that are in progress
