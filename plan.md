@@ -177,13 +177,12 @@ Test: The user cannot click on both definitive and indefinite buttons at once. O
 Test: We will write a test where that if the user clicks on definite and the results are non-definite, then the test will fail
 Test: We will write a test where that if the button being clicked is filtering out the respective type, then the test will pass. 
 
-Creating Post Button
-On the top right side of the website, will be a right-aligned add button. This button will say Add with a ‘+’ icon next to it
-Test: We will write a test where if the user clicks on the “add +
-“ icon, the user should be directed with a popup modal requesting user for information. 
-If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form.
-Test: We will create a test where if the popup modal is the correct modal, then the test will pass
-Test: The pop-up modal should include everything that we need from the user to create a post
+**Creating Post Button**
+- On the top right side of the website, will be a right-aligned add button. This button will say Add with a ‘+’ icon next to it
+	- Test: We will write a test where if the user clicks on the “add +“ icon, the user should be directed with a popup modal requesting user for information. 
+- If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form.
+	- Test: We will create a test where if the popup modal is the correct modal, then the test will pass
+	- Test: The pop-up modal should include everything that we need from the user to create a post
 Creating Post will have a detailed explanation below
 Post Section:
 Each post will be a tile in a grid format(check grid display)
@@ -205,73 +204,73 @@ Test: We will write a simple test where we will make sure that the tile to the l
 
 
 
-Editing Post
+**Editing Post**
 
 After the user clicking on a post, the module that shows all the information about the post will be popup in front of the user.
-Test: We will use manual test for this by making sure that there is a pop up for every click; But we will only test for the first 10 and the last 10 button in the list.
+- Test: We will use manual test for this by making sure that there is a pop up for every click; But we will only test for the first 10 and the last 10 button in the list.
 
 The post will contain the information: title, location, definite or indefinite, description and an optional image. If the post has definite property, it also has two more required fields: date and time (start and end). If it is indefinite, it will just show the indefinite property.
-Test: We will write unit testing for this by entering one definite post and one indefinite post and making sure that they are correct in the database and in the showing view to the viewers as passing the test.
+- Test: We will write unit testing for this by entering one definite post and one indefinite post and making sure that they are correct in the database and in the showing view to the viewers as passing the test.
 
 Also, the post will have a field where the user email will show up at the bottom left corner of the module.
-The user email can be used to check if the user is the one who creates the post by storing String and compare them with the user email String in the top-left corner of the web page.
-If the post is created by the user, the button “Edit” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Delete” button.
-Test: we will create some unit tests to make sure the String store in the bottom left corner of the module match the String in the top-left corner of the webpage. If they are matched and the “edit” button show up, we consider that a passing test.
+- The user email can be used to check if the user is the one who creates the post by storing String and compare them with the user email String in the top-left corner of the web page.
+- If the post is created by the user, the button “Edit” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Delete” button.
+- Test: we will create some unit tests to make sure the String store in the bottom left corner of the module match the String in the top-left corner of the webpage. If they are matched and the “edit” button show up, we consider that a passing test.
 
 After the user clicks on the “Edit” button, the module will change into the modal that can let the user change the text on all the fields that were entered by the user earlier.
-test: we propose a manual test for this requirement. When we click on the “edit” button, we will check if the modal that can be edit information show up. If it does, then the test is a success.
+- test: we propose a manual test for this requirement. When we click on the “edit” button, we will check if the modal that can be edit information show up. If it does, then the test is a success.
 
 There are two cases to consider:
 
-Case 1: 
-If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description. 
-test: We propose a manual test for this. When the popup window show up, we will make sure that the users can only enter these fields: title, location, date, time (start and end) and description. If only these fields show up, the test is a success.
-The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post. 
-Test: manual test, we will delete the image. And if we click the submit button, it disappears and our default image replace it, then the test pass.
-The user can also upload an image from her/his local device. 
-test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes.
-If no image is uploaded the default picture will be shown in the box space. 
-Test: this test is similar to the above test where we delete a picture and the default image shows up.
-Case 2:
-If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text. 
-test: We propose a manual test for this. When the popup window show up, we will make sure that the users can only enter these fields: title, location, date  and description. If only these fields show up, the test is a success.
-The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post. 
-test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes
-The user can also upload an image from her/his local device. 
-test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes.
-If no image is uploaded the default picture will be shown in the box space.  
-Test: this test is similar to the above test where we delete a picture and the default image shows up.
+- Case 1: 
+	- If the post was created by “definite” type which means it records the date and time of the event, the user can edit these fields: title, location, date, time (start and end), description. 
+		- test: We propose a manual test for this. When the popup window show up, we will make sure that the users can only enter these fields: title, location, date, time (start and end) and description. If only these fields show up, the test is a success.
+	- The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post. 
+		- Test: manual test, we will delete the image. And if we click the submit button, it disappears and our default image replace it, then the test pass.
+	- The user can also upload an image from her/his local device. 
+		- test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes.
+	- If no image is uploaded the default picture will be shown in the box space. 
+		- Test: this test is similar to the above test where we delete a picture and the default image shows up.
+- Case 2:
+	- If the post was created by “indefinite” in the radio button, then the user can edit these fields: title, location, description as text. 
+		- test: We propose a manual test for this. When the popup window show up, we will make sure that the users can only enter these fields: title, location, date  and description. If only these fields show up, the test is a success.
+	- The user can also delete one image from the image that is stored in the post if the user uploads it during the creation of the post. 
+		- test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes
+	- The user can also upload an image from her/his local device. 
+		- test: manual test, we will upload a different picture. After clicking the submit button, if the new image show up in the picture slot, then the test passes.
+	- If no image is uploaded the default picture will be shown in the box space.  
+		- Test: this test is similar to the above test where we delete a picture and the default image shows up.
 
 After the user has finished editing the post, the user can click on the submit button at the bottom of the module:
-If any of the required fields are missing, an error message will show up to prompt the user enters these fields. 
-test: manual test. We will create one test that purposely missing one or more entering fields and check if the popup error message show up. If it did then the test pass, if not then the test fail. We will also write one test to see if all the required fields are entered and the error popup show up after clicking the submit button. If it shows up, the test fail; if it does not show up, the test passes.
-After successfully submitting, the modal will disappear and the original screen(dashboard) behind will be shown. 
-test: manual test. We will create one test to see if the modal would disappear after clicking submit button. If it disappears and the dashboard show up again, then the test passes.
-The dashboard will be updated with the new post. 
-test: manual test. The test will make sure that all the fields are correct with the new information. If it is, then the test passes.
-The database in Firebase will also need to be updated with the new post. 
-test: automatic test. We will write a unit test to see if the database will be updated with new information. We will create an edited post. And the unit test will go to the database and see if those information are correctly enter to replace the old information. If yes, the test passes.
-The edit post is located in the same position as the Middle Post Section. 
-test: manual test. We will see if the edited post would show up at the same location as the old one. If it is, then the test passes.
-If there are any changes to the database like some users add new posts or delete posts, the position of the edited post will change accordingly:
-If a new post is added, the edited post will move one position to the right or down on the dashboard.
- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
-test: this will be a combination of manual test and automatic test. We will manual checking for all the position of posts that are presented at the middle section. Then the unit test will check for what is the list in the database match what the middle section shows at that moment. If they match, the test passes.
+- If any of the required fields are missing, an error message will show up to prompt the user enters these fields. 
+	- test: manual test. We will create one test that purposely missing one or more entering fields and check if the popup error message show up. If it did then the test pass, if not then the test fail. We will also write one test to see if all the required fields are entered and the error popup show up after clicking the submit button. If it shows up, the test fail; if it does not show up, the test passes.
+- After successfully submitting, the modal will disappear and the original screen(dashboard) behind will be shown. 
+	- test: manual test. We will create one test to see if the modal would disappear after clicking submit button. If it disappears and the dashboard show up again, then the test passes.
+- The dashboard will be updated with the new post. 
+	- test: manual test. The test will make sure that all the fields are correct with the new information. If it is, then the test passes.
+- The database in Firebase will also need to be updated with the new post. 
+	- test: automatic test. We will write a unit test to see if the database will be updated with new information. We will create an edited post. And the unit test will go to the database and see if those information are correctly enter to replace the old information. If yes, the test passes.
+- The edit post is located in the same position as the Middle Post Section. 
+	- test: manual test. We will see if the edited post would show up at the same location as the old one. If it is, then the test passes.
+- If there are any changes to the database like some users add new posts or delete posts, the position of the edited post will change accordingly:
+	- If a new post is added, the edited post will move one position to the right or down on the dashboard.
+	- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+	- test: this will be a combination of manual test and automatic test. We will manual checking for all the position of posts that are presented at the middle section. Then the unit test will check for what is the list in the database match what the middle section shows at that moment. If they match, the test passes.
 
 If the user clicks “cancel” button (at the bottom-right of the modal next to the submit button) or the ‘X’ located on the top right of the modal:
-Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
-test: manual test. The test will check if a popup shows up when the cancel button is clicked. If it does, then the test passes.
-If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown. 
-test: manual test. The test will check to see if we click “yes”, would the the modal disappears. If it does, then the test passes.
-The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
-If a new post is added, the edited post will move one position to the right or down on the dashboard.
- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
-test: one manual test and one automatic test. The manual test is to check if new posts appear or old posts disappear. Then, the unit test will return what is stored in the database to make sure they are a match. If they match, then the test passes.
-If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again. 
-test: manual test. When clicking “no”, the test will make sure the modal show up again. If it does, then the test passes.
+- Users are prompted to confirm if they want to close by a pop-up indicating “yes” or “no”.
+	- test: manual test. The test will check if a popup shows up when the cancel button is clicked. If it does, then the test passes.
+- If they click “yes”, the modal disappears and the original screen(dashboard) behind will be shown. 
+	- test: manual test. The test will check to see if we click “yes”, would the the modal disappears. If it does, then the test passes.
+- The dashboard will show all the origin post without any new post. However, if other users have created new posts or deleting posts or editing posts, the dashboard will update accordingly.
+	- If a new post is added, the edited post will move one position to the right or down on the dashboard.
+	- If a new post is deleted, the edited post will move one position to the left or up on the dashboard.
+	- test: one manual test and one automatic test. The manual test is to check if new posts appear or old posts disappear. Then, the unit test will return what is stored in the database to make sure they are a match. If they match, then the test passes.
+- If they click “no”, the yes/no prompt will disappear and the pop-up modal will be shown back again. 
+	- test: manual test. When clicking “no”, the test will make sure the modal show up again. If it does, then the test passes.
 
 The database in Firebase will store all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly. 
-test: automatic test. We will write one unit test that to make all the post in the database match what we have show up that current middle section. In particular, the test will test for number of posts, name of the user match on the post. If they are, the test passes.
+- test: automatic test. We will write one unit test that to make all the post in the database match what we have show up that current middle section. In particular, the test will test for number of posts, name of the user match on the post. If they are, the test passes.
 
 
 
@@ -280,66 +279,66 @@ test: automatic test. We will write one unit test that to make all the post in t
 
 
 
-Delete Post
+**Delete Post**
 
 After the user clicking on a post, the module that shows all the information about the post will be popup in front of the user. 
-Test: We will use manual test for this by making sure that there is a pop up for every click; But we will only test for the first 10 and the last 10 button in the list.
+- Test: We will use manual test for this by making sure that there is a pop up for every click; But we will only test for the first 10 and the last 10 button in the list.
 
 The post will contain the information: title, location, definite or indefinite, description and an optional image. If the post has definite property, it also has two more required fields: date and time (start and end). If it is indefinite, it will just show the indefinite property. 
-test: We will write unit testing for this by entering one definite post and one indefinite post and making sure that they are correct in the database and in the showing view to the viewers as passing the test.
+- test: We will write unit testing for this by entering one definite post and one indefinite post and making sure that they are correct in the database and in the showing view to the viewers as passing the test.
 
 Also, the post will have a field where the user email will show up at the bottom left corner of the module.
-The user email can be used to check if the user is the one who creates the post by storing String and compare them with the user email String in the top-left corner of the web page.
-If the post is created by the user, the button “Delete” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Edit” button.
-test: automatic tests. We will create some unit tests to make sure the String store in the bottom left corner of the module match the String in the top-left corner of the webpage. If they are matched and the “Delete” button show up, we consider that a passing test.
+- The user email can be used to check if the user is the one who creates the post by storing String and compare them with the user email String in the top-left corner of the web page.
+- If the post is created by the user, the button “Delete” will show to the user on the right bottom corner of the module like in the picture. It is located next to the “Edit” button.
+- test: automatic tests. We will create some unit tests to make sure the String store in the bottom left corner of the module match the String in the top-left corner of the webpage. If they are matched and the “Delete” button show up, we consider that a passing test.
 
 After the user clicks on the “Delete” button, users are prompted to confirm if they want to delete by a pop-up indicating “yes” or “no”:
 
-If yes, the modal disappears and the original screen(dashboard) behind will be shown with the update without the deleted post.  
-test: manual test. The test will check if a popup shows up when the Delete button is clicked. If it does, then the test passes.
-The dashboard will be updated with the new post. 
-test: manual test. The test will make sure that the post is deleted. If it is, then the test passes.
-The database in Firebase will also need to be updated with the deleted post. 
-test: automatic test. We will write a unit test to see if the database will be updated with new information. We will delete a post. And the unit test will go to the database and see if that post is removed from the list. If yes, the test passes.
-If no, the yes/no prompt will disappear and the pop-up modal will be shown back again. 
-test: manual test. When clicking “no”, the test will make sure the modal show up again. If it does, then the test passes.
+- If yes, the modal disappears and the original screen(dashboard) behind will be shown with the update without the deleted post.  
+	- test: manual test. The test will check if a popup shows up when the Delete button is clicked. If it does, then the test passes.
+- The dashboard will be updated with the new post. 
+	- test: manual test. The test will make sure that the post is deleted. If it is, then the test passes.
+- The database in Firebase will also need to be updated with the deleted post. 
+	- test: automatic test. We will write a unit test to see if the database will be updated with new information. We will delete a post. And the unit test will go to the database and see if that post is removed from the list. If yes, the test passes.
+- If no, the yes/no prompt will disappear and the pop-up modal will be shown back again. 
+	- test: manual test. When clicking “no”, the test will make sure the modal show up again. If it does, then the test passes.
 
 The database in Firebase will store all the fields as String and images in png or jpg. After the deletion of a post, the database will be updated accordingly. 
-test: automatic test. We will write one unit test that to make all the post in the database match what we have show up that current middle section. In particular, the test will test for number of posts, name of the user match on the post. If they are, the test passes
+- test: automatic test. We will write one unit test that to make all the post in the database match what we have show up that current middle section. In particular, the test will test for number of posts, name of the user match on the post. If they are, the test passes
 
-Footer
-Located at the bottom of the page
-Test: We will manually test to see if the footer is at the bottom of the page
-The footer includes copyright, which includes a year, project name, and copyright symbol
-Test: We will manually test to see if the items are there in the footer
-There should be a link for the “About Us” page
-Test: We will manually test to see if the link is there in the footer
-The footer includes contact information (email)
-Test: We will manually test to see if the items are there in the footer
+**Footer**
+- Located at the bottom of the page
+	- Test: We will manually test to see if the footer is at the bottom of the page
+- The footer includes copyright, which includes a year, project name, and copyright symbol
+	- Test: We will manually test to see if the items are there in the footer
+- There should be a link for the “About Us” page
+	- Test: We will manually test to see if the link is there in the footer
+- The footer includes contact information (email)
+	- Test: We will manually test to see if the items are there in the footer
 
-About Us
-Contains information about the creators and project
-Test: We will manually test to see if the items are shown as intended
+**About Us**
+- Contains information about the creators and project
+	- Test: We will manually test to see if the items are shown as intended
 
-Database
-The database will be a non-relational database due to the inherent structure of our data.
-Test: We can test by calling a request to retrieve the JSON file and check if it exists and matches the intended structure
-Particularly, we will use Firebase Realtime Database. The data is structured in the form of a JSON tree.
-Test: automatic test. We will write two unit tests to check if the database hold json object. The test will create a dummy post with some fields that are one for definite and one for indefinite. The unit test needs to make sure that those information exist in the database as JSON objects. If they exist, the tests pass.
-The main branches of the tree would include users and posts.
-Test: automatic test. One unit test to check for information if the json object would start with the keyword as the user-email. If it is, then the test passes.
-The users branch would include information about each user that has signed up for our service. The posts branch would include data points related to each individual post. (see below for details)
-Test: automatic test. Ten unit tests to check for each of the information entered in the post would match. We will use “assert” to check for each fields. For example, if we enter Title=”free cookies”, then in our unit test when we call assert, it should return true if the json object hold string value “free cookies” in the title.
-User
+**Database**
+- The database will be a non-relational database due to the inherent structure of our data.
+	- Test: We can test by calling a request to retrieve the JSON file and check if it exists and matches the intended structure
+- Particularly, we will use Firebase Realtime Database. The data is structured in the form of a JSON tree.
+	- Test: automatic test. We will write two unit tests to check if the database hold json object. The test will create a dummy post with some fields that are one for definite and one for indefinite. The unit test needs to make sure that those information exist in the database as JSON objects. If they exist, the tests pass.
+- The main branches of the tree would include users and posts.
+	- Test: automatic test. One unit test to check for information if the json object would start with the keyword as the user-email. If it is, then the test passes.
+- The users branch would include information about each user that has signed up for our service. The posts branch would include data points related to each individual post. (see below for details)
+	- Test: automatic test. Ten unit tests to check for each of the information entered in the post would match. We will use “assert” to check for each fields. For example, if we enter Title=”free cookies”, then in our unit test when we call assert, it should return true if the json object hold string value “free cookies” in the title.
+**User**
 Data points obtained from Google Sign-in Authorization web client
-Post
-Title
-isDefinite
-Start time
-End time
-Location
-Description
-Picture
-Tag
-Upvotes
-Downvotes
+**Post**
+- Title
+- isDefinite
+- Start time
+- End time
+- Location
+- Description
+- Picture
+- Tag
+- Upvotes
+- Downvotes
