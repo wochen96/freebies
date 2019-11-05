@@ -28,22 +28,22 @@
 
 For each, articulate the alternatives and why that is the best choice.
 
-	1. We will use Slack as our main tool of communication. Slack is convenient and easy to share code.
-	2. We will communicate whenever someone is confused and needs help, verification (see below)  
-	3. If a person in our group is MIA there will be a contingency: an overview a person being MIA(Missing in Action)
+	* We will use Slack as our main tool of communication. Slack is convenient and easy to share code.
+	* We will communicate whenever someone is confused and needs help, verification (see below)  
+	* If a person in our group is MIA there will be a contingency: an overview a person being MIA(Missing in Action)
 		- Project Manager will check-up on the tasks
 		- If the tasks are approaching the deadline and cannot reach the person after realizing they’re off the grid
 		- Notify the rest of the group and also inform the professor to organize a meeting to re-assign work
 		- Discuss the work they are currently working on and their future work
 		- A request of who should the work then be directed to 
-	4. If a person in our group is SICK there will be a contingency: an overview a person being SICK
+	* If a person in our group is SICK there will be a contingency: an overview a person being SICK
 		- Communication with the team via our communication channels from sick person
 		- PM to organize  a brief meeting of the work they’re working on
 		- Request who should the work then be directed to
 		- Request the person to stay in touch
 		- Request the sick person to transfer the knowledge on how to do the work they’re doing
 		- Inform Professors that person is sick and just not slacking
-	5. If there are bugs that needs to be taken care of there will be a process:
+	* If there are bugs that needs to be taken care of there will be a process:
 		a. A person with the bug will request assistance from the other team members
 		b. A person with the bug have choices to fix it:
 Person will handle the overall bug meaning that they’ll research and work on it provided the knowledge from other teammates
