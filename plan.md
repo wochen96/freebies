@@ -133,8 +133,16 @@
 
 	* test : we will manually test by logging in and click the sign out button to see if we are directed back to the landing page
 
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/landing_page.jpg" width="300" height="300" />
+</p>
+
 
 **Upper/Top-Navigation**
+
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/dashboard.jpg" width="300" height="300" />
+</p>
 
 *Home Button*
 	
@@ -368,6 +376,9 @@ The modal will prompt the user to add their title, description, location, date (
 - There will also be one image that is uploaded by the user. The picture will require a file selector to allow users to select an image from the end of the device. If the user does not provide the picture, a default picture will be assigned to the user. Below is the default picture.
 	- Test: test to see if the default picture shows up by creating a post with no picture and see if the picture show.
 
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/hWZpEBHB_400x400.png" width="300" height="300" />
+</p>
  (Source: https://twitter.com/uw) (default picture)
 
 - Also, the picture that upload need to behave the size 300pix x 300pix (this is an optional feature that can be changed based on the engineering choice and user feedback later).
@@ -403,7 +414,9 @@ If the user clicks “cancel” button (at the bottom-right of the modal next to
 The database in Firebase will store all the fields as String and images in png or jpg. After the creation of a new post, the database will be updated accordingly.
 
 
-
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/create_post.jpg" width="300" height="300" />
+</p>
 
 
 **Editing Post**
@@ -475,10 +488,9 @@ The database in Firebase will store all the fields as String and images in png o
 - test: automatic test. We will write one unit test that to make all the post in the database match what we have show up that current middle section. In particular, the test will test for number of posts, name of the user match on the post. If they are, the test passes.
 
 
-
-
-
-
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/view_post.jpg" width="300" height="300" />
+</p>
 
 
 **Delete Post**
@@ -547,3 +559,7 @@ Data points obtained from Google Sign-in Authorization web client
 - Tag
 - Upvotes
 - Downvotes
+
+<p align="center">
+  <img src="https://github.com/wochen96/freebies/blob/master/img/new_design/about_us.jpg" width="300" height="300" />
+</p>
