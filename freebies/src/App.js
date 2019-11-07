@@ -31,6 +31,7 @@ function App() {
       <header className="App-header">
         <nav>
           <button className="Home">
+            HOME
 
           </button>
 
@@ -39,6 +40,7 @@ function App() {
           </p>
 
           <button className="SIGNOUT">
+            SIGNOUT
 
           </button>
 
@@ -49,14 +51,17 @@ function App() {
           // add search icon later
 
           <button className="Definite">
+            Definite
 
           </button>
 
           <button className="Indefinite">
+            Indefinite
 
           </button>
 
           <button className="Add">
+            Add
 
           </button>
 
@@ -76,10 +81,12 @@ function App() {
       <footer className="App-footer">
 
         <button className="Contact">
+          Contact
         
         </button>        
 
         <button className="About_us">
+          About_us
 
         </button>
 
