@@ -1,100 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-/* function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App; */
+import React, { Component } from 'react';
+//import logo from './logo.svg';
+//import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
 
 function App() {
-  return (
-    <div className="App">
+    return(
       <header className="App-header">
-        <nav>
-          <button className="Home">
-            HOME
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="#home">LOGO</Navbar.Brand>
+          <Nav className="#all-buttons">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#signout">SIGN OUT</Nav.Link>
+            <Form inline>
+              <FormControl type="text" placeholder="Search" className="edit_text" />
+              <Button variant="outline-info">Search</Button>
+            </Form>
+            <Nav.Link href="#definite">Definite</Nav.Link>
+            <Nav.Link href="#indefinite">Indefinite</Nav.Link>
+            <Nav.Link href="#add">ADD</Nav.Link>
+          </Nav>
+        </Navbar>
 
-          </button>
+        <p>
+          Body
+        </p>
 
-          <p>
-            Username: someuser@gmail.com
-          </p>
-
-          <button className="SIGNOUT">
-            SIGNOUT
-
-          </button>
-
-          <p className="Search">
-            SEARCH
-          </p>
-
-          // add search icon later
-
-          <button className="Definite">
-            Definite
-
-          </button>
-
-          <button className="Indefinite">
-            Indefinite
-
-          </button>
-
-          <button className="Add">
-            Add
-
-          </button>
-
-          // add the plus icon
-
-        </nav>
-        
       </header>
+    );
 
-      <body className="App-body">
-        <div>
-          // middle section
-        </div>
-
-      </body>
-
-      <footer className="App-footer">
-
-        <button className="Contact">
-          Contact
-        
-        </button>        
-
-        <button className="About_us">
-          About_us
-
-        </button>
-
-      </footer>
-
-    </div>
-  );
-}
+  }
 
 export default App;
 
