@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class PostView extends Component{
+class Footer extends Component{
     render() {
         return(
 
@@ -9,4 +9,4 @@ class PostView extends Component{
     }
 }
 
-export default PostView;
+export default Footer;

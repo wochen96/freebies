@@ -8,3 +8,5 @@ class CreateModal extends Component{
         );
     }
 }
+
+export default CreateModal;

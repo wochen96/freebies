@@ -8,3 +8,5 @@ class EditModal extends Component{
         );
     }
 }
+
+export default EditModal;
