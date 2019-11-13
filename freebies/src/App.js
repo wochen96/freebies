@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import components
 import Landing from './Landing.js';
+import Dashboard from './Dashboard.js';
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -13,6 +16,13 @@ class App extends Component {
     this.state = {
       user: null
     }
+  }
+
+  // Update current user
+  updateUser(user) {
+    this.setState({
+      user: user
+    });
   }
 
   render() {
@@ -26,7 +36,7 @@ class App extends Component {
               </main>
             );
           }}/>
-          {/* <Route path ="/home" render={() => {
+          <Route path ="/home" render={() => {
             return (
               <main>
                 <Navbar />
@@ -34,7 +44,7 @@ class App extends Component {
                 <Footer />
               </main>
             );
-          }}/> */}
+          }}/>
         </Switch>
       </div>
     );

@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
+import firebase from 'firebase/app';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
 class Landing extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isAuthenticated: false
+        }
+    }
+    
+    // Sign in using Google popup authentication
+    signIn() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider).catch((error) => alert(error));
+    }
+
+    // Sign out
+    signOut() {
+        firebase.auth().signOut().catch((error) => alert(error));
+    }
+
     render() {
         return(
             <div className="container h-100">
                 <div className="row">
                     <div className="col-6 align-self-center">
                         <div className="text-center">
-                            <button type="button" className="btn btn-primary">Login</button>
+                            <NavLink type="button" onClick={this.signIn} to="/home" className="btn btn-primary">
+                                Login
+                            </NavLink>
                             <p>Please click on the link above to sign in with your Google account</p>
                         </div>
                     </div>
