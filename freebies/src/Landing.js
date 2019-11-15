@@ -1,26 +1,46 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
 
 class Landing extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            isAuthenticated: false
+            user: null
         }
+    }
+
+    componentDidMount() {
+        this.authUnRegFunc = firebase.auth().onAuthStateChanged(user => {
+            if (user) { // user is successfully logged in
+                this.setState(state => {
+                    state.user = user;
+                    return state;
+                });
+                this.props.updateUser(user);
+            } else { // user is not logged in
+                this.setState(state => {
+                    state.user = null;
+                    return state;
+                });
+                this.props.updateUser(null);
+            }
+        });
+    }
+
+    componentWillUnmount() {
+        this.authUnRegFunc.off();
     }
     
     // Sign in using Google popup authentication
     signIn() {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).catch((error) => alert(error));
-    }
-
-    // Sign out
-    signOut() {
-        firebase.auth().signOut().catch((error) => alert(error));
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                window.location = '/home';
+            }
+        })
     }
 
     render() {
@@ -29,9 +49,9 @@ class Landing extends Component {
                 <div className="row">
                     <div className="col-6 align-self-center">
                         <div className="text-center">
-                            <NavLink type="button" onClick={this.signIn} to="/home" className="btn btn-primary">
+                            <button type="button" onClick={this.signIn} className="btn btn-primary">
                                 Login
-                            </NavLink>
+                            </button>
                             <p>Please click on the link above to sign in with your Google account</p>
                         </div>
                     </div>
