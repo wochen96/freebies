@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
 
 class Landing extends Component {
 
@@ -43,11 +41,6 @@ class Landing extends Component {
                 window.location = '/home';
             }
         })
-    }
-
-    // Sign out
-    signOut() {
-        firebase.auth().signOut().catch((error) => alert(error));
     }
 
     render() {
