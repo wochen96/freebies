@@ -24,25 +24,6 @@ function App() {
         <Footer />
 
       </div>
-
-
-
-      
-
-      /* <div>
-        <p>
-          body
-        </p>
-      </div> */
-
-      /*<footer>
-        <Navbar bg="dark" variant="dark">
-          <Nav className="#footer">
-          <Nav.Link href="#contactUs">Contact Us</Nav.Link>
-          <Nav.Link href="#aboutUs">About Us</Nav.Link>
-          </Nav>
-        </Navbar>
-      </footer>*/
     );
 
   }

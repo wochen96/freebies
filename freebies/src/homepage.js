@@ -3,19 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap'
 
-//import {Responsive, WidthProvider} from 'react-grid-layout';
-/*import lomap from 'lodash.map'
-import loresult from 'lodash.result'
-import lorange from 'lodash.range'
-import lorandom from 'lodash.random'*/
-
-//import "../node_modules/react-grid-layout/css/styles.css"
-//import "../node_modules/react-resizable/css/styles.css"
-
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-
-//const ResponsiveReactGridLayout = WidthProvider(Responsive)
 
 const customStyles = {
     content : {
@@ -32,11 +21,6 @@ const customStyles = {
 Modal.setAppElement('#root')
 
 class DashboardBody extends Component {
-
-    //const [show, setShow] = useState(false);
-
-    //handleClose = () => setShow(false);
-    //handleShow = () => setShow(true);
 
     constructor() {
         super();
@@ -86,15 +70,17 @@ class DashboardBody extends Component {
                         contentLabel="Example Modal"
                         >
                 
-                        <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+                        <h2 ref={subtitle => this.subtitle = subtitle}>Free Cokies for All</h2>
                         <button onClick={this.closeModal}>close</button>
-                        <div>I am a modal</div>
+                        <div>
+                            <p>Location: Mary Gate hall</p>
+                            <p>Date: Nov, 15 2019</p>
+                            <p>Time: Start: 10am, End: 11am</p>
+                            <p>Free cookies for All!!! Go get some!!!</p>
+                        </div>
                         <form>
-                            <input />
-                            <button>tab navigation</button>
-                            <button>stays</button>
-                            <button>inside</button>
-                            <button>the modal</button>
+                            <button>Edit</button>
+                            <button>Delete</button>
                         </form>
                     </Modal>
 
