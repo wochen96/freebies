@@ -8,3 +8,5 @@ class DeleteModal extends Component{
         );
     }
 }
+
+import default DeleteModal;
