@@ -1,13 +1,10 @@
 import React, { Component, ProTypes } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap';
+import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap'
 
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import PostView from './PostView';
-//import PostView2 from './PostView2';
-//import Logger from 'simple-console-logger';
 
 const customStyles = {
     content : {
@@ -21,9 +18,9 @@ const customStyles = {
   };
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-//Modal.setAppElement('#root')
+Modal.setAppElement('#root')
 
-class MidleSection extends Component {
+class DashboardBody extends Component {
 
     constructor() {
         super();
@@ -37,16 +34,9 @@ class MidleSection extends Component {
         this.closeModal = this.closeModal.bind(this);
       }
      
-      /*openModal() {
-        console.log("openModal")
+      openModal() {
         this.setState({modalIsOpen: true});
-      }*/
-
-      openModal = e => {
-        this.setState({
-          modalIsOpen: true
-        });
-      };
+      }
      
       afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -57,22 +47,9 @@ class MidleSection extends Component {
         this.setState({modalIsOpen: false});
       }
 
-      getModal() {
-        //console.log("into getModal");
-        //const post = new PostView();
-        //post.openModal();
-        //console.log("into getModal");
+    render() {
         return(
             <div>
-                <PostView />
-            </div>
-        )
-      } 
-
-    render() {
-        console.log(this.state.modalIsOpen)
-        return(
-            <div id="root2">
                 <CardColumns>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src="./uw_icon.png" />
@@ -81,13 +58,11 @@ class MidleSection extends Component {
                             <Card.Text>
                             Free cokies
                             </Card.Text>
-                            <Button variant="primary" onClick={e => {this.openModel(e);}}>Click</Button>
+                            <Button variant="primary" onClick={this.openModal}>Click</Button>
                         </Card.Body>
                     </Card>
 
-                    <PostView show={this.state.modalIsOpen} />
-
-                    {/* <Modal
+                    <Modal
                         isOpen={this.state.modalIsOpen}
                         onAfterOpen={this.afterOpenModal}
                         onRequestClose={this.closeModal}
@@ -107,9 +82,42 @@ class MidleSection extends Component {
                             <button>Edit</button>
                             <button>Delete</button>
                         </form>
-                    </Modal>    */}             
+                    </Modal>
 
                     
+
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="./uw_icon.png" />
+                        <Card.Body>
+                            <Card.Title>Free Cookie for All</Card.Title>
+                            <Card.Text>
+                            Free cokies
+                            </Card.Text>
+                            <Button variant="primary">Click</Button>
+                        </Card.Body>
+                    </Card>
+
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="./uw_icon.png" />
+                        <Card.Body>
+                            <Card.Title>Free Cookie for All</Card.Title>
+                            <Card.Text>
+                            Free cokies
+                            </Card.Text>
+                            <Button variant="primary">Click</Button>
+                        </Card.Body>
+                    </Card>
+
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="./uw_icon.png" />
+                        <Card.Body>
+                            <Card.Title>Free Cookie for All</Card.Title>
+                            <Card.Text>
+                            Free cokies
+                            </Card.Text>
+                            <Button variant="primary">Click</Button>
+                        </Card.Body>
+                    </Card>
                     
                 </CardColumns>
 
@@ -120,4 +128,4 @@ class MidleSection extends Component {
     }
  }
 
-export default MidleSection;
+export default DashboardBody;
