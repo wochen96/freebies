@@ -7,24 +7,33 @@ class MidleSection extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {addModalShow: false}
+        /*this.state = {postModalShow: false}
     
-        this.openModal = this.openModal.bind(this);
-        this.addModalClose = this.addModalClose.bind(this);
+        this.postOpenModal = this.postOpenModal.bind(this);
+        this.postClose = this.postClose.bind(this);*/
       }
     
     
-    openModal = () => {
-    this.setState({addModalShow: true})
+    /*postOpenModal = () => {
+    this.setState({postModalShow: true})
     }
 
-    addModalClose = () => this.setState({addModalShow: false});
+    postClose = () => this.setState({postModalShow: false});*/
+
+    modalPostCheck = ({openPostModal}) => {
+        this.showPostModal = openPostModal;
+    }
+     
+    onPostClick = () => {
+        this.showPostModal();
+    }
 
     render() {
-        console.log(this.state.modalIsOpen)
         return(
-            <div id="root2">
+            <div>
                 <CardColumns>
+                    <PostView ref={this.modalPostCheck}></PostView>
+
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src="./uw_icon.png" />
                         <Card.Body>
@@ -32,15 +41,20 @@ class MidleSection extends Component {
                             <Card.Text>
                             Free cokies
                             </Card.Text>
-                            <Button variant="primary" onClick={this.openModal}>Click</Button>
+                            <Button variant="primary" onClick={this.onPostClick}>Click</Button>
                         </Card.Body>
                     </Card>
 
-                    <PostView 
-                    show={this.state.addModalShow}
-                    onHide={this.addModalClose}/>
-
-                               
+<                   Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="./uw_icon.png" />
+                        <Card.Body>
+                            <Card.Title>Free Cookie for All</Card.Title>
+                            <Card.Text>
+                            Free cokies
+                            </Card.Text>
+                            <Button variant="primary" onClick={this.onPostClick}>Click</Button>
+                        </Card.Body>
+                    </Card>
 
                     
                     

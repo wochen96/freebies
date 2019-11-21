@@ -4,9 +4,18 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
+import CreateModal from './CreateModal';
 //import './default.css';
 
 class Header extends Component {
+    modalCheck = ({createOpenModal}) => {
+        this.showAddModal = createOpenModal;
+    }
+     
+    onAddClick = () => {
+        this.showAddModal();
+    }
+
     render() {
         return (
             <header className="App-header">
@@ -38,7 +47,8 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#add">ADD</Nav.Link>
+                            <CreateModal ref={this.modalCheck}></CreateModal>
+                            <Button onClick={this.onAddClick}>ADD</Button>
                         </Nav.Item>
                     </Nav>
                 </Navbar>
