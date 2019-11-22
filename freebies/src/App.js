@@ -17,23 +17,78 @@ import { Button, Navbar, Nav, Form, FormControl, ButtonToolbar } from 'react-boo
 import ReactDOM from "react-dom";
 //import App from "./App";
 
-function App() {
-    return(
+import Landing from './Landing.js';
+import Dashboard from './Dashboard.js';
+//import Navbar from './Navbar.js';
+//import Footer from './Footer.js';
+import { Route, Switch } from 'react-router-dom';
+import firebase from 'firebase/app';
 
-      <div id="root" className="App">
-        
-        {/* <Header />
+class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: null
+        }
+    }
 
-        <DashboardBody />
+    componentDidMount() {
+        this.authUnsub = firebase.auth().onAuthStateChanged(user => {
+            this.setState({ user: user });
+        });
+    }
 
-        <Footer /> */}
+    // Update current user
 
-        <DashboardBody />
+    updateUser(user) {
+        this.setState({
+            user: user
+        });
+    }
 
-      </div>
-    );
+    render() {
+        if (firebase.auth().currentUser) {
+            console.log("logged in");
+        }
+        else {
+            console.log("not signed in");
+        }
+        console.log(this.state.user);
+        //console.log(firebase.auth().currentUser);
+        return (
 
-  }
+            <div>
+                <Switch>
+                    <Route exact path="/" render={() => {
+                        return (
+                            <main>
+                                <Landing />
+                            </main>
+                        );
+                    }} />
+                    <Route path="/home" render={() => {
+                        return (
+                            <DashboardBody />
+                        );
+                    }} />
+                </Switch>
+            </div>
+
+            //<div id="root" className="App">
+
+            //  {/* <Header />
+
+            //  <DashboardBody />
+
+            //  <Footer /> */}
+
+            //  <DashboardBody />
+
+            //</div>
+
+        );
+    }
+}
 
 export default App; 
 

@@ -19,6 +19,10 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
+                            <Nav.Link href="#home">Welcome,[Insert User]</Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
                             <Nav.Link href="#signout">SIGN OUT</Nav.Link>
                         </Nav.Item>
 

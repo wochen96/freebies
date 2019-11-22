@@ -1,11 +1,14 @@
 import React, { Component, ProTypes } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap'
 
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import PostView from './PostView'
+import icon from "./uw_icon.png";
+//import "../src/uw_icon.png";
 
 const customStyles = {
     content : {
@@ -16,9 +19,13 @@ const customStyles = {
       marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)'
     }
-  };
+};
+
+
+
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
+
 Modal.setAppElement('#root')
 
 class MidleSection extends Component {
@@ -56,11 +63,19 @@ class MidleSection extends Component {
         return(
             <div>
                 <CardColumns>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="./uw_icon.png" />
+                    <Card>
+                        <Card.Img variant="top" src={icon} />
                         <Card.Body>
-                            <Card.Title>Free Cookie for All</Card.Title>
-                            <Card.Text>
+                            <Card.Title style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Free Cookie for All</Card.Title>
+                            <Card.Text style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}>
                             Free cokies
                             </Card.Text>
                             <Button variant="primary" onClick={this.getModal}>Click</Button>
@@ -91,33 +106,57 @@ class MidleSection extends Component {
  */}
                     
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="./uw_icon.png" />
+                    <Card style={{     }}>
+                        <Card.Img variant="top" src={icon} />
                         <Card.Body>
-                            <Card.Title>Free Cookie for All</Card.Title>
-                            <Card.Text>
+                            <Card.Title style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Free Cookie for All</Card.Title>
+                            <Card.Text style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             Free cokies
                             </Card.Text>
                             <Button variant="primary">Click</Button>
                         </Card.Body>
                     </Card>
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="./uw_icon.png" />
+                    <Card style={{     }}>
+                        <Card.Img variant="top" src={icon} />
                         <Card.Body>
-                            <Card.Title>Free Cookie for All</Card.Title>
-                            <Card.Text>
+                            <Card.Title style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Free Cookie for All</Card.Title>
+                            <Card.Text style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             Free cokies
                             </Card.Text>
                             <Button variant="primary">Click</Button>
                         </Card.Body>
                     </Card>
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="./uw_icon.png" />
+                    <Card style={{     }}>
+                        <Card.Img variant="top" src={icon}  />
                         <Card.Body>
-                            <Card.Title>Free Cookie for All</Card.Title>
-                            <Card.Text>
+                            <Card.Title style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>Free Cookie for All</Card.Title>
+                            <Card.Text style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             Free cokies
                             </Card.Text>
                             <Button variant="primary">Click</Button>

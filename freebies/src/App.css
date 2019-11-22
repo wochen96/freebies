@@ -1,5 +1,4 @@
 
-
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
@@ -25,6 +24,9 @@ footer {
     right: 0;
 }
 
+.btn-primary{
+   border-color:#337ab7;
+}
 
 
 @minin translateY($e) {
@@ -39,4 +41,17 @@ footer {
     transition:$e;
 }
 
+.card-columns {
+    display: flex;
+}
 
+.card {
+    margin-right: 2vw;
+}
+.card-body {
+    text-align: center;
+}
+
+.card-img-top {
+    align-content:center;
+}
