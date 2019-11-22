@@ -28,22 +28,26 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#signout">SIGN OUT</Nav.Link>
+                            {/* <Nav.Link href="#signout">SIGN OUT</Nav.Link> */}
+                            <Button>SIGN OUT</Button>
                         </Nav.Item>
 
                         <Nav.Item>
                             <Form inline>
                                 <FormControl type="text" placeholder="Search" className="edit_text" />
-                                <Button variant="outline-info">Search</Button>
+                                {/* <Button variant="outline-info">Search</Button> */}
+                                <Button>SEARCH</Button>
                             </Form>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#definite">Definite</Nav.Link>
+                            {/*<Nav.Link href="#definite">Definite</Nav.Link>*/}
+                            <Button>DEFINITE</Button>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#indefinite">Indefinite</Nav.Link>
+                            {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
+                            <Button>INDEFINITE</Button>
                         </Nav.Item>
 
                         <Nav.Item>

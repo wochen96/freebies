@@ -11,7 +11,7 @@ class PostModal extends Component {
     render() {
         return(
             <div>
-                {/* <Modal
+                <Modal
                     {...this.props}
                     size="lg"
                     aria-labelledby="contained-modal-title-vcenter"
@@ -19,42 +19,22 @@ class PostModal extends Component {
                     >
                     <Modal.Header className="modal-header" closeButton>
                         <Modal.Title id="contained-modal-title-vcenter">
-                        EDIT POST
+                        {this.props.onePost.title}
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        Body
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="danger" onClick={this.props.onHide}>CANCEL</Button>
-                        <Button variant="danger" onClick={this.props.onHide}>SUMMIT</Button>
-                    </Modal.Footer>
-                    </Modal> */}
-
-                    <Modal
-                    {...this.props}
-                    size="lg"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered
-                    >
-                    <Modal.Header className="modal-header" closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter">
-                        Free Cokies for All
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div className="container">
-                            <p><span className="modal-label">Location: </span><span>Mary Gate hall</span></p>
-                            <p><span className="modal-label">Date: </span><span>Nov, 15 2019</span></p>
-                            <p><span className="modal-label">Time: </span><span>Start: 10am, End: 11am</span></p>
-                            <p><span className="modal-label">Description: </span><span>Free cookies for All!!! Go get some!!!</span></p>
+                        <div className="modal-body">
+                            <p><span className="modal-label">Location: </span><span>{this.props.onePost.location}</span></p>
+                            <p><span className="modal-label">Date: </span><span>{this.props.onePost.definite.start}</span></p>
+                            <p><span className="modal-label">Time: </span><span>{this.props.onePost.definite.end}</span></p>
+                            <p><span className="modal-label">Description: </span><span>{this.props.onePost.description}</span></p>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="danger" onClick={this.props.showEditModalClick}>Edit</Button>
-                        <Button variant="danger" onClick={this.props.onHide}>Delete</Button>
+                        <Button variant="danger" onClick={this.props.showDeleteModalClick}>Delete</Button>
                     </Modal.Footer>
-                    </Modal>
+                </Modal>
             </div>
         );
 

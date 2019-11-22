@@ -6,33 +6,41 @@ body {
   font-style: normal;
   overflow: auto;
 }
-
 html, body, #app, #app>div {
   height: 100%
 }
-
 header {
   display: block;
   width: 100%;
 }
-
 footer {
   position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
 }
-
-
-
+.btn-primary{
+ border-color:#337ab7;
+}
 @minin translateY($e) {
   -webkit-transform: translateY($e);
   -moz-transform: translateY($e);
   transform: translateY($e);
 }
-
 @minin transition($e) {
   -webkit-transition:$e;
   -moz-transition:$e;
   transition:$e;
+}
+.card-columns {
+  display: flex;
+}
+.card {
+  margin-right: 2vw;
+}
+.card-body {
+  text-align: center;
+}
+.card-img-top {
+  align-content:center;
 }

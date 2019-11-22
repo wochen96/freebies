@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
 import EditModal from './EditModal';
 import PostModal from './PostModal';
+import DeleteModal from './DeleteModal'
 import './modal.css';
 
 
@@ -10,7 +11,8 @@ class PostView extends Component {
         super(props);
         this.state = {
             showPostModal: false,
-            showEditModal: false
+            showEditModal: false,
+            showDeleteModal: false
         }
 
         this.openEditModal = this.openEditModal.bind(this);
@@ -33,12 +35,24 @@ class PostView extends Component {
         })
     }
 
+    openDeleteModal = () => {
+        this.setState({
+            showEditModal: false,
+            showPostModal: true,
+            showDeleteModal: true
+        })
+    }
+
     closeEditModal = () => {
         this.setState({showEditModal: false})
     }
 
     closePostModal = () => {
         this.setState({showPostModal: false})
+    }
+
+    closeDeleteModal = () => {
+        this.setState({showDeleteModal: false})
     }
 
     render() {
@@ -48,12 +62,19 @@ class PostView extends Component {
                     <PostModal
                     show={this.state.showPostModal}
                     onHide={this.closePostModal}
-                    showEditModalClick={this.openEditModal}/>
+                    showEditModalClick={this.openEditModal}
+                    showDeleteModalClick={this.openDeleteModal}
+                    onePost={this.props.onePost}/>
                 )}
                 {this.state.showEditModal && (
                     <EditModal
                     show={this.state.showEditModal}
                     onHide={this.closeEditModal}/>
+                )}
+                {this.state.showDeleteModal && (
+                    <DeleteModal
+                    show={this.state.showDeleteModal}
+                    onHide={this.closeDeleteModal}/>
                 )}
             </div>
             

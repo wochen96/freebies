@@ -22,12 +22,17 @@ class CreateModal extends Component {
     render() {
         return(
             <div>
-                <Modal show={this.state.createModalShow} onHide={this.createClose}>
+                <Modal show={this.state.createModalShow} onHide={this.createClose} backdrop="static">
                     <Modal.Header closeButton>
                     <Modal.Title>Create Post</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        Body
+                        <div className="modal-body">
+                            <p><span className="modal-label">Location: </span><input type="text" name="inputLocation" /></p>
+                            <p><span className="modal-label">Date: </span><input type="text" name="inputDate" /></p>
+                            <p><span className="modal-label">Time: </span><input type="text" name="inputTime" /></p>
+                            <p><span className="modal-label">Description: </span><input type="text" name="inputDescription" /></p>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={this.createClose}>
