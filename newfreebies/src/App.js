@@ -11,7 +11,7 @@ import firebase from 'firebase/app';
 import Landing from './Landing.js';
 import Dashboard from './Dashboard';
 
-class App extends Component{
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,42 +20,42 @@ class App extends Component{
   }
   componentDidMount() {
     this.authUnsub = firebase.auth().onAuthStateChanged(user => {
-        this.setState({ user: user });
+      this.setState({ user: user });
     });
   }
   // Update current user
   updateUser(user) {
     this.setState({
-        user: user
+      user: user
     });
   }
 
   render() {
     if (firebase.auth().currentUser) {
-        console.log("logged in");
+      console.log("logged in");
     }
     else {
-        console.log("not signed in");
+      console.log("not signed in");
     }
     console.log(this.state.user);
     //console.log(firebase.auth().currentUser);
     return (
-        <div>
-            <Switch>
-                <Route exact path="/" render={() => {
-                    return (
-                        <main>
-                            <Landing />
-                        </main>
-                    );
-                }} />
-                <Route path="/home" render={() => {
-                    return (
-                        <Dashboard />
-                    );
-                }} />
-            </Switch>
-        </div>
+      <div>
+        <Switch>
+          <Route exact path="/" render={() => {
+            return (
+              <main>
+                <Landing />
+              </main>
+            );
+          }} />
+          <Route path="/home" render={() => {
+            return (
+              <Dashboard />
+            );
+          }} />
+        </Switch>
+      </div>
     );
   }
 }
