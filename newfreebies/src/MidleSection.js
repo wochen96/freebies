@@ -13,16 +13,16 @@ class MidleSection extends Component {
 
 
     render() {
-        return(
+        return (
             <div>
                 <CardColumns>
-                    
+
                     {Data.map((onePost, i) => {
                         return (
                             <PostCardDetail onePost={onePost} />
                         );
                     })}
-                    
+
                 </CardColumns>
 
 
@@ -30,6 +30,6 @@ class MidleSection extends Component {
         );
 
     }
- }
+}
 
 export default MidleSection;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
-class DeleteModal extends Component{
+class DeleteModal extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        return(
+        return (
             <div>
                 <Modal
                     {...this.props}
@@ -21,7 +21,7 @@ class DeleteModal extends Component{
                         <Button variant="danger" onClick={this.props.onHide}>YES</Button>
                         <Button variant="danger" onClick={this.props.onHide}>NO</Button>
                     </Modal.Footer>
-                    </Modal>
+                </Modal>
             </div>
         );
 
