@@ -1,7 +1,6 @@
-import React, { Component, ProTypes } from 'react';
+import React, { Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap'
 
 // components
 import Header from './header';

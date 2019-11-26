@@ -10,8 +10,9 @@ import firebase from 'firebase/app';
 // components
 import Landing from './Landing.js';
 import Dashboard from './Dashboard';
+import TestFirebase from './TestFirebase'
 
-class App extends Component {
+/* class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,4 +60,14 @@ class App extends Component {
     );
   }
 }
+export default App; */
+
+function App() {
+  return (
+    <div className="App">
+      <TestFirebase />
+    </div>
+  );
+}
+
 export default App;
