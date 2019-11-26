@@ -62,8 +62,8 @@ class PostView extends Component {
                     <PostModal
                     show={this.state.showPostModal}
                     onHide={this.closePostModal}
-                    showEditModalClick={this.openEditModal}
-                    showDeleteModalClick={this.openDeleteModal}
+                    openEditModal={this.openEditModal}
+                    openDeleteModal={this.openDeleteModal}
                     onePost={this.props.onePost}/>
                 )}
                 {this.state.showEditModal && (

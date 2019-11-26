@@ -3,21 +3,24 @@ import { Button, Modal, Card } from 'react-bootstrap';
 import PostView from './PostView';
 import icon from './uw_icon.png'
 
-class PostCardDetail extends Component{
+class PostCardDetail extends Component {
     constructor(props) {
         super(props);
     }
 
-    modalPostCheck = ({openPostModal}) => {
+    modalPostCheck = ({ openPostModal }) => {
+        console.log("openPostModal is ");
         this.showPostModal = openPostModal;
+
     }
-     
+
     onPostClick = () => {
+        console.log("onPostClick are called");
         this.showPostModal();
     }
 
     render() {
-        return(
+        return (
             <div>
                 <PostView ref={this.modalPostCheck} onePost={this.props.onePost}></PostView>
 
@@ -34,7 +37,7 @@ class PostCardDetail extends Component{
                             justifyContent: "center",
                             alignItems: "center",
                         }}>
-                        {this.props.onePost.description}
+                            {this.props.onePost.description}
                         </Card.Text>
                         <Button variant="primary" onClick={this.onPostClick}>Click</Button>
                     </Card.Body>

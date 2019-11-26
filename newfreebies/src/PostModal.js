@@ -25,14 +25,14 @@ class PostModal extends Component {
                     <Modal.Body>
                         <div className="modal-body">
                             <p><span className="modal-label">Location: </span><span>{this.props.onePost.location}</span></p>
-                            <p><span className="modal-label">Date: </span><span>{this.props.onePost.definite.start}</span></p>
-                            <p><span className="modal-label">Time: </span><span>{this.props.onePost.definite.end}</span></p>
+                            <p><span className="modal-label">Date: </span><span>{this.props.onePost.startTime}</span></p>
+                            <p><span className="modal-label">Time: </span><span>{this.props.onePost.endTime}</span></p>
                             <p><span className="modal-label">Description: </span><span>{this.props.onePost.description}</span></p>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="danger" onClick={this.props.showEditModalClick}>Edit</Button>
-                        <Button variant="danger" onClick={this.props.showDeleteModalClick}>Delete</Button>
+                        <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
+                        <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
                     </Modal.Footer>
                 </Modal>
             </div>

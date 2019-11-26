@@ -19,7 +19,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 
-var firebaseConfig = {
+/* var firebaseConfig = {
     apiKey: "AIzaSyC7bISvg7OGw2gZiq0C6Ya8qVQqMu73xJA",
     authDomain: "freebies-f44de.firebaseapp.com",
     databaseURL: "https://freebies-f44de.firebaseio.com",
@@ -30,7 +30,7 @@ var firebaseConfig = {
     measurementId: "G-KL6M4T183Y"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig); */
 
 
 /* var config = {
