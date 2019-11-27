@@ -31,13 +31,13 @@ class PostCardDetail extends Component {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center"
-                        }}>{this.props.onePost.title}</Card.Title>
+                        }}>{this.props.onePost.data.title}</Card.Title>
                         <Card.Text style={{
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
                         }}>
-                            {this.props.onePost.description}
+                            {this.props.onePost.data.description}
                         </Card.Text>
                         <Button variant="primary" onClick={this.onPostClick}>Click</Button>
                     </Card.Body>

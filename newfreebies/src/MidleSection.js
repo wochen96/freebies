@@ -24,8 +24,11 @@ class MidleSection extends Component {
             .then(snapshot => {
                 const posts = []
                 snapshot.forEach(doc => {
-                    const data = doc.data()
-                    posts.push(data)
+                    const data = doc.data();
+                    posts.push({
+                        key: doc.id,
+                        data: data
+                    })
                 })
                 this.setState({ posts: posts })
                 //console.log(snapshot)
@@ -45,11 +48,11 @@ class MidleSection extends Component {
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
                             return (
-                                <PostCardDetail onePost={onePost} key={i} />
+                                <PostCardDetail onePost={onePost} key={onePost.id} />
                             );
                         })
-                    }
-
+                }
+                
                 </CardColumns>
 
 
