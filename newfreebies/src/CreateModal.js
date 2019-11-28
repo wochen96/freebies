@@ -142,7 +142,7 @@ class CreateModal extends Component {
                             CANCEL
                             </Button>
                         <Button variant="primary" onClick={this.addNewPost}>
-                            SUMMIT
+                            SUBMIT
                             </Button>
                     </Modal.Footer>
                 </Modal>

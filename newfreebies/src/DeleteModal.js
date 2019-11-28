@@ -18,7 +18,7 @@ class DeleteModal extends Component {
                         Are you sure you want to delete this Post
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="danger" onClick={this.props.onHide}>YES</Button>
+                        <Button variant="secondary" onClick={this.props.handleDeleteOnePost}>YES</Button>
                         <Button variant="danger" onClick={this.props.onHide}>NO</Button>
                     </Modal.Footer>
                 </Modal>

@@ -42,12 +42,12 @@ class Header extends Component {
 
                         <Nav.Item>
                             {/*<Nav.Link href="#definite">Definite</Nav.Link>*/}
-                            <Button>DEFINITE</Button>
+                            <Button value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
                         </Nav.Item>
 
                         <Nav.Item>
                             {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
-                            <Button>INDEFINITE</Button>
+                            <Button value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
                         </Nav.Item>
 
                         <Nav.Item>

@@ -17,9 +17,15 @@ class MidleSection extends Component {
         }
     }
 
-    getDataToDisplay() {
+    getDataToDisplay = props => {
 
-        db.collection('posts')
+        /*console.log('props.isDefiniteSelected is ' + props.isDefiniteSelected);
+
+        const isDefiniteSelected = props.isDefiniteSelected.toString();
+
+        console.log('isDefiniteSelected is ' + isDefiniteSelected);*/
+
+        db.collection('posts').where('isDefinite', '==', 'definite')//.orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
                 const posts = []
@@ -40,7 +46,7 @@ class MidleSection extends Component {
 
 
     render() {
-        this.getDataToDisplay();
+        this.getDataToDisplay(this.props);
         return (
             <div>
                 <CardColumns>
