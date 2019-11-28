@@ -6,9 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import components
 import Landing from './Landing.js';
 import Dashboard from './Dashboard.js';
+import AboutSection from './AboutSection.js';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 import { Route, Switch } from 'react-router-dom';
+import Features from './Features.js';
 
 class App extends Component {
   constructor(props) {
@@ -33,6 +35,9 @@ class App extends Component {
             return (
               <main>
                 <Landing />
+                <Features />
+                <AboutSection />
+                <Footer />
               </main>
             );
           }}/>

@@ -1,9 +1,43 @@
 body {
   height: 100%;
-  display: flex;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  /* display: flex; */
+  /* padding-top: 56px; */
+}
+
+section {
+  min-height: 100vh;
 }
 
 /**!-----------------------
     [ Landing Page ]
 -------------------------**/
+.landing-splash {
+  background-image: url("img/landing-splash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.library {
+  background-image: url("img/library.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.feature-img {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  display: block;
+}
+
+.features {
+  background-color: #424a60;
+}

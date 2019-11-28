@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 class Landing extends Component {
 
@@ -45,27 +47,28 @@ class Landing extends Component {
 
     render() {
         return(
+            
+        <section className="landing-splash py-5">
             <div className="container h-100">
-                <div className="row">
-                    <div className="col-6 align-self-center">
-                        <div className="text-center">
-                            <button type="button" onClick={this.signIn} className="btn btn-primary">
-                                Login
-                            </button>
-                            <p>Please click on the link above to sign in with your Google account</p>
-                        </div>
+                <div className="row h-100 align-items-center">
+                    <div className="col-lg-12">
+                        <h1 className="display-3 text-white mt-5 mb-2">Welcome to Freebies!</h1>
+                        <p className="lead mb-5 text-white">Our goal is to help students navigate all of the free resources that University of Washington has to offer.</p>
                     </div>
-                    <div className="col-6 align-self-center">
-                        <div className="text-center">
-                            <h2>About Us</h2>
-                            <p>Our mission is to help students take advantage of the free resources that UW campus provides</p>
-                            <h2>Contact Us</h2>
-                            <p>Phone:</p>
-                            <p>Email:</p>
-                        </div>
+                    <button type="button" onClick={this.signIn} className="btn btn-primary ml-3">
+                        Login
+                    </button>
+                    <div className="smooth-scroll">
+                        <Link smooth to="#features">
+                            <button type="button" className="btn btn-secondary ml-3">
+                                Learn More
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
+        </section>
+        
         );
     }
 }
