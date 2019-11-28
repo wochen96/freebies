@@ -6,23 +6,31 @@ import icon from './uw_icon.png'
 class PostCardDetail extends Component {
     constructor(props) {
         super(props);
+
+        this.refPostView = React.createRef();
     }
 
-    modalPostCheck = ({ openPostModal }) => {
+    /* modalPostCheck = ({ openPostModal }) => {
         console.log("openPostModal is ");
         this.showPostModal = openPostModal;
 
-    }
+    } */
+
+    
 
     onPostClick = () => {
-        console.log("onPostClick are called");
-        this.showPostModal();
+        const currentPostView = this.refPostView.current;
+
+        if (currentPostView.state.showPostModal == false) {
+            currentPostView.openPostModal();
+            //console.log("onPostClick are called and show PostView");
+        }
     }
 
     render() {
         return (
             <div>
-                <PostView ref={this.modalPostCheck} onePost={this.props.onePost}></PostView>
+                <PostView ref={this.refPostView} onePost={this.props.onePost}></PostView>
 
                 <Card>
                     <Card.Img variant="top" src={icon} />

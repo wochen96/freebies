@@ -30,10 +30,6 @@ class Dashboard extends Component {
             <div>
                 <Header changeDefinite={this.changeDefinite} />
 
-                {/* <button value="definite" onClick={this.changeDefinite}>DEFINITE</button>
-
-                <button value="indefinite" onClick={this.changeDefinite}>INDEFINITE</button> */}
-
                 <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} />
 
                 <Footer />

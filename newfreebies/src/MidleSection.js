@@ -19,13 +19,7 @@ class MidleSection extends Component {
 
     getDataToDisplay = props => {
 
-        /*console.log('props.isDefiniteSelected is ' + props.isDefiniteSelected);
-
-        const isDefiniteSelected = props.isDefiniteSelected.toString();
-
-        console.log('isDefiniteSelected is ' + isDefiniteSelected);*/
-
-        db.collection('posts').where('isDefinite', '==', 'definite')//.orderBy('startDate', 'desc')
+        db.collection('posts').where('isDefinite', '==', props.isDefiniteSelected)//.orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
                 const posts = []
@@ -37,11 +31,8 @@ class MidleSection extends Component {
                     })
                 })
                 this.setState({ posts: posts })
-                //console.log(snapshot)
             })
             .catch(error => console.log(error));
-
-        //const { providerId, isSignedIn, ...authProviderConfig } = config;
     }
 
 
