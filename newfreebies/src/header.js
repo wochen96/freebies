@@ -8,12 +8,27 @@ import CreateModal from './CreateModal';
 //import './default.css';
 
 class Header extends Component {
-    modalCheck = ({createOpenModal}) => {
-        this.showAddModal = createOpenModal;
+
+    constructor(props) {
+        super(props);
+
+        this.refCreateView = React.createRef();
     }
+
+
+
+
+
+    /*modalCheck = ({createOpenModal}) => {
+        this.showAddModal = createOpenModal;
+    }*/
      
     onAddClick = () => {
-        this.showAddModal();
+        const currentCreateView = this.refCreateView.current;
+
+        if (currentCreateView.state.createModalShow == false) {
+            currentCreateView.createOpenModal();
+        }
     }
 
     render() {
@@ -51,7 +66,7 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <CreateModal ref={this.modalCheck}></CreateModal>
+                            <CreateModal ref={this.refCreateView}></CreateModal>
                             <Button onClick={this.onAddClick}>ADD</Button>
                         </Nav.Item>
                     </Nav>
