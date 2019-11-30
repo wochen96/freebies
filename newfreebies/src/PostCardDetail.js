@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, Card } from 'react-bootstrap';
 import PostView from './PostView';
-import icon from './uw_icon.png'
 
 class PostCardDetail extends Component {
     constructor(props) {

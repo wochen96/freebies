@@ -14,14 +14,6 @@ class Header extends Component {
 
         this.refCreateView = React.createRef();
     }
-
-
-
-
-
-    /*modalCheck = ({createOpenModal}) => {
-        this.showAddModal = createOpenModal;
-    }*/
      
     onAddClick = () => {
         const currentCreateView = this.refCreateView.current;
@@ -39,7 +31,7 @@ class Header extends Component {
                     <Nav className="navbar-nav nav-fill w-100">
 
                         <Nav.Item>
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="/home">Home</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>

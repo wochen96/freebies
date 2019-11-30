@@ -1,11 +1,14 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 // components
 import Header from './header';
 import Footer from './footer';
 import MidleSection from './MidleSection'
+import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
 
 
 class Dashboard extends Component {
@@ -27,13 +30,33 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div>
-                <Header changeDefinite={this.changeDefinite} />
+            <Router>
+                <div>
+                    <Header changeDefinite={this.changeDefinite} />
 
-                <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} />
+                    <Switch>
+                        <Route path="/home" render={() => {
+                            return (
+                                <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} />
+                            );
+                        }} />
 
-                <Footer />
-            </div>
+                        {/* <Route path="/contact" render={() => {
+                            return (
+                                <ContactUs />
+                            );
+                        }} /> */}
+
+                        <Route path="/contact" component={ContactUs} />
+                        <Route path="/about" component={AboutUs} />
+
+                    </Switch>
+
+
+
+                    <Footer />
+                </div>
+            </Router>
         );
 
     }

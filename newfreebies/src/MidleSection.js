@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Navbar, Nav, Form, FormControl, Card, CardColumns } from 'react-bootstrap';
+import { CardColumns } from 'react-bootstrap';
 //import PostView from './PostView';
-import PostCardDetail from './PostCardDetail'
-import Data from './json.json'
+import PostCardDetail from './PostCardDetail';
 import { db, auth } from './services/firebase';
 
 
@@ -45,7 +44,7 @@ class MidleSection extends Component {
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
                             return (
-                                <PostCardDetail onePost={onePost} key={onePost.id} />
+                                <PostCardDetail onePost={onePost} key={i} />
                             );
                         })
                 }

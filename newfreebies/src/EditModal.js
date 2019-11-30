@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { db, auth, storage } from './services/firebase';
 import DatePicker from 'react-datepicker';
@@ -16,14 +16,20 @@ class EditModal extends Component {
             isDefinite: this.props.onePost.data.isDefinite,
             location: this.props.onePost.data.location,
             tag: this.props.onePost.data.tag,
-            startDate: this.props.onePost.data.startDate,
-            endDate: this.props.onePost.data.endDate,
-            imageName: this.props.onePost.data.imageName,
 
+            imageName: this.props.onePost.data.imageName,
             imageToUpload: null,
             imageToShow: this.props.onePost.data.url,
             url: this.props.onePost.data.url,
-            progress: 0
+            progress: 0,
+
+            startDate: null,
+            endDate: null
+        }
+
+        if (this.state.isDefinite == 'definite') {
+            this.state.startDate = this.props.onePost.data.startDate.toDate();
+            this.state.endDate = this.props.onePost.data.endDate.toDate();
         }
     }
 
@@ -132,6 +138,19 @@ class EditModal extends Component {
         }
     }
 
+    checkCondition = (event) => {
+        if (document.getElementById('inputEditTitle').value == '' || document.getElementById('inputEditLocation').value == '' ||
+            document.getElementById('inputEditDescription').value == '' || document.getElementById('inputEditTag').value == '') {
+            alert('Please fill out all the missing fields!');
+        } else if (this.state.isDefinite == 'definite' && (this.state.startDate == null || this.state.endDate == null)) {
+            alert('Please fill out a start time and end time!');
+        } else if (this.state.isDefinite == 'definite' && this.state.startDate > this.state.endDate) {
+            alert('The end time have to be later than the start time.');
+        } else {
+            this.editOnePost(event);
+        }
+    }
+
     render() {
 
         const style = {
@@ -165,8 +184,6 @@ class EditModal extends Component {
                                 <img src={this.state.imageToshow} height='100' width='150' />
                                 <input type='file' onChange={this.handleImageChange} />
                                 <progress value={this.state.progress} max="100" />
-
-                                {/* <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height='300' width='400' /> */}
                             </div>
 
                             <div>
@@ -179,7 +196,7 @@ class EditModal extends Component {
                                             <span className="modal-label">Start Time: </span>
 
                                             <DatePicker
-                                                selected={this.state.startDate.toDate()}
+                                                selected={this.state.startDate}
                                                 onChange={date => this.setState({ startDate: date })}
                                                 showTimeSelect
                                                 timeFormat="HH:mm"
@@ -193,7 +210,7 @@ class EditModal extends Component {
                                         <p>
                                             <span className="modal-label">End Time: </span>
                                             <DatePicker
-                                                selected={this.state.endDate.toDate()}
+                                                selected={this.state.endDate}
                                                 onChange={date => this.setState({ endDate: date })}
                                                 showTimeSelect
                                                 timeFormat="HH:mm"
@@ -214,7 +231,7 @@ class EditModal extends Component {
 
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.onHide}>CANCEL</Button>
-                        <Button variant="primary" onClick={this.editOnePost}>SUBMIT</Button>
+                        <Button variant="primary" onClick={this.checkCondition}>SUBMIT</Button>
                     </Modal.Footer>
                 </Modal>
 

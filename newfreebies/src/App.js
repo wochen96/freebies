@@ -4,16 +4,17 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Router } from 'react-router-dom';
+//import { BrowserRouter as Router, Link } from "react-router-dom";
 import firebase from 'firebase/app';
 import { db, auth } from './services/firebase';
 import axios from 'axios';
-import ImageUpload from './components/ImageUpload';
+//import ImageUpload from './components/ImageUpload';
 
 // components
 import Landing from './Landing.js';
 import Dashboard from './Dashboard';
-import TestFirebase from './TestFirebase'
+//import TestFirebase from './TestFirebase'
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class App extends Component {
               </main>
             );
           }} />
+
           <Route path="/home" render={() => {
             return (
               <Dashboard />
@@ -61,18 +63,9 @@ class App extends Component {
         </Switch>
       </div>
     );
-
-    /*return (
-      <div>
-        <ImageUpload />
-      </div>
-    );*/
-
-    /*const x = this.addNew();
-    return (
-    <div>{x}</div>
-    );*/
   }
 }
 export default App;
+
+
 

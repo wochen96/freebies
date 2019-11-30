@@ -33,6 +33,8 @@ class CreateModal extends Component {
 
         this.createOpenModal = this.createOpenModal.bind(this);
         this.createClose = this.createClose.bind(this);
+        this.addNewPost = this.addNewPost.bind(this);
+        this.checkCondition = this.checkCondition.bind(this);
     }
 
 
@@ -49,7 +51,6 @@ class CreateModal extends Component {
     }
 
     addNewPost = (event) => {
-
         const image = this.state.imageToUpload;
 
         if (image == null) {
@@ -57,8 +58,6 @@ class CreateModal extends Component {
         } else {
             this.addNewPostWithUploadImage(image);
         }
-
-
     }
 
     addNewPostWithUploadImage = (image) => {
@@ -144,6 +143,19 @@ class CreateModal extends Component {
         this.createClose();
     }
 
+    checkCondition = (event) => {
+        if (document.getElementById('inputTitle').value == '' || document.getElementById('inputLocation').value == '' ||
+            document.getElementById('inputDescription').value == '' || document.getElementById('inputTag').value == '') {
+            alert('Please fill out all the missing fields!');
+        } else if (this.state.selectedOption == 'definite' && (this.state.startDate == null || this.state.endDate == null)) {
+            alert('Please fill out a start time and end time!');
+        } else if (this.state.selectedOption == 'definite' && this.state.startDate > this.state.endDate) {
+            alert('The end time have to be later than the start time.');
+        } else {
+            this.addNewPost(event);
+        }
+    }
+
 
     render() {
         const style = {
@@ -179,7 +191,6 @@ class CreateModal extends Component {
                                 <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} /> Indefinite
                                 {this.state.selectedOption === "definite" ?
                                     <div>
-                                        {/* <p><span className="modal-label">Date: </span><input type="text" id="inputDate" /></p> */}
                                         <p><span className="modal-label">Event time: </span></p>
 
                                         <p>
@@ -224,7 +235,7 @@ class CreateModal extends Component {
                         <Button variant="secondary" onClick={this.createClose}>
                             CANCEL
                             </Button>
-                        <Button variant="primary" onClick={this.addNewPost}>
+                        <Button variant="primary" onClick={this.checkCondition}>
                             SUBMIT
                             </Button>
                     </Modal.Footer>
