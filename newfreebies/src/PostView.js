@@ -4,7 +4,7 @@ import EditModal from './EditModal';
 import PostModal from './PostModal';
 import DeleteModal from './DeleteModal'
 import './modal.css';
-import { db, auth } from './services/firebase';
+import { db, auth, storage } from './services/firebase';
 
 
 class PostView extends Component {
@@ -71,6 +71,21 @@ class PostView extends Component {
                 }).catch(function (error) {
                     console.error("Error removing document: ", error);
                 });
+
+            // This statement is to delete the old image from firebase.
+            if (!(this.props.onePost.data.imageName == 'default')) {
+                // Create a reference to the file to delete
+                var desertRef = storage.ref('images').child(this.props.onePost.data.imageName);
+
+                // Delete the file
+                desertRef.delete().then(function () {
+                    // File deleted successfully
+                    console.log('Delete image yes.');
+                }).catch(function (error) {
+                    // Uh-oh, an error occurred!
+                    console.log('error in delete the image.')
+                });
+            }
         });
     }
 

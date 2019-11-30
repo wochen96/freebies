@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import firebase from 'firebase/app';
 import { db, auth } from './services/firebase';
 import axios from 'axios';
+import ImageUpload from './components/ImageUpload';
 
 // components
 import Landing from './Landing.js';
@@ -60,6 +61,17 @@ class App extends Component {
         </Switch>
       </div>
     );
+
+    /*return (
+      <div>
+        <ImageUpload />
+      </div>
+    );*/
+
+    /*const x = this.addNew();
+    return (
+    <div>{x}</div>
+    );*/
   }
 }
 export default App;

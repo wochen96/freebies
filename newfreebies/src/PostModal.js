@@ -38,6 +38,13 @@ class PostModal extends Component {
             </div>
         );*/
 
+        const style = {
+            height: '20vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
 
         return (
             <div>
@@ -56,6 +63,10 @@ class PostModal extends Component {
                         <div className="modal-body">
                             <p><span className="modal-label">Type: </span><span>{this.props.onePost.data.isDefinite}</span></p>
                             <p><span className="modal-label">Location: </span><span>{this.props.onePost.data.location}</span></p>
+
+                            <div style={style}>
+                                <img src={this.props.onePost.data.url || 'http://via.placeholder.com/100x150'} height='100' width='150' />
+                            </div>
 
                             {
                                 this.props.onePost.data.isDefinite == 'definite' ?
@@ -78,6 +89,6 @@ class PostModal extends Component {
         );
 
     }
- }
+}
 
 export default PostModal;

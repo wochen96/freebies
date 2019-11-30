@@ -32,8 +32,8 @@ class PostCardDetail extends Component {
             <div>
                 <PostView ref={this.refPostView} onePost={this.props.onePost}></PostView>
 
-                <Card>
-                    <Card.Img variant="top" src={icon} />
+                <Card onClick={this.onPostClick}>
+                    <Card.Img variant="top" src={this.props.onePost.data.url} height="200" width="100" />
                     <Card.Body>
                         <Card.Title style={{
                             display: "flex",
@@ -47,7 +47,7 @@ class PostCardDetail extends Component {
                         }}>
                             {this.props.onePost.data.description}
                         </Card.Text>
-                        <Button variant="primary" onClick={this.onPostClick}>Click</Button>
+                        {/* <Button variant="primary" onClick={this.onPostClick}>Click</Button> */}
                     </Card.Body>
                 </Card>
             </div>
