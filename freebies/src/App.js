@@ -18,11 +18,14 @@ import ReactDOM from "react-dom";
 //import App from "./App";
 
 import Landing from './Landing.js';
+import SignOutView from "./signOut";
 import Dashboard from './Dashboard.js';
 //import Navbar from './Navbar.js';
 //import Footer from './Footer.js';
 import { Route, Switch } from 'react-router-dom';
 import firebase from 'firebase/app';
+
+
 
 class App extends Component{
     constructor(props) {
@@ -34,26 +37,46 @@ class App extends Component{
 
     componentDidMount() {
         this.authUnsub = firebase.auth().onAuthStateChanged(user => {
+            console.log("auth change");
             this.setState({ user: user });
         });
     }
 
     // Update current user
 
-    updateUser(user) {
+   /* displayEmail = () => {
+        var user = firebase.auth().currentUser;
+        var name, email, photoUrl, uid, emailVerified;
+
+        if (user != null) {
+            name = user.displayName;
+            email = user.email;
+            photoUrl = user.photoURL;
+            emailVerified = user.emailVerified;
+            uid = user.uid;
+        }
+        console.log(email);
+        console.log(this.state.user);
+    }*/
+
+    updateUser = (user) =>{
         this.setState({
             user: user
         });
     }
 
     render() {
+        console.log(this.state);
         if (firebase.auth().currentUser) {
+ 
             console.log("logged in");
+            console.log(firebase.auth().currentUser.email);
         }
         else {
             console.log("not signed in");
         }
-        console.log(this.state.user);
+
+
         //console.log(firebase.auth().currentUser);
         return (
 
@@ -62,7 +85,8 @@ class App extends Component{
                     <Route exact path="/" render={() => {
                         return (
                             <main>
-                                <Landing />
+                                <Landing updateUser={this.updateUser} />
+                               
                             </main>
                         );
                     }} />

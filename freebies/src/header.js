@@ -3,11 +3,25 @@ import React, { Component } from 'react';
 //import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
+import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
+import firebase from "firebase/app";
+import SignOut from "./signOut";
+import App from "./App";
+
 //import './default.css';
 
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: null
+        }
+    }
+
+
     render() {
+        console.log(this.state.user);
         return (
             <header className="App-header">
                 <Navbar bg="dark" variant="dark">
@@ -19,17 +33,17 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#home">Welcome,[Insert User]</Nav.Link>
+                            <Nav.Link href="#welcome">Welcome,[insert user]{this.state.user}</Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
-                            <Nav.Link href="#signout">SIGN OUT</Nav.Link>
+                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
                             <Form inline>
-                                <FormControl type="text" placeholder="Search" className="edit_text" />
-                                <Button variant="outline-info">Search</Button>
+                                <FormControl id="search" type="text" placeholder="Search" className="edit_text" />
+                                <Button variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
                             </Form>
                         </Nav.Item>
 

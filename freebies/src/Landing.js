@@ -16,6 +16,7 @@ class Landing extends Component {
                 this.setState(state => {
                     state.user = user;
                     return state;
+                    console.log(firebase.auth().currentUser.email);
                 });
                 this.props.updateUser(user);
             } else { // user is not logged in
@@ -31,15 +32,18 @@ class Landing extends Component {
     componentWillUnmount() {
         this.authUnRegFunc.off();
     }
-
+    //gapi.auth2.getAuthInstance().disconnect()
     // Sign in using Google popup authentication
     signIn() {
+
+
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).catch((error) => alert(error));
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 window.location = '/home';
             }
+            
         })
     }
 
