@@ -11,6 +11,10 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 
 
+import firebase from "firebase/app";
+import 'firebase/firestore'
+
+
 class Dashboard extends Component {
 
     constructor(props) {
@@ -18,8 +22,11 @@ class Dashboard extends Component {
 
         this.state = {
             isDefiniteSelected: 'definite',
-            checkBoolean: true
+            searchCheck: 'no'
         }
+        console.log(this.props.user);
+
+        this.refSearch = React.createRef();
     }
 
     changeDefinite = event => {
@@ -28,35 +35,40 @@ class Dashboard extends Component {
         })
     }
 
+    searchDatabase = (event) => {
+        this.setState({
+            searchCheck: event.target.value
+        })
+    }
+    
+
     render() {
         return (
-            <Router>
-                <div>
-                    <Header changeDefinite={this.changeDefinite} />
+            <div>
+                <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} />
 
-                    <Switch>
-                        <Route path="/home" render={() => {
-                            return (
-                                <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} />
-                            );
-                        }} />
+                {/* <p>{this.props.user}</p> */}
 
-                        {/* <Route path="/contact" render={() => {
+                <Switch>
+                    <Route path="/home" render={() => {
+                        return (
+                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} />
+                        );
+                    }} />
+
+                    {/* <Route path="/contact" render={() => {
                             return (
                                 <ContactUs />
                             );
                         }} /> */}
 
-                        <Route path="/contact" component={ContactUs} />
-                        <Route path="/about" component={AboutUs} />
+                    <Route exact path="/contact" component={ContactUs} />
+                    <Route path="/about" component={AboutUs} />
 
-                    </Switch>
+                </Switch>
 
-
-
-                    <Footer />
-                </div>
-            </Router>
+                <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
+            </div>
         );
 
     }

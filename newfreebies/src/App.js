@@ -19,21 +19,26 @@ import Dashboard from './Dashboard';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    //this.refLanding = React.createRef();
+    //const currentLanding = this.refLanding.current;
+
     this.state = {
-      user: null
+      user: null,
     }
   }
   componentDidMount() {
     this.authUnsub = firebase.auth().onAuthStateChanged(user => {
+      console.log("auth change");
       this.setState({ user: user });
     });
   }
   // Update current user
-  updateUser(user) {
+  updateUser = (user) =>{
     this.setState({
-      user: user
+        user: user
     });
-  }
+}
 
   render() {
     if (firebase.auth().currentUser) {
@@ -50,14 +55,14 @@ class App extends Component {
           <Route exact path="/" render={() => {
             return (
               <main>
-                <Landing />
+                <Landing updateUser={this.updateUser} />
               </main>
             );
           }} />
 
           <Route path="/home" render={() => {
             return (
-              <Dashboard />
+              <Dashboard user={this.state.user} />
             );
           }} />
         </Switch>
@@ -66,6 +71,3 @@ class App extends Component {
   }
 }
 export default App;
-
-
-

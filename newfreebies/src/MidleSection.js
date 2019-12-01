@@ -34,9 +34,40 @@ class MidleSection extends Component {
             .catch(error => console.log(error));
     }
 
+    searchDatabase = props => {
+        var searchTerm = document.getElementById("search").value.toLowerCase();
+
+        db.collection("posts")
+            .get()
+            .then(snapshot => {
+                const posts = [];
+                snapshot.forEach(doc =>  {
+
+                    const data = doc.data();
+
+                    if (data.title.toLowerCase().includes(searchTerm)) {
+                        console.log(doc.data().title);
+
+                        posts.push({
+                            key: doc.id,
+                            data: data
+                        })
+                        //console.log(posts);
+                    }
+                });
+                this.setState({ posts: posts });
+            })
+            .catch(error => console.log(error));
+    }
 
     render() {
-        this.getDataToDisplay(this.props);
+
+        if (this.props.searchCheck == 'yes') {
+            this.searchDatabase(this.props);
+        } else {
+            this.getDataToDisplay(this.props);
+        };
+
         return (
             <div>
                 <CardColumns>
@@ -47,8 +78,8 @@ class MidleSection extends Component {
                                 <PostCardDetail onePost={onePost} key={i} />
                             );
                         })
-                }
-                
+                    }
+
                 </CardColumns>
 
 
@@ -73,3 +104,5 @@ export default MidleSection;
         )
     });
 }*/
+
+

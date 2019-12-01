@@ -7,15 +7,7 @@ class PostCardDetail extends Component {
         super(props);
 
         this.refPostView = React.createRef();
-    }
-
-    /* modalPostCheck = ({ openPostModal }) => {
-        console.log("openPostModal is ");
-        this.showPostModal = openPostModal;
-
-    } */
-
-    
+    }    
 
     onPostClick = () => {
         const currentPostView = this.refPostView.current;

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
 import CreateModal from './CreateModal';
 //import './default.css';
+import SignOut from "./SignOut";
 
 class Header extends Component {
 
@@ -14,7 +15,7 @@ class Header extends Component {
 
         this.refCreateView = React.createRef();
     }
-     
+
     onAddClick = () => {
         const currentCreateView = this.refCreateView.current;
 
@@ -35,15 +36,14 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            {/* <Nav.Link href="#signout">SIGN OUT</Nav.Link> */}
-                            <Button>SIGN OUT</Button>
+                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
                         </Nav.Item>
 
                         <Nav.Item>
                             <Form inline>
-                                <FormControl type="text" placeholder="Search" className="edit_text" />
+                                <FormControl id="search" type="text" placeholder="Search" className="edit_text" />
                                 {/* <Button variant="outline-info">Search</Button> */}
-                                <Button>SEARCH</Button>
+                                <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
                             </Form>
                         </Nav.Item>
 
@@ -67,6 +67,6 @@ class Header extends Component {
         );
 
     }
- }
+}
 
 export default Header;
