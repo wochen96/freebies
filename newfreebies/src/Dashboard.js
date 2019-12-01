@@ -25,13 +25,12 @@ class Dashboard extends Component {
             searchCheck: 'no'
         }
         console.log(this.props.user);
-
-        this.refSearch = React.createRef();
     }
 
     changeDefinite = event => {
         this.setState({
-            isDefiniteSelected: event.target.value
+            isDefiniteSelected: event.target.value,
+            searchCheck: 'no'
         })
     }
 

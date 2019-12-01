@@ -46,7 +46,7 @@ class MidleSection extends Component {
                     const data = doc.data();
 
                     if (data.title.toLowerCase().includes(searchTerm)) {
-                        console.log(doc.data().title);
+                        //console.log(doc.data().title);
 
                         posts.push({
                             key: doc.id,
