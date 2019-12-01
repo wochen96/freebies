@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //import PostCardDetail from './PostCardDetail';
 //import { db, auth } from './services/firebase';
 
-const ContactUs = (props) => {
+const Contact = (props) => {
     const style = {
         height: '20vh',
         display: 'flex',
@@ -22,4 +22,4 @@ const ContactUs = (props) => {
     );
 }
 
-export default ContactUs;
+export default Contact;

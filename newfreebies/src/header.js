@@ -36,6 +36,10 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
+                            <span>{this.props.userEmail}</span>
+                        </Nav.Item>
+
+                        <Nav.Item>
                             <Nav.Link href="#signout"><SignOut /></Nav.Link>
                         </Nav.Item>
 

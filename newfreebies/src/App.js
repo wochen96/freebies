@@ -15,6 +15,7 @@ import axios from 'axios';
 import Landing from './Landing.js';
 import Dashboard from './Dashboard';
 //import TestFirebase from './TestFirebase'
+import Contact from './ContactUs';
 
 class App extends Component {
   constructor(props) {
@@ -34,15 +35,18 @@ class App extends Component {
     });
   }
   // Update current user
-  updateUser = (user) =>{
+  updateUser = (user) => {
     this.setState({
-        user: user
+      user: user
     });
-}
+  }
 
   render() {
     if (firebase.auth().currentUser) {
       console.log("logged in");
+      console.log(firebase.auth().currentUser.email);
+      this.state.user = firebase.auth().currentUser;
+      console.log(this.state.user.email);
     }
     else {
       console.log("not signed in");
@@ -51,7 +55,7 @@ class App extends Component {
     //console.log(firebase.auth().currentUser);
     return (
       <div>
-        <Switch>
+        <div>
           <Route exact path="/" render={() => {
             return (
               <main>
@@ -60,12 +64,24 @@ class App extends Component {
             );
           }} />
 
-          <Route path="/home" render={() => {
+          {
+            this.state.user &&
+            <Route path="/home" render={() => {
+              return (
+                <Dashboard userEmail={this.state.user.email} />
+              );
+            }} />
+          }
+
+          {/* <Route path="/home" render={() => {
             return (
               <Dashboard user={this.state.user} />
             );
-          }} />
-        </Switch>
+          }} /> */}
+
+          {/* <Route path="/contact" component={Contact} />           */}
+
+        </div>
       </div>
     );
   }

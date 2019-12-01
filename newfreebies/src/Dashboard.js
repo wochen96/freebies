@@ -8,7 +8,7 @@ import Header from './header';
 import Footer from './footer';
 import MidleSection from './MidleSection'
 import AboutUs from './AboutUs';
-import ContactUs from './ContactUs';
+import Contact from './ContactUs';
 
 
 import firebase from "firebase/app";
@@ -24,7 +24,7 @@ class Dashboard extends Component {
             isDefiniteSelected: 'definite',
             searchCheck: 'no'
         }
-        console.log(this.props.user);
+        //console.log('the user name is: ' + this.props.user.email);
     }
 
     changeDefinite = event => {
@@ -39,38 +39,57 @@ class Dashboard extends Component {
             searchCheck: event.target.value
         })
     }
-    
+
 
     render() {
         return (
-            <div>
-                <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} />
+            <Router>
+                <div className="dashboard">
+                    <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} />
 
-                {/* <p>{this.props.user}</p> */}
-
-                <Switch>
                     <Route path="/home" render={() => {
                         return (
-                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} />
+                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                            
                         );
                     }} />
 
-                    {/* <Route path="/contact" render={() => {
-                            return (
-                                <ContactUs />
-                            );
-                        }} /> */}
-
-                    <Route exact path="/contact" component={ContactUs} />
+                    <Route path="/contact" component={Contact} />
                     <Route path="/about" component={AboutUs} />
 
-                </Switch>
+                    <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
+                </div>
+            </Router>
 
-                <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
-            </div>
+
+
+
+
+
         );
 
     }
 }
 
 export default Dashboard;
+
+
+/*<div>
+
+
+<Switch>
+    <Route path="/home" render={() => {
+        return (
+            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} />
+        );
+    }} />
+
+
+
+    <Route exact path="/contact" component={ContactUs} />
+    <Route path="/about" component={AboutUs} />
+
+</Switch>
+
+
+</div>*/
