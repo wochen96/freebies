@@ -20,7 +20,6 @@ class CreateModal extends Component {
             location: null,
             tag: null,
             upvotes: null,
-            username: null,
             startDate: null,
             endDate: null,
 
@@ -85,8 +84,7 @@ class CreateModal extends Component {
                                 isDefinite: this.state.selectedOption,
                                 url: url,
                                 imageName: image.name,
-                                tag: document.getElementById('inputTag').value,
-                                username: 'tran6388@uw.edu',
+                                tag: document.getElementById('inputTag').value
                             }
 
                         }, () => this.addFunction())
@@ -103,8 +101,7 @@ class CreateModal extends Component {
                 isDefinite: this.state.selectedOption,
                 url: 'https://firebasestorage.googleapis.com/v0/b/freebies-f44de.appspot.com/o/uw_icon.png?alt=media&token=40163c4d-8a5e-4406-87ee-9a4e139ab449',
                 imageName: 'default',
-                tag: document.getElementById('inputTag').value,
-                username: 'tran6388@uw.edu',
+                tag: document.getElementById('inputTag').value
             }
 
         }, () => this.addFunction());
@@ -135,7 +132,7 @@ class CreateModal extends Component {
                 upvotes: '0',
                 imageName: this.state.imageName,
                 createAt: new Date(),
-                username: 'tran6388@uw.edu'
+                username: this.props.userEmail
             })
             .then(res => {
                 console.log(res.id)

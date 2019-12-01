@@ -62,7 +62,7 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <CreateModal ref={this.refCreateView}></CreateModal>
+                            <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
                             <Button onClick={this.onAddClick}>ADD</Button>
                         </Nav.Item>
                     </Nav>

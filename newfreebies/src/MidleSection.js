@@ -75,7 +75,7 @@ class MidleSection extends Component {
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
                             return (
-                                <PostCardDetail onePost={onePost} key={i} />
+                                <PostCardDetail userEmail={this.props.userEmail} onePost={onePost} key={i} />
                             );
                         })
                     }

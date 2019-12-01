@@ -9,35 +9,6 @@ class PostModal extends Component {
     }
 
     render() {
-        /*return(
-            <div>
-                <Modal
-                    {...this.props}
-                    size="lg"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered
-                    >
-                    <Modal.Header className="modal-header" closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter">
-                        {this.props.onePost.title}
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div className="modal-body">
-                            <p><span className="modal-label">Location: </span><span>{this.props.onePost.location}</span></p>
-                            <p><span className="modal-label">Date: </span><span>{this.props.onePost.startTime}</span></p>
-                            <p><span className="modal-label">Time: </span><span>{this.props.onePost.endTime}</span></p>
-                            <p><span className="modal-label">Description: </span><span>{this.props.onePost.description}</span></p>
-                        </div>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
-                        <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
-                    </Modal.Footer>
-                </Modal>
-            </div>
-        );*/
-
         const style = {
             height: '20vh',
             display: 'flex',
@@ -80,10 +51,26 @@ class PostModal extends Component {
                             <p><span className="modal-label">Description: </span><span>{this.props.onePost.data.description}</span></p>
                         </div>
                     </Modal.Body>
+
                     <Modal.Footer>
+                        <span>Create by: {this.props.onePost.data.username}</span>
+                        {
+                            this.props.userEmail == this.props.onePost.data.username ?
+                                <div>
+                                    <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
+                                    
+                                    <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
+                                </div> : null
+                        }
+
+                    </Modal.Footer>
+
+
+
+                    {/* <Modal.Footer>
                         <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
                         <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
-                    </Modal.Footer>
+                    </Modal.Footer> */}
                 </Modal>
             </div>
         );
