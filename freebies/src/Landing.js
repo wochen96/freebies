@@ -38,10 +38,20 @@ class Landing extends Component {
         firebase.auth().signInWithPopup(provider).catch((error) => alert(error));
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
+                // save user to our db
+                console.log(firebase.database().ref('users/' + '1').toString())
+                firebase.database().ref('users/' + '1').set({
+                    username:"New username"
+                }); 
+                console.log("Inserted user", user.l)
+
+                // redirect to home page
                 window.location = '/home';
             }
         })
     }
+
+
 
     render() {
         return(

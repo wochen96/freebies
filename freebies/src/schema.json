@@ -1,0 +1,21 @@
+{
+    "posts":{
+        "1": {
+            "title":"Free pizza"
+        },
+        "2": {
+            "title":"Doughnuts"
+        }
+    
+    },
+    "users":{
+        "1": {
+            "username":"blackhat"
+        },
+        "2": {
+            "username":"whtiehat"
+        }
+        
+    }
+
+}

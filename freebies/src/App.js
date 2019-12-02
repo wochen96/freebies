@@ -8,6 +8,8 @@ import Landing from './Landing.js';
 import Dashboard from './Dashboard.js';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
+import TestFirebase from './TestFirebase.js';
+
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -41,6 +43,7 @@ class App extends Component {
               <main>
                 <Navbar />
                 <Dashboard />
+                <TestFirebase/>
                 <Footer />
               </main>
             );
