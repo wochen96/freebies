@@ -65,9 +65,11 @@ class MidleSection extends Component {
 
         if (this.props.searchCheck == 'yes') {
             this.searchDatabase(this.props);
-        } else {
+        } else if (this.state.posts == null) {
             this.getDataToDisplay(this.props);
-        };
+        } else {
+            console.log('Esle state: ' + this.state.posts)
+        }
 
         return (
             <section>
