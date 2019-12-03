@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-//import './App.css';
+import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap'
@@ -28,20 +28,40 @@ class Header extends Component {
         return (
             <header className="App-header">
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#logo">LOGO</Navbar.Brand>
+                    <Navbar.Brand href="#logo" id="logo">
+                        <img 
+                            src="img/freebies.png"
+                            width="40"
+                            height="50"
+                            className="d-inline-block align-top"
+                            alt="logo"
+                        />
+                    
+                    Freebies
+                    </Navbar.Brand>
                     <Nav className="navbar-nav nav-fill w-100">
 
-                        <Nav.Item>
+                        {/* <Nav.Item>
                             <Nav.Link href="/home">Home</Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item> */}
 
                         <Nav.Item>
-                            <span>{this.props.userEmail}</span>
+                            <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
+                            <Button variant="info" onClick={this.onAddClick}>New Post</Button>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <div> Filter posts duration</div>
+                            <Nav.Item>
+                                {/*<Nav.Link href="#definite">Definite</Nav.Link>*/}
+                                <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
+                            </Nav.Item>
+
+                            <Nav.Item>
+                                {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
+                                <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
+                            </Nav.Item>
                         </Nav.Item>
 
-                        <Nav.Item>
-                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
-                        </Nav.Item>
 
                         <Nav.Item>
                             <Form inline>
@@ -52,19 +72,15 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item>
-                            {/*<Nav.Link href="#definite">Definite</Nav.Link>*/}
-                            <Button value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
+                        <div>Logged in as :</div>
+                            <span>{this.props.userEmail}</span>
                         </Nav.Item>
 
                         <Nav.Item>
-                            {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
-                            <Button value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
+                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
                         </Nav.Item>
 
-                        <Nav.Item>
-                            <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
-                            <Button onClick={this.onAddClick}>ADD</Button>
-                        </Nav.Item>
+
                     </Nav>
                 </Navbar>
             </header>

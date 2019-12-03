@@ -54,8 +54,8 @@ class Dashboard extends Component {
                         );
                     }} />
 
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/about" component={AboutUs} />
+                    {/* <Route path="/contact" component={Contact} />
+                    <Route path="/about" component={AboutUs} /> */}
 
                     <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
                 </div>
