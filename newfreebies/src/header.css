@@ -1,0 +1,18 @@
+#logo {
+ margin-left: 0px;
+ font-size:2em;
+ font-weight: 350;  
+ color:teal;
+}   
+    
+    Button {
+    background-color: rgba(200, 200, 200, 1);
+
+}
+
+Nav, Nav.Link {
+   display: flex;
+    align-content: flex-end;
+    color:white;
+
+}

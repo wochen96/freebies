@@ -171,8 +171,9 @@ class CreateModal extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="modal-body">
-                            <p><span className="modal-label">Title: </span><input type="text" id="inputTitle" /></p>
-                            <p><span className="modal-label">Location: </span><input type="text" id="inputLocation" /></p>
+
+                            <input type="text" id="inputTitle" className="form-control mb-2" placeholder="Title"/>
+                            <input type="text" id="inputLocation" className="form-control mb-2" placeholder="Location"/>
 
                             <div style={style}>
                                 <img src={this.state.imageToshow} height='100' width='150' />
@@ -184,16 +185,21 @@ class CreateModal extends Component {
 
 
                             <div>
-                                <input type="radio" value="definite" id="inputDefinite" checked={this.state.selectedOption === 'definite'} onChange={this.handleOptionChange} /> Definite
-                                <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} /> Indefinite
+                                <div className="form-check form-check-inline">
+                                    <input type="radio" value="definite" id="inputDefinite" checked={this.state.selectedOption === 'definite'} onChange={this.handleOptionChange} />
+                                    <label className="form-check-label">Definite</label>
+                                </div>
+                                <div className="form-check form-check-inline mb-2">
+                                    <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} />
+                                    <label className="form-check-label">Indefinite</label>
+                                </div>
+                                
                                 {this.state.selectedOption === "definite" ?
                                     <div>
-                                        <p><span className="modal-label">Event time: </span></p>
-
-                                        <p>
-                                            <span className="modal-label">Start Time: </span>
-
+                                        <p><span className="modal-label">Event Time: </span></p>
+                                            
                                             <DatePicker
+                                                placeholderText="Start Time"
                                                 selected={this.state.startDate}
                                                 onChange={date => this.setState({ startDate: date })}
                                                 showTimeSelect
@@ -201,13 +207,12 @@ class CreateModal extends Component {
                                                 timeIntervals={15}
                                                 timeCaption="time"
                                                 dateFormat="MMMM d, yyyy h:mm aa"
+                                                className="mb-2 form-control"
                                                 id="inputStartDate"
                                             />
-                                        </p>
-
-                                        <p>
-                                            <span className="modal-label">End Time: </span>
+                              
                                             <DatePicker
+                                                placeholderText="End Time"
                                                 selected={this.state.endDate}
                                                 onChange={date => this.setState({ endDate: date })}
                                                 showTimeSelect
@@ -215,17 +220,16 @@ class CreateModal extends Component {
                                                 timeIntervals={15}
                                                 timeCaption="time"
                                                 dateFormat="MMMM d, yyyy h:mm aa"
+                                                className="mb-2 form-control"
                                                 id="inputEndDate"
                                             />
-                                        </p>
-
 
                                     </div> : null
                                 }
                             </div>
-
-                            <p><span className="modal-label">Description: </span><input type="text" id="inputDescription" /></p>
-                            <p><span className="modal-label">Tag: </span><input type="text" id="inputTag" /></p>
+                            
+                            <textarea id="inputDescription" className="form-control mb-2" placeholder="Description"></textarea>
+                            <input type="text" id="inputTag" className="form-control mb-2" placeholder="Tag"/>
                         </div>
                     </Modal.Body>
                     <Modal.Footer>

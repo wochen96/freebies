@@ -69,7 +69,7 @@ class MidleSection extends Component {
         };
 
         return (
-            <div>
+            <section>
                 <CardColumns>
 
                     {this.state.posts &&
@@ -83,7 +83,7 @@ class MidleSection extends Component {
                 </CardColumns>
 
 
-            </div>
+            </section>
         );
 
     }
