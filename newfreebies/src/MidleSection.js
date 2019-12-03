@@ -28,6 +28,7 @@ class MidleSection extends Component {
                         key: doc.id,
                         data: data
                     })
+                    console.log("gettingDataDisplay counts")
                 })
                 this.setState({ posts: posts })
             })
