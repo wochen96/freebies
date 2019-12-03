@@ -50,8 +50,8 @@ class Header extends Component {
                             <Button variant="info" onClick={this.onAddClick}>New Post</Button>
                         </Nav.Item>
 
-                        {/* <Nav.Item>
-                            <Dropdown>
+                        {/* <Nav.Item> */}
+                            {/* <Dropdown>
                                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                                     Filter
                                 </Dropdown.Toggle>
@@ -60,17 +60,17 @@ class Header extends Component {
                                     <Dropdown.Item value="definite" onClick={this.props.changeDefinite}>Definite</Dropdown.Item>
                                     <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
                                 </Dropdown.Menu>
-                            </Dropdown>
+                            </Dropdown> */}
 
-                            <div> Filter posts duration</div>
-                            <Nav.Item>
-                                <Nav.Link href="#definite">Definite</Nav.Link>
-                                <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
+                            {/* <div> Filter posts duration</div> */}
+                            {/* <Nav.Item> */}
+                                {/* <Nav.Link href="#definite">Definite</Nav.Link> */}
+                                {/* <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
                             </Nav.Item>
 
-                            <Nav.Item>
-                                <Nav.Link href="#indefinite">Indefinite</Nav.Link>
-                                <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
+                            <Nav.Item> */}
+                                {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
+                                {/* <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
                             </Nav.Item>
 
                         </Nav.Item> */}
@@ -84,7 +84,32 @@ class Header extends Component {
                             </Form>
                         </Nav.Item>
 
-                        <Nav.Item className="mt-2 mr-2">
+                        <Nav.Item>
+                            {/* <Dropdown>
+                                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                                    Filter
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item value="definite" onClick={this.props.changeDefinite}>Definite</Dropdown.Item>
+                                    <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown> */}
+
+                            {/* <div> Filter posts duration</div> */}
+                            <Nav.Item>
+                                {/* <Nav.Link href="#definite">Definite</Nav.Link> */}
+                                <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
+                            </Nav.Item>
+
+                            <Nav.Item>
+                                {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
+                                <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
+                            </Nav.Item>
+
+                        </Nav.Item>
+
+                        {/* <Nav.Item className="mt-2 mr-2">
                             <Dropdown>
                                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                                     Filter
@@ -95,7 +120,7 @@ class Header extends Component {
                                     <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                        </Nav.Item>
+                        </Nav.Item> */}
 
                         <Nav.Item>
                         <div>Logged in as :</div>
