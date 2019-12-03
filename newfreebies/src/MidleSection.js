@@ -17,11 +17,12 @@ class MidleSection extends Component {
     }
 
     getDataToDisplay = props => {
+        const posts = [];
 
         db.collection('posts').where('isDefinite', '==', props.isDefiniteSelected)//.orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
-                const posts = []
+                
                 snapshot.forEach(doc => {
                     const data = doc.data();
                     posts.push({
@@ -30,6 +31,8 @@ class MidleSection extends Component {
                     })
                     console.log("gettingDataDisplay counts")
                 })
+                //db.off();
+
                 this.setState({ posts: posts })
             })
             .catch(error => console.log(error));
