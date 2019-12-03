@@ -17,18 +17,22 @@ class MidleSection extends Component {
     }
 
     getDataToDisplay = props => {
+        const posts = [];
 
         db.collection('posts').where('isDefinite', '==', props.isDefiniteSelected)//.orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
-                const posts = []
+                
                 snapshot.forEach(doc => {
                     const data = doc.data();
                     posts.push({
                         key: doc.id,
                         data: data
                     })
+                    console.log('getingDataToDisplay counts');
                 })
+                //db.off();
+
                 this.setState({ posts: posts })
             })
             .catch(error => console.log(error));
@@ -64,9 +68,11 @@ class MidleSection extends Component {
 
         if (this.props.searchCheck == 'yes') {
             this.searchDatabase(this.props);
-        } else {
+        } else if (this.state.posts == null) {
             this.getDataToDisplay(this.props);
-        };
+        } else {
+            console.log('Esle state: ' + this.state.posts)
+        }
 
         return (
             <section>
