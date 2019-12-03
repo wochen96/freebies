@@ -29,6 +29,7 @@ class MidleSection extends Component {
                         data: data
                     })
                 })
+                console.log('getDataToDisplay: ');
                 this.setState({ posts: posts })
             })
             .catch(error => console.log(error));
