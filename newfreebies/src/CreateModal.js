@@ -193,9 +193,6 @@ class CreateModal extends Component {
                                     <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} />
                                     <label className="form-check-label">Indefinite</label>
                                 </div>
-
-                                {/* <input type="radio" value="definite" id="inputDefinite" checked={this.state.selectedOption === 'definite'} onChange={this.handleOptionChange} /> Definite
-                                <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} /> Indefinite */}
                                 
                                 {this.state.selectedOption === "definite" ?
                                     <div>
@@ -232,10 +229,7 @@ class CreateModal extends Component {
                             </div>
                             
                             <textarea id="inputDescription" className="form-control mb-2" placeholder="Description"></textarea>
-                            {/* <input type="text" id="inputDescription" className="form-control mb-2" placeholder="Description"/> */}
                             <input type="text" id="inputTag" className="form-control mb-2" placeholder="Tag"/>
-                            {/* <p><span className="modal-label">Description: </span><input type="text" id="inputDescription" /></p>
-                            <p><span className="modal-label">Tag: </span><input type="text" id="inputTag" /></p> */}
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
