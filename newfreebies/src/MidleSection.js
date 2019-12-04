@@ -20,17 +20,18 @@ class MidleSection extends Component {
     getDataToDisplay = props => {
         const posts = [];
 
-        db.collection('posts').where('isDefinite', '==', this.props.isDefiniteSelected)//.orderBy('startDate', 'desc')
+        db.collection('posts').where('isDefinite', '==', this.props.isDefiniteSelected).orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
                 
                 snapshot.forEach(doc => {
                     const data = doc.data();
+                    console.log('data: ' + data.toString());
                     posts.push({
                         key: doc.id,
                         data: data
                     })
-                    //console.log("gettingDataDisplay counts")
+                    console.log("gettingDataDisplay counts")
                 })
                 //db.off();
 
