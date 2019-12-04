@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl, FormGroup, InputGroup } from 'react-bootstrap';
+import { Button, Navbar, Nav, FormControl, FormGroup, InputGroup } from 'react-bootstrap';
 import CreateModal from './CreateModal';
 //import './default.css';
 import SignOut from "./SignOut";

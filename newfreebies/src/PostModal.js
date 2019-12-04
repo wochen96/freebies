@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './postModal.css';
-import { db } from './services/firebase';
 
 
 class PostModal extends Component {

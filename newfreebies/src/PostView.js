@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 import EditModal from './EditModal';
 import PostModal from './PostModal';
 import DeleteModal from './DeleteModal'
 import './modal.css';
-import { db, auth, storage } from './services/firebase';
+import { db, storage } from './services/firebase';
 
 
 class PostView extends Component {

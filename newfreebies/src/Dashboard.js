@@ -7,11 +7,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import MidleSection from './MidleSection'
-import AboutUs from './AboutUs';
-import Contact from './ContactUs';
 
-
-import firebase from "firebase/app";
 import 'firebase/firestore'
 
 
@@ -81,24 +77,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-
-
-/*<div>
-
-
-<Switch>
-    <Route path="/home" render={() => {
-        return (
-            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} />
-        );
-    }} />
-
-
-
-    <Route exact path="/contact" component={ContactUs} />
-    <Route path="/about" component={AboutUs} />
-
-</Switch>
-
-
-</div>*/
