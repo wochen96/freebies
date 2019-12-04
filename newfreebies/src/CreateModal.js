@@ -147,9 +147,9 @@ class CreateModal extends Component {
         if (document.getElementById('inputTitle').value == '' || document.getElementById('inputLocation').value == '' ||
             document.getElementById('inputDescription').value == '' || document.getElementById('inputTag').value == '') {
             alert('Please fill out all the missing fields!');
-        } else if (this.state.selectedOption == 'definite' && (this.state.startDate == null || this.state.endDate == null)) {
+        } else if (this.state.selectedOption == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');
-        } else if (this.state.selectedOption == 'definite' && this.state.startDate > this.state.endDate) {
+        } else if (this.state.selectedOption == 'limited' && this.state.startDate > this.state.endDate) {
             alert('The end time have to be later than the start time.');
         } else {
             this.addNewPost(event);

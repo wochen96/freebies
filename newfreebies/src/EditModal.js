@@ -179,24 +179,20 @@ class EditModal extends Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="modal-body">
-                            <p><span className="modal-label">Title: </span><input type="text" value={this.state.title} onChange={e => this.setState({ title: e.target.value })} id="inputEditTitle"></input></p>
-                            <p><span className="modal-label">Location: </span><input type="text" value={this.state.location} onChange={e => this.setState({ location: e.target.value })} id="inputEditLocation"></input></p>
-
-                            <div style={style}>
+                            <span className="modal-label">Title: </span><input type="text" className="form-control mb-2" placeholder="Title" value={this.state.title} onChange={e => this.setState({ title: e.target.value })} id="inputEditTitle"></input>
+                            <span className="modal-label">Location: </span><input type="text" className=" form-control mb-2" placeholder="Location" value={this.state.location} onChange={e => this.setState({ location: e.target.value })} id="inputEditLocation"></input>
+                            <div>
+                                <p><span>Post image (optional):</span></p>
                                 <img src={this.state.imageToshow} height='100' width='150' />
                                 <input type='file' onChange={this.handleImageChange} />
-                                <progress value={this.state.progress} max="100" />
+                                <progress className="mb-2" value={this.state.progress} max="100" />
                             </div>
-
                             <div>
                                 <p><span className="modal-label">Type: </span>{this.state.isDefinite}</p>
                                 {this.state.isDefinite === "limited" ?
                                     <div>
-                                        <p><span className="modal-label">Event time: </span></p>
-
                                         <p>
                                             <span className="modal-label">Start Time: </span>
-
                                             <DatePicker
                                                 selected={this.state.startDate}
                                                 onChange={date => this.setState({ startDate: date })}
@@ -205,10 +201,10 @@ class EditModal extends Component {
                                                 timeIntervals={15}
                                                 timeCaption="time"
                                                 dateFormat="MMMM d, yyyy h:mm aa"
+                                                className="mb-2 form-control"
                                                 id="inputEditStartDate"
                                             />
                                         </p>
-
                                         <p>
                                             <span className="modal-label">End Time: </span>
                                             <DatePicker
@@ -219,25 +215,22 @@ class EditModal extends Component {
                                                 timeIntervals={15}
                                                 timeCaption="time"
                                                 dateFormat="MMMM d, yyyy h:mm aa"
+                                                className="mb-2 form-control"
                                                 id="inputEditEndDate"
                                             />
                                         </p>
                                     </div> : null
                                 }
                             </div>
-
-                            <p><span className="modal-label">Description: </span><input type="text" value={this.state.description} onChange={e => this.setState({ description: e.target.value })} id="inputEditDescription"></input></p>
-                            <p><span className="modal-label">Tag: </span><input type="text" value={this.state.tag} onChange={e => this.setState({ tag: e.target.value })} id="inputEditTag"></input></p>
+                            <p><span className="modal-label">Description: </span><input type="text" className="form-control mb-2" placeholder="Description" value={this.state.description} onChange={e => this.setState({ description: e.target.value })} id="inputEditDescription"></input></p>
+                            <p><span className="modal-label">Tag: </span><input type="text" className="form-control mb-2" placeholder="Tag" value={this.state.tag} onChange={e => this.setState({ tag: e.target.value })} id="inputEditTag"></input></p>
                         </div>
                     </Modal.Body>
-
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.onHide}>CANCEL</Button>
                         <Button variant="primary" onClick={this.checkCondition}>SUBMIT</Button>
                     </Modal.Footer>
                 </Modal>
-
-
             </div>
         );
     }
