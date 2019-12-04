@@ -24,7 +24,7 @@ export default class SignOut extends Component {
     render() {
         let user = firebase.auth().currentUser;
         return (
-            <button className="btn btn-primary" onClick={evt => this.handleSignOut(evt) } style={{ }}>
+            <button className="btn btn-outline-secondary" onClick={evt => this.handleSignOut(evt) } style={{ }}>
                 Sign Out
                     </button>
         )

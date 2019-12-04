@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import './postModal.css';
 
 
 class PostModal extends Component {
@@ -31,29 +32,29 @@ class PostModal extends Component {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
+                    
                         <div className="modal-body">
-                            <p><span className="modal-label">Type: </span><span>{this.props.onePost.data.isDefinite}</span></p>
-                            <p><span className="modal-label">Location: </span><span>{this.props.onePost.data.location}</span></p>
-
                             <div style={style}>
                                 <img src={this.props.onePost.data.url || 'http://via.placeholder.com/100x150'} height='100' width='150' />
                             </div>
+                            <p><span className="modal-label"><span class="postHeaders"> Type: </span></span><span class="postValue">{this.props.onePost.data.isDefinite}</span></p>
+                            <p><span className="modal-label"><span class="postHeaders">Location:  </span></span><span class="postValue">{this.props.onePost.data.location}</span></p>
 
                             {
                                 this.props.onePost.data.isDefinite == 'definite' ?
                                     <div>
-                                        <p><span className="modal-label">Event Date and Time:</span></p>
-                                        <p><span className="modal-label">Start date and time: </span><span>{this.props.onePost.data.startDate.toDate().toString()}</span></p>
-                                        <p><span className="modal-label">End date and time: </span><span>{this.props.onePost.data.endDate.toDate().toString()}</span></p>
+                                        <p><span className="modal-label"><span class="postHeaders">Event Date and Time: </span></span></p>
+                                        <p><span className="modal-label"><span class="postHeaders"> Start date and time:</span> </span><span class="postValue">{this.props.onePost.data.startDate.toDate().toString().slice(0, -32)} hours</span></p>
+                                        <p><span className="modal-label"><span class="postHeaders"> End date and time: </span></span><span class="postValue">{this.props.onePost.data.endDate.toDate().toString().slice(0, -32)} hours</span></p>
                                     </div> : null
                             }
 
-                            <p><span className="modal-label">Description: </span><span>{this.props.onePost.data.description}</span></p>
+                            <p><span className="modal-label"><span class="postHeaders">Description: </span> </span><span class="postValue">{this.props.onePost.data.description}</span></p>
                         </div>
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <span>Create by: {this.props.onePost.data.username}</span>
+                        <span  class="postValue">Created by: {this.props.onePost.data.username}</span>
                         {
                             this.props.userEmail == this.props.onePost.data.username ?
                                 <div>

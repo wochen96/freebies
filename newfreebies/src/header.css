@@ -1,6 +1,6 @@
 #logo {
  margin-left: 0px;
- font-size:2em;
+ font-size:2.5em;
  font-weight: 350;  
  color:teal;
 }   
@@ -15,4 +15,28 @@ Nav, Nav.Link {
     align-content: flex-end;
     color:white;
 
+}
+
+.loginInfo {
+    color:rgb(200,200,200)
+}
+
+#filterButton {
+    margin-top:3%;
+    display: flex;
+    justify-content: center
+}
+
+.b {
+    width:40%;
+}
+.searchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.newPostContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

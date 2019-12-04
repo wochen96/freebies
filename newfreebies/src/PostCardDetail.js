@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, Card } from 'react-bootstrap';
 import PostView from './PostView';
+import './PostCardDetail.css';
 
 class PostCardDetail extends Component {
     constructor(props) {
@@ -24,14 +25,14 @@ class PostCardDetail extends Component {
                 <PostView ref={this.refPostView} onePost={this.props.onePost} userEmail={this.props.userEmail} getDataToDisplay={this.props.getDataToDisplay}></PostView>
 
                 <Card onClick={this.onPostClick}>
-                    <Card.Img variant="top" src={this.props.onePost.data.url} height="200" width="100" />
+                    <Card.Img id = "cardImg" variant="top" src={this.props.onePost.data.url} height="200" width="100" />
                     <Card.Body>
                         <Card.Title style={{
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center"
                         }}>{this.props.onePost.data.title}</Card.Title>
-                        <Card.Text style={{
+                        <Card.Text id="cardText" style={{
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",

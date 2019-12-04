@@ -3,6 +3,7 @@ import { CardColumns } from 'react-bootstrap';
 //import PostView from './PostView';
 import PostCardDetail from './PostCardDetail';
 import { db, auth } from './services/firebase';
+import './PostCardDetail.css';
 
 
 class MidleSection extends Component {
@@ -76,7 +77,7 @@ class MidleSection extends Component {
 
         return (
             <section>
-                <CardColumns>
+                <CardColumns class="cardContainer">
 
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
