@@ -99,7 +99,8 @@ class CreateModal extends Component {
                 location: document.getElementById('inputLocation').value,
                 description: document.getElementById('inputDescription').value,
                 isDefinite: this.state.selectedOption,
-                url: 'https://firebasestorage.googleapis.com/v0/b/freebies-f44de.appspot.com/o/uw_icon.png?alt=media&token=40163c4d-8a5e-4406-87ee-9a4e139ab449',
+                //url: 'https://firebasestorage.googleapis.com/v0/b/freebies-f44de.appspot.com/o/uw_icon.png?alt=media&token=40163c4d-8a5e-4406-87ee-9a4e139ab449',
+                url: 'https://firebasestorage.googleapis.com/v0/b/freebies-test.appspot.com/o/uw_icon.png?alt=media&token=5edfd86e-7166-4435-83eb-cc529c7ecc65',
                 imageName: 'default',
                 tag: document.getElementById('inputTag').value
             }
