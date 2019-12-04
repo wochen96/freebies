@@ -191,15 +191,15 @@ class CreateModal extends Component {
                             <div>
                                 <p>Event time limit</p>
                                 <div className="form-check form-check-inline">
-                                    <input type="radio" value="definite" id="inputDefinite" checked={this.state.selectedOption === 'definite'} onChange={this.handleOptionChange} />
-                                    <label className="form-check-label">Definite</label>
+                                    <input type="radio" value="limited" id="inputDefinite" checked={this.state.selectedOption === 'limited'} onChange={this.handleOptionChange} />
+                                    <label className="form-check-label">Limited</label>
                                 </div>
                                 <div className="form-check form-check-inline mb-2">
-                                    <input type="radio" value="indefinite" id="inputIndefinite" checked={this.state.selectedOption === 'indefinite'} onChange={this.handleOptionChange} />
-                                    <label className="form-check-label">Indefinite</label>
+                                    <input type="radio" value="unlimited" id="inputIndefinite" checked={this.state.selectedOption === 'unlimited'} onChange={this.handleOptionChange} />
+                                    <label className="form-check-label">Unlimited</label>
                                 </div>
                                 
-                                {this.state.selectedOption === "definite" ?
+                                {this.state.selectedOption === "limited" ?
                                     <div>
                                         <p><span className="modal-label">Event Time: </span></p>
                                             

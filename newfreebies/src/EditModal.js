@@ -27,7 +27,7 @@ class EditModal extends Component {
             endDate: null
         }
 
-        if (this.state.isDefinite == 'definite') {
+        if (this.state.isDefinite == 'limited') {
             this.state.startDate = this.props.onePost.data.startDate.toDate();
             this.state.endDate = this.props.onePost.data.endDate.toDate();
         }
@@ -144,9 +144,9 @@ class EditModal extends Component {
         if (document.getElementById('inputEditTitle').value == '' || document.getElementById('inputEditLocation').value == '' ||
             document.getElementById('inputEditDescription').value == '' || document.getElementById('inputEditTag').value == '') {
             alert('Please fill out all the missing fields!');
-        } else if (this.state.isDefinite == 'definite' && (this.state.startDate == null || this.state.endDate == null)) {
+        } else if (this.state.isDefinite == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');
-        } else if (this.state.isDefinite == 'definite' && this.state.startDate > this.state.endDate) {
+        } else if (this.state.isDefinite == 'limited' && this.state.startDate > this.state.endDate) {
             alert('The end time have to be later than the start time.');
         } else {
             this.editOnePost(event);
@@ -190,7 +190,7 @@ class EditModal extends Component {
 
                             <div>
                                 <p><span className="modal-label">Type: </span>{this.state.isDefinite}</p>
-                                {this.state.isDefinite === "definite" ?
+                                {this.state.isDefinite === "limited" ?
                                     <div>
                                         <p><span className="modal-label">Event time: </span></p>
 
