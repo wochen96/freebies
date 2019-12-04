@@ -28,7 +28,7 @@ class Header extends Component {
         return (
             <header className="App-header">
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#logo" id="logo">
+                    <Navbar.Brand href="/home" id="logo">
                         <img 
                             src="img/freebies.png"
                             width="35"

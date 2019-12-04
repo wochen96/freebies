@@ -56,17 +56,17 @@ class Dashboard extends Component {
                 <div className="dashboard">
                     <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} onUpdate={this.onUpdate} />
 
-                    <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refUpdate} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                    
 
-                    {/* <Route path="/home" render={() => {
+                    <Route path="/home" render={() => {
                         return (
-                            <MidleSection ref={this.refUpdate} isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refUpdate} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
                             
                         );
-                    }} /> */}
+                    }} />
 
-                    {/* <Route path="/contact" component={Contact} />
-                    <Route path="/about" component={AboutUs} /> */}
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/about" component={AboutUs} />
 
                     <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
                 </div>
