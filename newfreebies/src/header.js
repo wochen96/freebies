@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Navbar, Nav, Form, FormControl, Dropdown } from 'react-bootstrap';
+import { Button, Navbar, Nav, Form, FormControl, FormGroup, InputGroup } from 'react-bootstrap';
 import CreateModal from './CreateModal';
 //import './default.css';
 import SignOut from "./SignOut";
@@ -46,10 +46,23 @@ class Header extends Component {
                         </Nav.Item>
 
                         <Nav.Item className="ml-5 mt-2 searchContainer">
-                            <Form inline>
-                                <FormControl id="search" type="text" placeholder="Search for freebies" className="edit_text" />
-                                <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
-                            </Form>
+                            <FormGroup inline>
+                                <InputGroup>
+                                    <FormControl
+                                        id="search" placeholder="Search for freebies" className="edit_text"
+                                        type="input"
+                                        onKeyPress={event => {
+                                            if (event.key === "Enter") {
+                                                this.props.searchDatabase();
+                                            }
+                                        }}
+                                    />
+                                    <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
+                                </InputGroup>
+                            </FormGroup>
+
+                            {/* <input id="search" type="text" placeholder="Search for freebies" className="edit_text" />
+                            <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button> */}
                         </Nav.Item>
 
                         <Nav.Item>

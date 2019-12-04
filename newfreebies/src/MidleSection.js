@@ -40,7 +40,7 @@ class MidleSection extends Component {
             .catch(error => console.log(error));
     }
 
-    searchDatabase = props => {
+    searchDatabase = event => {
         var searchTerm = document.getElementById("search").value.toLowerCase();
 
         db.collection("posts")
@@ -58,7 +58,7 @@ class MidleSection extends Component {
                             key: doc.id,
                             data: data
                         })
-                        //console.log(posts);
+                        console.log("searchDatabase counts")
                     }
                 });
                 this.setState({ posts: posts });
@@ -69,7 +69,7 @@ class MidleSection extends Component {
     render() {
 
         if (this.props.searchCheck == 'yes') {
-            this.searchDatabase(this.props);
+            //this.searchDatabase(this.props);
         } else if (this.state.posts == null) {
             this.getDataToDisplay(this.props);
         } else {

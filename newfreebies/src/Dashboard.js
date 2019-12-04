@@ -27,6 +27,7 @@ class Dashboard extends Component {
         //console.log('the user name is: ' + this.props.user.email);
 
         this.refUpdate = React.createRef();
+        this.refMidle = React.createRef();
     }
 
     changeDefinite = event => {
@@ -39,14 +40,16 @@ class Dashboard extends Component {
     }
 
     searchDatabase = (event) => {
+        const currentMidle = this.refMidle.current;
+        currentMidle.searchDatabase();
         this.setState({
-            searchCheck: event.target.value
+            searchCheck: "yes"
         })
     }
 
     onUpdate = () => {
-        const currentUpdate = this.refUpdate.current;
-        currentUpdate.getDataToDisplay();
+        const currentMidle = this.refMidle.current;
+        currentMidle.getDataToDisplay();
     }
 
 
@@ -58,7 +61,7 @@ class Dashboard extends Component {
 
                     <Route path="/home" render={() => {
                         return (
-                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refUpdate} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refMidle} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
                             
                         );
                     }} />
