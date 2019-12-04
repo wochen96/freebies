@@ -25,6 +25,8 @@ class Dashboard extends Component {
             searchCheck: 'no'
         }
         //console.log('the user name is: ' + this.props.user.email);
+
+        this.refUpdate = React.createRef();
     }
 
     changeDefinite = event => {
@@ -40,19 +42,26 @@ class Dashboard extends Component {
         })
     }
 
+    onUpdate = () => {
+        const currentUpdate = this.refUpdate.current;
+        currentUpdate.getDataToDisplay();
+    }
+
 
     render() {
         return (
             <Router>
                 <div className="dashboard">
-                    <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} />
+                    <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} onUpdate={this.onUpdate} />
 
-                    <Route path="/home" render={() => {
+                    <MidleSection ref={this.refUpdate} isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+
+                    {/* <Route path="/home" render={() => {
                         return (
-                            <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                            <MidleSection ref={this.refUpdate} isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
                             
                         );
-                    }} />
+                    }} /> */}
 
                     {/* <Route path="/contact" component={Contact} />
                     <Route path="/about" component={AboutUs} /> */}

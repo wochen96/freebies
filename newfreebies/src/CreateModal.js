@@ -136,7 +136,8 @@ class CreateModal extends Component {
                 username: this.props.userEmail
             })
             .then(res => {
-                console.log(res.id)
+                console.log(res.id);
+                this.props.onUpdate();
             })
         this.createClose();
     }
