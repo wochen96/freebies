@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6dc13a88.chunk.css",
-    "main.js": "/static/js/main.c5d1bd85.chunk.js",
-    "main.js.map": "/static/js/main.c5d1bd85.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7178b644.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7178b644.js.map",
-    "static/css/2.2037d4a1.chunk.css": "/static/css/2.2037d4a1.chunk.css",
-    "static/js/2.4d146902.chunk.js": "/static/js/2.4d146902.chunk.js",
-    "static/js/2.4d146902.chunk.js.map": "/static/js/2.4d146902.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.01007a7bcd4e93823dbd68904e389def.js": "/precache-manifest.01007a7bcd4e93823dbd68904e389def.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.2037d4a1.chunk.css.map": "/static/css/2.2037d4a1.chunk.css.map",
-    "static/css/main.6dc13a88.chunk.css.map": "/static/css/main.6dc13a88.chunk.css.map",
-    "static/media/App.css": "/static/media/library.b9c1c063.jpg"
+    "main.css": "/freebies/newfreebies/static/css/main.1919e9e7.chunk.css",
+    "main.js": "/freebies/newfreebies/static/js/main.4c40f272.chunk.js",
+    "main.js.map": "/freebies/newfreebies/static/js/main.4c40f272.chunk.js.map",
+    "runtime-main.js": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js",
+    "runtime-main.js.map": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js.map",
+    "static/css/2.2037d4a1.chunk.css": "/freebies/newfreebies/static/css/2.2037d4a1.chunk.css",
+    "static/js/2.c3475d86.chunk.js": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js",
+    "static/js/2.c3475d86.chunk.js.map": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js.map",
+    "index.html": "/freebies/newfreebies/index.html",
+    "precache-manifest.34b2fb24dd7f9b514cfa1c94e12332da.js": "/freebies/newfreebies/precache-manifest.34b2fb24dd7f9b514cfa1c94e12332da.js",
+    "service-worker.js": "/freebies/newfreebies/service-worker.js",
+    "static/css/2.2037d4a1.chunk.css.map": "/freebies/newfreebies/static/css/2.2037d4a1.chunk.css.map",
+    "static/css/main.1919e9e7.chunk.css.map": "/freebies/newfreebies/static/css/main.1919e9e7.chunk.css.map",
+    "static/media/App.css": "/freebies/newfreebies/static/media/library.b9c1c063.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7178b644.js",
+    "static/js/runtime-main.a96b362b.js",
     "static/css/2.2037d4a1.chunk.css",
-    "static/js/2.4d146902.chunk.js",
-    "static/css/main.6dc13a88.chunk.css",
-    "static/js/main.c5d1bd85.chunk.js"
+    "static/js/2.c3475d86.chunk.js",
+    "static/css/main.1919e9e7.chunk.css",
+    "static/js/main.4c40f272.chunk.js"
   ]
 }
