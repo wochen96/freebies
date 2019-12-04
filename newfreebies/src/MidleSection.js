@@ -78,13 +78,13 @@ class MidleSection extends Component {
         }
 
         return (
-            <section>
+            <section class="middleSection">
                 <CardColumns class="cardContainer">
 
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
                             return (
-                                <PostCardDetail userEmail={this.props.userEmail} onePost={onePost} key={i} />
+                                <PostCardDetail  class="detail" userEmail={this.props.userEmail} onePost={onePost} key={i} />
                             );
                         })
                     }
