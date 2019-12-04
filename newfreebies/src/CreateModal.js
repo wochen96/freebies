@@ -137,7 +137,7 @@ class CreateModal extends Component {
             })
             .then(res => {
                 console.log(res.id);
-                //this.props.onUpdate();
+                // this.props.onUpdate();
                 window.location.reload();
             })
         this.createClose();
@@ -189,6 +189,7 @@ class CreateModal extends Component {
 
 
                             <div>
+                                <p>Event time limit</p>
                                 <div className="form-check form-check-inline">
                                     <input type="radio" value="limited" id="inputDefinite" checked={this.state.selectedOption === 'limited'} onChange={this.handleOptionChange} />
                                     <label className="form-check-label">Limited</label>
