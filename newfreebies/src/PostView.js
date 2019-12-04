@@ -68,6 +68,7 @@ class PostView extends Component {
                 .delete()
                 .then(function () {
                     console.log("Document successfully deleted!");
+                    window.location.reload();
                 }).catch(function (error) {
                     console.error("Error removing document: ", error);
                 });
