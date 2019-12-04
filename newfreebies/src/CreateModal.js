@@ -137,8 +137,8 @@ class CreateModal extends Component {
             })
             .then(res => {
                 console.log(res.id);
-                //this.props.onUpdate();
-                window.location.reload();
+                this.props.onUpdate();
+                //window.location.reload();
             })
         this.createClose();
     }

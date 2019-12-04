@@ -69,6 +69,7 @@ class PostView extends Component {
                 .then(function () {
                     console.log("Document successfully deleted!");
                     window.location.reload();
+                    //this.props.getDataToDisplay();
                 }).catch(function (error) {
                     console.error("Error removing document: ", error);
                 });
@@ -106,7 +107,8 @@ class PostView extends Component {
                     <EditModal
                         show={this.state.showEditModal}
                         onHide={this.closeEditModal}
-                        onePost={this.props.onePost} />
+                        onePost={this.props.onePost}
+                        getDataToDisplay={this.props.getDataToDisplay}/>
                 )}
                 {this.state.showDeleteModal && (
                     <DeleteModal //ref={({deleteOnePost}) => {this.deleteOnePost = deleteOnePost}}
@@ -114,7 +116,7 @@ class PostView extends Component {
                         onHide={this.closeDeleteModal}
                         onePost={this.props.onePost}
                         handleDeleteOnePost={this.handleDeleteOnePost}
-                        state={this.state} />
+                        state={this.state}/>
                 )}
             </div>
 

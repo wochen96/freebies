@@ -19,8 +19,6 @@ class MidleSection extends Component {
     getDataToDisplay = props => {
         const posts = [];
 
-        console.log('isDefiniteSelected: ' + this.props.isDefiniteSelected.toString());
-
         db.collection('posts').where('isDefinite', '==', this.props.isDefiniteSelected)//.orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
@@ -83,7 +81,7 @@ class MidleSection extends Component {
                     {this.state.posts &&
                         this.state.posts.map((onePost, i) => {
                             return (
-                                <PostCardDetail userEmail={this.props.userEmail} onePost={onePost} key={i} />
+                                <PostCardDetail userEmail={this.props.userEmail} onePost={onePost} getDataToDisplay={this.getDataToDisplay} key={i} />
                             );
                         })
                     }

@@ -21,7 +21,7 @@ class PostCardDetail extends Component {
     render() {
         return (
             <div>
-                <PostView ref={this.refPostView} onePost={this.props.onePost} userEmail={this.props.userEmail}></PostView>
+                <PostView ref={this.refPostView} onePost={this.props.onePost} userEmail={this.props.userEmail} getDataToDisplay={this.props.getDataToDisplay}></PostView>
 
                 <Card onClick={this.onPostClick}>
                     <Card.Img variant="top" src={this.props.onePost.data.url} height="200" width="100" />
@@ -36,7 +36,7 @@ class PostCardDetail extends Component {
                             justifyContent: "center",
                             alignItems: "center",
                         }}>
-                            {this.props.onePost.data.description}
+                            {this.props.onePost.data.location}
                         </Card.Text>
                         {/* <Button variant="primary" onClick={this.onPostClick}>Click</Button> */}
                     </Card.Body>
