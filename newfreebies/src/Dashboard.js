@@ -34,6 +34,7 @@ class Dashboard extends Component {
             isDefiniteSelected: event.target.value,
             searchCheck: 'no'
         }, () => {
+            console.log('after the setState in changeDefinite: ' + this.state.isDefiniteSelected);
             this.onUpdate();
         })
     }
@@ -56,7 +57,7 @@ class Dashboard extends Component {
                 <div className="dashboard">
                     <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} onUpdate={this.onUpdate} />
 
-                    <MidleSection ref={this.refUpdate} isDefiniteSelected={this.state.isDefiniteSelected} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
+                    <MidleSection isDefiniteSelected={this.state.isDefiniteSelected} ref={this.refUpdate} searchCheck={this.state.searchCheck} userEmail={this.props.userEmail} />
 
                     {/* <Route path="/home" render={() => {
                         return (
