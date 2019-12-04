@@ -99,12 +99,12 @@ class Header extends Component {
                                     <div id="filterButton">
                                     <span class="b"> 
                                     <Nav.Item>
-                                        <Button variant="secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>Limited</Button>
+                                        <Button variant="secondary" size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
                                     </Nav.Item>
                                     </span>
                                     <span class="b">   
                                     <Nav.Item>
-                                        <Button variant="secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>Unlimited</Button>
+                                        <Button variant="secondary" size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
                                     </Nav.Item>
 
                                     </span>
