@@ -8,51 +8,6 @@ class PostModal extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            upVote: parseInt(this.props.onePost.data.upvotes),
-            downVote: parseInt(this.props.onePost.data.downvotes)
-        }
-    }
-
-    upVote = e => {
-        this.setState({
-            upVote: this.state.upVote + 1
-        }, () => {
-            db.collection('posts').doc(this.props.onePost.key)
-                .update({
-                    upvotes: this.state.upVote.toString()
-                })
-                .then(function () {
-                    console.log("Document successfully updated!");
-                    //window.location.reload();
-                    //this.props.getDataToDisplay();
-                })
-                .catch(function (error) {
-                    // The document probably doesn't exist.
-                    console.error("Error updating document: ", error);
-                });
-        });
-    }
-
-    downVote = e => {
-        this.setState({
-            downVote: this.state.downVote + 1
-        }, () => {
-            db.collection('posts').doc(this.props.onePost.key)
-                .update({
-                    downvotes: this.state.downVote.toString()
-                })
-                .then(function () {
-                    console.log("Document successfully updated!");
-                    //window.location.reload();
-                    //this.props.getDataToDisplay();
-                })
-                .catch(function (error) {
-                    // The document probably doesn't exist.
-                    console.error("Error updating document: ", error);
-                });
-        });
     }
 
     render() {
@@ -100,10 +55,12 @@ class PostModal extends Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <span>{this.state.upVote}</span>
-                        <Button variant="primary" onClick={this.upVote}>Up Vote</Button>
-                        <Button variant="primary" onClick={this.downVote}>Down Vote</Button>
-                        <span>{this.state.downVote}</span>
+                        <span>
+                            <span>{this.props.upVote}</span>
+                            <Button variant="primary" onClick={this.props.upOneVote}>Up Vote</Button>
+                            <Button variant="primary" onClick={this.props.downOneVote}>Down Vote</Button>
+                            <span>{this.props.downVote}</span>
+                        </span> : null
 
                         <span class="postValue">Created by: {this.props.onePost.data.username}</span>
                         {

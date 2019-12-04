@@ -23,7 +23,7 @@ class MidleSection extends Component {
         db.collection('posts').where('isDefinite', '==', this.props.isDefiniteSelected).orderBy('startDate', 'desc')
             .get()
             .then(snapshot => {
-                
+
                 snapshot.forEach(doc => {
                     const data = doc.data();
                     console.log('data: ' + data.toString());
@@ -47,7 +47,7 @@ class MidleSection extends Component {
             .get()
             .then(snapshot => {
                 const posts = [];
-                snapshot.forEach(doc =>  {
+                snapshot.forEach(doc => {
 
                     const data = doc.data();
 
