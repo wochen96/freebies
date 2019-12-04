@@ -59,6 +59,7 @@ class EditModal extends Component {
             })
             .then(function () {
                 console.log("Document successfully updated!");
+                window.location.reload();
             })
             .catch(function (error) {
                 // The document probably doesn't exist.
