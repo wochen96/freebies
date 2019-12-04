@@ -36,8 +36,7 @@ class Header extends Component {
                             className="d-inline-block align-top"
                             alt="logo"
                         />
-                    &nbsp;
-                    Freebies
+                        <span>Freebies</span>
                     </Navbar.Brand>
                     <Nav className="navbar-nav nav-fill w-100">
 
@@ -45,7 +44,7 @@ class Header extends Component {
                             <Nav.Link href="/home">Home</Nav.Link>
                         </Nav.Item> */}
 
-                        <Nav.Item className="mt-2">
+                        <Nav.Item className="mt-2 newPostContainer">
                             <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
                             <Button variant="info" onClick={this.onAddClick}>New Post</Button>
                         </Nav.Item>
@@ -76,9 +75,9 @@ class Header extends Component {
                         </Nav.Item> */}
 
 
-                        <Nav.Item className="ml-5 mt-2">
+                        <Nav.Item className="ml-5 mt-2 searchContainer">
                             <Form inline>
-                                <FormControl id="search" type="text" placeholder="Search" className="edit_text" />
+                                <FormControl id="search" type="text" placeholder="Search for freebies" className="edit_text" />
                                 {/* <Button variant="outline-info">Search</Button> */}
                                 <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
                             </Form>
@@ -97,15 +96,26 @@ class Header extends Component {
                             </Dropdown> */}
 
                             {/* <div> Filter posts duration</div> */}
-                            <Nav.Item>
                                 {/* <Nav.Link href="#definite">Definite</Nav.Link> */}
-                                <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
-                            </Nav.Item>
+                                <div class="loginInfo">Filter by time limit</div>
+                                    <div id="filterButton">
+                                    <span class="b"> 
+                                    <Nav.Item>
 
-                            <Nav.Item>
-                                {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
-                                <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
-                            </Nav.Item>
+                                        <Button variant="secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>Limited</Button>
+                                        </Nav.Item>
+                                    </span>
+                                    <span class="b">   
+                                    <Nav.Item>
+                             
+                                        <Button variant="secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>Unlimited</Button>
+                                        </Nav.Item>
+
+                                    </span>
+                                </div>
+                                
+                            
+
 
                         </Nav.Item>
 
@@ -122,14 +132,12 @@ class Header extends Component {
                             </Dropdown>
                         </Nav.Item> */}
 
-                        <Nav.Item>
-                        <div>Logged in as :</div>
-                            <span>{this.props.userEmail}</span>
+                        <Nav.Item class="loginInfo">
+                        <em>{this.props.userEmail}</em>
+                        <Nav.Link href="#signout"><SignOut /></Nav.Link>
+
                         </Nav.Item>
 
-                        <Nav.Item>
-                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
-                        </Nav.Item>
 
 
                     </Nav>
