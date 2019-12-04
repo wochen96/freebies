@@ -29,7 +29,7 @@ class Header extends Component {
             <header className="App-header">
                 <Navbar bg="dark" variant="dark">
                     <Navbar.Brand href="/home" id="logo">
-                        <img 
+                        <img
                             src="img/freebies.png"
                             width="35"
                             height="45"
@@ -40,95 +40,38 @@ class Header extends Component {
                     </Navbar.Brand>
                     <Nav className="navbar-nav nav-fill w-100">
 
-                        {/* <Nav.Item>
-                            <Nav.Link href="/home">Home</Nav.Link>
-                        </Nav.Item> */}
-
                         <Nav.Item className="mt-2 newPostContainer">
                             <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
                             <Button variant="info" onClick={this.onAddClick}>New Post</Button>
                         </Nav.Item>
 
-                        {/* <Nav.Item> */}
-                            {/* <Dropdown>
-                                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                                    Filter
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item value="definite" onClick={this.props.changeDefinite}>Definite</Dropdown.Item>
-                                    <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown> */}
-
-                            {/* <div> Filter posts duration</div> */}
-                            {/* <Nav.Item> */}
-                                {/* <Nav.Link href="#definite">Definite</Nav.Link> */}
-                                {/* <Button variant="outline-secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>DEFINITE</Button>
-                            </Nav.Item>
-
-                            <Nav.Item> */}
-                                {/* <Nav.Link href="#indefinite">Indefinite</Nav.Link> */}
-                                {/* <Button variant="outline-secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>INDEFINITE</Button>
-                            </Nav.Item>
-
-                        </Nav.Item> */}
-
-
                         <Nav.Item className="ml-5 mt-2 searchContainer">
                             <Form inline>
                                 <FormControl id="search" type="text" placeholder="Search for freebies" className="edit_text" />
-                                {/* <Button variant="outline-info">Search</Button> */}
                                 <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
                             </Form>
                         </Nav.Item>
 
-                            {/* <Dropdown>
-                                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                                    Filter
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item value="definite" onClick={this.props.changeDefinite}>Definite</Dropdown.Item>
-                                    <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown> */}
                         <Nav.Item>
-
-                                <div class="loginInfo">Filter by time limit</div>
-                                    <div id="filterButton">
-                                    <span class="b"> 
+                            <div class="loginInfo">Filter by time limit</div>
+                            <div id="filterButton">
+                                <span class="b">
                                     <Nav.Item>
                                         <Button variant="secondary" size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
                                     </Nav.Item>
-                                    </span>
-                                    <span class="b">   
+                                </span>
+                                <span class="b">
                                     <Nav.Item>
                                         <Button variant="secondary" size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
                                     </Nav.Item>
 
-                                    </span>
-                                </div>
+                                </span>
+                            </div>
                         </Nav.Item>
 
-                        
-
-                        {/* <Nav.Item className="mt-2 mr-2">
-                            <Dropdown>
-                                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                                    Filter
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item value="definite" onClick={this.props.changeDefinite}>Definite</Dropdown.Item>
-                                    <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Nav.Item> */}
-
                         <Nav.Item class="loginInfo">
-                        <em>{this.props.userEmail}</em>
-                        <Nav.Link href="#signout"><SignOut /></Nav.Link>
+                            <em>{this.props.userEmail}</em>
+                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
 
                         </Nav.Item>
 

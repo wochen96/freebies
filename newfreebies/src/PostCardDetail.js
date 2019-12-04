@@ -39,7 +39,6 @@ class PostCardDetail extends Component {
                         }}>
                             {this.props.onePost.data.location}
                         </Card.Text>
-                        {/* <Button variant="primary" onClick={this.onPostClick}>Click</Button> */}
                     </Card.Body>
                 </Card>
             </div>

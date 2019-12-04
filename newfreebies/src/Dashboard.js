@@ -54,9 +54,7 @@ class Dashboard extends Component {
         return (
             <Router>
                 <div className="dashboard">
-                    <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} onUpdate={this.onUpdate} />
-
-                    
+                    <Header changeDefinite={this.changeDefinite} searchDatabase={this.searchDatabase} userEmail={this.props.userEmail} onUpdate={this.onUpdate} />                    
 
                     <Route path="/home" render={() => {
                         return (
@@ -64,9 +62,6 @@ class Dashboard extends Component {
                             
                         );
                     }} />
-
-                    {/* <Route path="/contact" component={Contact} />
-                    <Route path="/about" component={AboutUs} /> */}
 
                     <Footer style={{ position: 'absolute', bottom: '0', right: '0' }} />
                 </div>

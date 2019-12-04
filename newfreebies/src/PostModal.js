@@ -41,7 +41,7 @@ class PostModal extends Component {
                             <p><span className="modal-label"><span class="postHeaders">Location:  </span></span><span class="postValue">{this.props.onePost.data.location}</span></p>
 
                             {
-                                this.props.onePost.data.isDefinite == 'definite' ?
+                                this.props.onePost.data.isDefinite == 'limited' ?
                                     <div>
                                         <p><span className="modal-label"><span class="postHeaders">Event Date and Time: </span></span></p>
                                         <p><span className="modal-label"><span class="postHeaders"> Start date and time:</span> </span><span class="postValue">{this.props.onePost.data.startDate.toDate().toString().slice(0, -32)} hours</span></p>
@@ -65,13 +65,6 @@ class PostModal extends Component {
                         }
 
                     </Modal.Footer>
-
-
-
-                    {/* <Modal.Footer>
-                        <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
-                        <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
-                    </Modal.Footer> */}
                 </Modal>
             </div>
         );

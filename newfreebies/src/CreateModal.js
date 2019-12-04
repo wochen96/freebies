@@ -11,7 +11,7 @@ class CreateModal extends Component {
         super(props);
         this.state = {
             createModalShow: false,
-            selectedOption: 'definite',
+            selectedOption: 'limited',
 
             title: null,
             description: null,

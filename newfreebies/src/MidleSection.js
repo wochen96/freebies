@@ -31,7 +31,7 @@ class MidleSection extends Component {
                         key: doc.id,
                         data: data
                     })
-                    console.log("gettingDataDisplay counts")
+                    //console.log("gettingDataDisplay counts")
                 })
                 //db.off();
 
