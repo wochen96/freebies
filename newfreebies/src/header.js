@@ -83,7 +83,6 @@ class Header extends Component {
                             </Form>
                         </Nav.Item>
 
-                        <Nav.Item>
                             {/* <Dropdown>
                                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                                     Filter
@@ -94,30 +93,25 @@ class Header extends Component {
                                     <Dropdown.Item  value="indefinite" onClick={this.props.changeDefinite}>Indefinite</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown> */}
+                        <Nav.Item>
 
-                            {/* <div> Filter posts duration</div> */}
-                                {/* <Nav.Link href="#definite">Definite</Nav.Link> */}
                                 <div class="loginInfo">Filter by time limit</div>
                                     <div id="filterButton">
                                     <span class="b"> 
                                     <Nav.Item>
-
                                         <Button variant="secondary" size="sm" value="definite" onClick={this.props.changeDefinite}>Limited</Button>
-                                        </Nav.Item>
+                                    </Nav.Item>
                                     </span>
                                     <span class="b">   
                                     <Nav.Item>
-                             
                                         <Button variant="secondary" size="sm" value="indefinite" onClick={this.props.changeDefinite}>Unlimited</Button>
-                                        </Nav.Item>
+                                    </Nav.Item>
 
                                     </span>
                                 </div>
-                                
-                            
-
-
                         </Nav.Item>
+
+                        
 
                         {/* <Nav.Item className="mt-2 mr-2">
                             <Dropdown>

@@ -32,6 +32,7 @@ Nav, Nav.Link {
 }
 .searchContainer {
     display: flex;
+    justify-content: center;
 }
 
 .newPostContainer{
