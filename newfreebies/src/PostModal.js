@@ -60,7 +60,7 @@ class PostModal extends Component {
                             <Button variant="primary" onClick={this.props.upOneVote}>Up Vote</Button>
                             <Button variant="primary" onClick={this.props.downOneVote}>Down Vote</Button>
                             <span>{this.props.downVote}</span>
-                        </span> : null
+                        </span>
 
                         <span class="postValue">Created by: {this.props.onePost.data.username}</span>
                         {
