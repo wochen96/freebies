@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/freebies/newfreebies/static/css/main.1919e9e7.chunk.css",
-    "main.js": "/freebies/newfreebies/static/js/main.4c40f272.chunk.js",
-    "main.js.map": "/freebies/newfreebies/static/js/main.4c40f272.chunk.js.map",
+    "main.js": "/freebies/newfreebies/static/js/main.2e914e93.chunk.js",
+    "main.js.map": "/freebies/newfreebies/static/js/main.2e914e93.chunk.js.map",
     "runtime-main.js": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js",
     "runtime-main.js.map": "/freebies/newfreebies/static/js/runtime-main.a96b362b.js.map",
     "static/css/2.2037d4a1.chunk.css": "/freebies/newfreebies/static/css/2.2037d4a1.chunk.css",
     "static/js/2.c3475d86.chunk.js": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js",
     "static/js/2.c3475d86.chunk.js.map": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js.map",
     "index.html": "/freebies/newfreebies/index.html",
-    "precache-manifest.34b2fb24dd7f9b514cfa1c94e12332da.js": "/freebies/newfreebies/precache-manifest.34b2fb24dd7f9b514cfa1c94e12332da.js",
+    "precache-manifest.7501bfc35d517473164699fd89579e6d.js": "/freebies/newfreebies/precache-manifest.7501bfc35d517473164699fd89579e6d.js",
     "service-worker.js": "/freebies/newfreebies/service-worker.js",
     "static/css/2.2037d4a1.chunk.css.map": "/freebies/newfreebies/static/css/2.2037d4a1.chunk.css.map",
     "static/css/main.1919e9e7.chunk.css.map": "/freebies/newfreebies/static/css/main.1919e9e7.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.2037d4a1.chunk.css",
     "static/js/2.c3475d86.chunk.js",
     "static/css/main.1919e9e7.chunk.css",
-    "static/js/main.4c40f272.chunk.js"
+    "static/js/main.2e914e93.chunk.js"
   ]
 }

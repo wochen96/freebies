@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af0e8793cae04eb05f643852bd2f9daf",
+    "revision": "2e534d501acee81094e1dae280cfe9bf",
     "url": "/freebies/newfreebies/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/freebies/newfreebies/static/css/2.2037d4a1.chunk.css"
   },
   {
-    "revision": "3679a2409a0d39346eb8",
+    "revision": "1ecf121322afd0f9616f",
     "url": "/freebies/newfreebies/static/css/main.1919e9e7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/freebies/newfreebies/static/js/2.c3475d86.chunk.js"
   },
   {
-    "revision": "3679a2409a0d39346eb8",
-    "url": "/freebies/newfreebies/static/js/main.4c40f272.chunk.js"
+    "revision": "1ecf121322afd0f9616f",
+    "url": "/freebies/newfreebies/static/js/main.2e914e93.chunk.js"
   },
   {
     "revision": "104405e328559b9b5942",
