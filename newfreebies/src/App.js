@@ -18,7 +18,7 @@ import AboutSection from './AboutSection';
 import Features from './Features';
 //import TestFirebase from './TestFirebase'
 import Contact from './ContactUs';
-import Footer from './Footer';
+import Footer from './footer';
 
 class App extends Component {
   constructor(props) {
