@@ -89,3 +89,11 @@ header {
 .card-img-top {
   align-content:center;
 }
+
+/**!-----------------------
+    [ Dashboard ]
+-------------------------**/
+
+.card:hover{ 
+  box-shadow: 5px 5px 5px grey;
+}

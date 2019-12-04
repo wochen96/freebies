@@ -178,10 +178,11 @@ class CreateModal extends Component {
                             <input type="text" id="inputTitle" className="form-control mb-2" placeholder="Title"/>
                             <input type="text" id="inputLocation" className="form-control mb-2" placeholder="Location"/>
 
-                            <div style={style}>
+                            <div>
+                                <p><span>Post image (optional):</span></p>
                                 <img src={this.state.imageToshow} height='100' width='150' />
                                 <input type='file' onChange={this.handleImageChange} />
-                                <progress value={this.state.progress} max="100" />
+                                <progress className="mb-2" value={this.state.progress} max="100" />
 
                                 {/* <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height='300' width='400' /> */}
                             </div>
