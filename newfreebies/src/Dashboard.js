@@ -34,7 +34,6 @@ class Dashboard extends Component {
             isDefiniteSelected: event.target.value,
             searchCheck: 'no'
         }, () => {
-            console.log('after the setState in changeDefinite: ' + this.state.isDefiniteSelected);
             this.onUpdate();
         })
     }
