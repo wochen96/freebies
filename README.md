@@ -1,4 +1,6 @@
-# Freebies <img src="img/favicon.svg" width="50" height="50" />
+# Freebies <img src="newfreebies/public/img/freebies.png" width="40" height="50" />
+
+Our application can be viewed [here](https://secure-cove-52980.herokuapp.com/)
 
 ## Team
 
