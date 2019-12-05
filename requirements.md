@@ -86,10 +86,10 @@ Homework 3 - Requirements
 * Users can interact with a post by clicking on a post on their dashboard. Once they click on a post, a modal box appears describing relevant information (description, start/end time etc) about that post. **complete**
 * There are primarily two ways a user can interact with a post. 
 	- The first is an option to upvote or downvote a post. This is enabled by the presence of two arrow buttons (Up arrow icon for upvote, down arrow icon for down vote). We do this to help maintain quality of posts, allow filtering search results by vote count in our dashboard, and create trends by interesting/disinteresting posts by measuring vote activity.
-		- The user can only vote an individual post once **incomplete**
-		- The user can only either upvote or downvote an individual post **incomplete**
-		- Users can change their vote by clicking the opposite arrow **incomplete**
-		- When the user upvotes or downvotes, the total displayed votes will change (i.e. the total votes increase when you upvote and decrease when you downvote). This will be located on the bottom right of each tile. If the post does not have any upvote downvote, then there will be nothing to display but the arrows itself. Upvote/downvote can be positive or negative integers. It will be the sum of total votes combined **incomplete**
+		- The user can only vote an individual post once **complete**
+		- The user can only either upvote or downvote an individual post **complete**
+		- Users can change their vote by clicking the opposite arrow **complete**
+		- When the user upvotes or downvotes, the total displayed votes will change (i.e. the total votes increase when you upvote and decrease when you downvote). This will be located on the bottom right of each tile. If the post does not have any upvote downvote, then there will be nothing to display but the arrows itself. Upvote/downvote can be positive or negative integers. It will be the sum of total votes combined **revised** We decided not to show the total sum/difference of the votes, instead we just wanted to show the total amount of upvotes and downvotes. We wanted to do this to show how many people have interacted with the post. Showing the sum/diference, if it only shows, 1 for example, people might think that this resource is not popular, even though it might have had 1000 of people who have voted.
 	- The second option is to exit out of the modal. A user can do this by clicking on the ‘X’ button on the modal, and then replying to the ‘Are you sure’ prompt. This will allow users to exit out of an individual post, and prevent accidental exits. **revise** We did not want the extra "Are you sure" prompt for people who are just viewing posts. This is only important for when someone might be deleting a post.
 	- If the user is the creator of the post, they can edit or delete the post (check edit/delete post section) **complete**
 
