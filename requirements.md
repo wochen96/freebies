@@ -64,7 +64,7 @@ Homework 3 - Requirements
 	- Only one button can be selected. When the definite button is on, the indefinite button is off. When the indefinite button is on, the definite button is off. **complete**
 * **Creating Post Button:**
 	- On the top right side of the website, will be a right aligned add button. This button will say Add with a ‘+’ icon next to it **revised** We thought it looked better as a "New Post" button instead of using an icon. We swapped the location for the login and "New Post" button, because we did not want the sign out feature to be next to a refresh mechanism, which is the logo.
-	- If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form.
+	- If the button is clicked, a pop-up screen will overlay the dashboard with the creating post form. **complete**
 	- Creating Post will have a detailed explanation below
 * **Post Section:**
 	- Each post will be a tile in a grid format(check grid display) **complete**
