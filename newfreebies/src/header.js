@@ -27,7 +27,7 @@ class Header extends Component {
     render() {
         return (
             <header className="App-header">
-                <Navbar bg="dark" variant="dark">
+                <Navbar bg="dark" variant="dark" expand="lg">
                     <Navbar.Brand href="/home" id="logo">
                         <img
                             src="img/freebies.png"
@@ -38,59 +38,62 @@ class Header extends Component {
                         />
                         <span>Freebies</span>
                     </Navbar.Brand>
-                    <Nav className="navbar-nav nav-fill w-100">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="navbar-nav nav-fill w-100">
 
-                        <Nav.Item className="mt-2 newPostContainer">
-                            <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
-                            <Button variant="info" onClick={this.onAddClick}>New Post</Button>
-                        </Nav.Item>
+                            <Nav.Item className="mt-2 newPostContainer">
+                                <CreateModal ref={this.refCreateView} userEmail={this.props.userEmail}></CreateModal>
+                                <Button variant="info" onClick={this.onAddClick}>New Post</Button>
+                            </Nav.Item>
 
-                        <Nav.Item className="ml-5 mt-4 searchContainer">
-                            <FormGroup inline>
-                                <InputGroup>
-                                    <FormControl
-                                        id="search" placeholder="Search for freebies" className="edit_text"
-                                        type="input"
-                                        onKeyPress={event => {
-                                            if (event.key === "Enter") {
-                                                this.props.searchDatabase();
-                                            }
-                                        }}
-                                    />
-                                    <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
-                                </InputGroup>
-                            </FormGroup>
+                            <Nav.Item className="ml-5 mt-4 searchContainer">
+                                <FormGroup inline>
+                                    <InputGroup>
+                                        <FormControl
+                                            id="search" placeholder="Search for freebies" className="edit_text"
+                                            type="input"
+                                            onKeyPress={event => {
+                                                if (event.key === "Enter") {
+                                                    this.props.searchDatabase();
+                                                }
+                                            }}
+                                        />
+                                        <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
+                                    </InputGroup>
+                                </FormGroup>
 
-                            {/* <input id="search" type="text" placeholder="Search for freebies" className="edit_text" />
-                            <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button> */}
-                        </Nav.Item>
+                                {/* <input id="search" type="text" placeholder="Search for freebies" className="edit_text" />
+                                <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button> */}
+                            </Nav.Item>
 
-                        <Nav.Item>
-                            <div class="loginInfo">Filter by time limit</div>
-                            <div id="filterButton">
-                                <span class="b">
-                                    <Nav.Item>
-                                        <Button variant="secondary" size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
-                                    </Nav.Item>
-                                </span>
-                                <span class="b">
-                                    <Nav.Item>
-                                        <Button variant="secondary" size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
-                                    </Nav.Item>
+                            <Nav.Item>
+                                <div class="loginInfo">Filter by time limit</div>
+                                <div id="filterButton">
+                                    <span class="b">
+                                        <Nav.Item>
+                                            <Button variant="secondary" size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
+                                        </Nav.Item>
+                                    </span>
+                                    <span class="b">
+                                        <Nav.Item>
+                                            <Button variant="secondary" size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
+                                        </Nav.Item>
 
-                                </span>
-                            </div>
-                        </Nav.Item>
+                                    </span>
+                                </div>
+                            </Nav.Item>
 
-                        <Nav.Item class="loginInfo">
-                            <em>{this.props.userEmail}</em>
-                            <Nav.Link href="#signout"><SignOut /></Nav.Link>
+                            <Nav.Item class="loginInfo">
+                                <em>{this.props.userEmail}</em>
+                                <Nav.Link href="#signout"><SignOut /></Nav.Link>
 
-                        </Nav.Item>
+                            </Nav.Item>
 
 
 
-                    </Nav>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Navbar>
             </header>
         );
