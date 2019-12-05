@@ -1,6 +1,6 @@
 # Freebies <img src="newfreebies/public/img/freebies.png" width="40" height="50" />
 
-Our application can be viewed [here](https://secure-cove-52980.herokuapp.com/)
+Our application can be viewed [here](https://freebiesuw.herokuapp.com/)
 
 ## Team
 
