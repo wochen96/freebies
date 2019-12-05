@@ -54,10 +54,10 @@ class PostModal extends Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <span>
-                            <span>{this.props.upVote}</span>
-                            <Button variant="primary" onClick={this.props.upOneVote}>Up Vote</Button>
-                            <Button variant="primary" onClick={this.props.downOneVote}>Down Vote</Button>
+                        <span className="mr-auto">
+                            <Button variant="primary" className="mr-2" onClick={this.props.upOneVote}>Up Vote</Button>
+                            <span className="mr-2">{this.props.upVote}</span>
+                            <Button variant="primary" className="mr-2" onClick={this.props.downOneVote}>Down Vote</Button>
                             <span>{this.props.downVote}</span>
                         </span>
 
@@ -65,7 +65,7 @@ class PostModal extends Component {
                         {
                             this.props.userEmail == this.props.onePost.data.username ?
                                 <div>
-                                    <Button variant="danger" onClick={this.props.openEditModal}>Edit</Button>
+                                    <Button variant="secondary" className="mr-2" onClick={this.props.openEditModal}>Edit</Button>
 
                                     <Button variant="danger" onClick={this.props.openDeleteModal}>Delete</Button>
                                 </div> : null

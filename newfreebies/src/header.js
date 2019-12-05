@@ -45,7 +45,7 @@ class Header extends Component {
                             <Button variant="info" onClick={this.onAddClick}>New Post</Button>
                         </Nav.Item>
 
-                        <Nav.Item className="ml-5 mt-2 searchContainer">
+                        <Nav.Item className="ml-5 mt-4 searchContainer">
                             <FormGroup inline>
                                 <InputGroup>
                                     <FormControl
