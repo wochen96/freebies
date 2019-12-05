@@ -55,9 +55,9 @@ class PostModal extends Component {
 
                     <Modal.Footer>
                         <span className="mr-auto">
-                            <Button variant="primary" className="mr-2" onClick={this.props.upOneVote}>Up Vote</Button>
+                            <Button variant="primary" className="mr-2" onClick={this.props.checkBeforeUpvote}>Up Vote</Button>
                             <span className="mr-2">{this.props.upVote}</span>
-                            <Button variant="primary" className="mr-2" onClick={this.props.downOneVote}>Down Vote</Button>
+                            <Button variant="primary" className="mr-2" onClick={this.props.checkBeforeDownvote}>Down Vote</Button>
                             <span>{this.props.downVote}</span>
                         </span>
 

@@ -133,7 +133,9 @@ class CreateModal extends Component {
                 upvotes: '0',
                 imageName: this.state.imageName,
                 createAt: new Date(),
-                username: this.props.userEmail
+                username: this.props.userEmail,
+                peopleUpvotes: new Array(),
+                peopleDownvotes: new Array()
             })
             .then(res => {
                 console.log(res.id);

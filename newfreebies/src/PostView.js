@@ -4,6 +4,7 @@ import PostModal from './PostModal';
 import DeleteModal from './DeleteModal'
 import './modal.css';
 import { db, storage } from './services/firebase';
+import firebase from './services/firebase'
 
 
 class PostView extends Component {
@@ -92,18 +93,17 @@ class PostView extends Component {
         });
     }
 
-    upOneVote = e => {
+    upOneVoteInUpvote = () => {
         this.setState({
             upVote: this.state.upVote + 1
         }, () => {
             db.collection('posts').doc(this.props.onePost.key)
                 .update({
-                    upvotes: this.state.upVote.toString()
+                    upvotes: this.state.upVote.toString(),
+                    peopleUpvotes: firebase.firestore.FieldValue.arrayUnion(this.props.userEmail)
                 })
                 .then(function () {
                     console.log("Document successfully updated!");
-                    //window.location.reload();
-                    //this.props.getDataToDisplay();
                 })
                 .catch(function (error) {
                     // The document probably doesn't exist.
@@ -112,24 +112,93 @@ class PostView extends Component {
         });
     }
 
-    downOneVote = e => {
+    upOneVoteInDownvote = () => {
         this.setState({
             downVote: this.state.downVote + 1
         }, () => {
             db.collection('posts').doc(this.props.onePost.key)
                 .update({
-                    downvotes: this.state.downVote.toString()
+                    downvotes: this.state.downVote.toString(),
+                    peopleDownvotes: firebase.firestore.FieldValue.arrayUnion(this.props.userEmail)
                 })
                 .then(function () {
                     console.log("Document successfully updated!");
-                    //window.location.reload();
-                    //this.props.getDataToDisplay();
                 })
                 .catch(function (error) {
                     // The document probably doesn't exist.
                     console.error("Error updating document: ", error);
                 });
         });
+    }
+
+    downOneVoteInUpvote = () => {
+        this.setState({
+            upVote: this.state.upVote - 1
+        }, () => {
+            db.collection('posts').doc(this.props.onePost.key)
+                .update({
+                    upvotes: this.state.upVote.toString(),
+                    peopleUpvotes: firebase.firestore.FieldValue.arrayRemove(this.props.userEmail)
+                })
+                .then(function () {
+                    console.log("Document successfully updated!");
+                })
+                .catch(function (error) {
+                    // The document probably doesn't exist.
+                    console.error("Error updating document: ", error);
+                });
+        });
+    }
+
+    downOneVoteInDownvote = () => {
+        this.setState({
+            downVote: this.state.upVote - 1
+        }, () => {
+            db.collection('posts').doc(this.props.onePost.key)
+                .update({
+                    downvotes: this.state.downVote.toString(),
+                    peopleDownvotes: firebase.firestore.FieldValue.arrayRemove(this.props.userEmail)
+                })
+                .then(function () {
+                    console.log("Document successfully updated!");
+                })
+                .catch(function (error) {
+                    // The document probably doesn't exist.
+                    console.error("Error updating document: ", error);
+                });
+        });
+    }
+
+    checkBeforeUpvote = e => {
+        const docRef = db.collection('posts').doc(this.props.onePost.key);
+
+        docRef.get().then(doc => {
+            var peopleUpvotes = doc.data().peopleUpvotes;
+            var peopleDownvotes = doc.data().peopleDownvotes;
+            if (!peopleUpvotes.includes(this.props.userEmail)) {
+                this.upOneVoteInUpvote();
+
+                if (peopleDownvotes.includes(this.props.userEmail)) {
+                    this.downOneVoteInDownvote(e);
+                }
+            }
+        })
+    }
+
+    checkBeforeDownvote = e => {
+        const docRef = db.collection('posts').doc(this.props.onePost.key);
+
+        docRef.get().then(doc => {
+            var peopleUpvotes = doc.data().peopleUpvotes;
+            var peopleDownvotes = doc.data().peopleDownvotes;
+            if (!peopleDownvotes.includes(this.props.userEmail)) {
+                this.upOneVoteInDownvote(e);
+
+                if (peopleUpvotes.includes(this.props.userEmail)) {
+                    this.downOneVoteInUpvote(e);
+                }
+            }
+        })
     }
 
     render() {
@@ -145,15 +214,15 @@ class PostView extends Component {
                         userEmail={this.props.userEmail}
                         upVote={this.state.upVote}
                         downVote={this.state.downVote}
-                        upOneVote={this.upOneVote}
-                        downOneVote={this.downOneVote}/>
+                        checkBeforeUpvote={this.checkBeforeUpvote}
+                        checkBeforeDownvote={this.checkBeforeDownvote} />
                 )}
                 {this.state.showEditModal && (
                     <EditModal
                         show={this.state.showEditModal}
                         onHide={this.closeEditModal}
                         onePost={this.props.onePost}
-                        getDataToDisplay={this.props.getDataToDisplay}/>
+                        getDataToDisplay={this.props.getDataToDisplay} />
                 )}
                 {this.state.showDeleteModal && (
                     <DeleteModal //ref={({deleteOnePost}) => {this.deleteOnePost = deleteOnePost}}
@@ -161,7 +230,7 @@ class PostView extends Component {
                         onHide={this.closeDeleteModal}
                         onePost={this.props.onePost}
                         handleDeleteOnePost={this.handleDeleteOnePost}
-                        state={this.state}/>
+                        state={this.state} />
                 )}
             </div>
 
