@@ -60,7 +60,7 @@ class CreateModal extends Component {
     }
 
     addNewPostWithUploadImage = (image) => {
-        const rand = Math.random() * (100000 - 0);
+        const rand = 10 + Math.random() * (100000 - 0);
         const imageName = rand + image.name;
         const uploadTask = storage.ref(`images/${imageName}`).put(image);
         uploadTask.on('state_changed',

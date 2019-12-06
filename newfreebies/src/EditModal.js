@@ -70,7 +70,9 @@ class EditModal extends Component {
     }
 
     editPostWithUploadImage = (image) => {
-        const uploadTask = storage.ref(`images/${image.name}`).put(image);
+        const rand = 10 + Math.random() * (100000 - 0);
+        const imageName = rand + image.name;
+        const uploadTask = storage.ref(`images/${imageName}`).put(image);
         uploadTask.on('state_changed',
             (snapshot) => {
                 // Progess function:
@@ -100,7 +102,7 @@ class EditModal extends Component {
 
 
                 // Complete function:
-                storage.ref('images').child(image.name).getDownloadURL()
+                storage.ref('images').child(imageName).getDownloadURL()
                     .then(url => {
 
                         this.setState(function () {
@@ -109,7 +111,7 @@ class EditModal extends Component {
                                 location: document.getElementById('inputEditLocation').value,
                                 description: document.getElementById('inputEditDescription').value,
                                 url: url,
-                                imageName: image.name,
+                                imageName: imageName,
                                 tag: document.getElementById('inputEditTag').value
                             }
 
