@@ -186,7 +186,7 @@ class EditModal extends Component {
                             <div>
                                 <p><span>Post image (optional):</span></p>
                                 <img src={this.state.imageToshow} height='100' width='150' />
-                                <input type='file' onChange={this.handleImageChange} />
+                                <input type='file' onChange={this.handleImageChange} accept="image/png, image/jpeg, image/jpg" />
                                 <progress className="mb-2" value={this.state.progress} max="100" />
                             </div>
                             <div>

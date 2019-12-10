@@ -43,28 +43,36 @@ class MidleSection extends Component {
     searchDatabase = event => {
         var searchTerm = document.getElementById("search").value.toLowerCase();
 
-        db.collection("posts")
-            .get()
-            .then(snapshot => {
-                const posts = [];
-                snapshot.forEach(doc => {
+        if (searchTerm.trim() == '') {
+            alert("You have not enter any search term");
+        } else {
+            db.collection("posts")
+                .get()
+                .then(snapshot => {
+                    const posts = [];
+                    snapshot.forEach(doc => {
 
-                    const data = doc.data();
+                        const data = doc.data();
 
-                    if (data.title.toLowerCase().includes(searchTerm) || data.tag.toLowerCase().includes(searchTerm) || 
-                    data.location.toLowerCase().includes(searchTerm) || data.description.toLowerCase().includes(searchTerm)) {
-                        //console.log(doc.data().title);
+                        if (data.title.toLowerCase().includes(searchTerm) || data.tag.toLowerCase().includes(searchTerm) ||
+                            data.location.toLowerCase().includes(searchTerm) || data.description.toLowerCase().includes(searchTerm)) {
+                            //console.log(doc.data().title);
 
-                        posts.push({
-                            key: doc.id,
-                            data: data
-                        })
-                        console.log("searchDatabase counts")
+                            posts.push({
+                                key: doc.id,
+                                data: data
+                            })
+                            console.log("searchDatabase counts")
+                        }
+                    });
+                    if (posts.length == 0) {
+                        alert("There is no event match your search");
+                    } else {
+                        this.setState({ posts: posts });
                     }
-                });
-                this.setState({ posts: posts });
-            })
-            .catch(error => console.log(error));
+                })
+                .catch(error => console.log(error));
+        }
     }
 
     render() {
