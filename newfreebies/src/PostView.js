@@ -183,6 +183,9 @@ class PostView extends Component {
                 }
             }
         })
+        .catch(function (error) {
+            console.error("Error getting document: ", error);
+        });
     }
 
     checkBeforeDownvote = e => {
@@ -199,6 +202,9 @@ class PostView extends Component {
                 }
             }
         })
+        .catch(function (error) {
+            console.error("Error getting document: ", error);
+        });
     }
 
     render() {

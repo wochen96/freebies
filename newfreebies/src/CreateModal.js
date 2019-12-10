@@ -156,7 +156,7 @@ class CreateModal extends Component {
         } else if (this.state.selectedOption == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');
         } else if (this.state.selectedOption == 'limited' && this.state.startDate > this.state.endDate) {
-            alert('The end time have to be later than the start time.');
+            alert('The end time has to be later than the start time.');
         } else {
             this.addNewPost(event);
         }

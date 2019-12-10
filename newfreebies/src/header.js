@@ -69,7 +69,7 @@ class Header extends Component {
                                 <div id="filterButton">
                                     <span class="b">
                                         <Nav.Item>
-                                            <Button id='btn_limited' variant='primary' onPress size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
+                                            <Button id='btn_limited' variant='primary' size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
                                         </Nav.Item>
                                     </span>
                                     <span class="b">

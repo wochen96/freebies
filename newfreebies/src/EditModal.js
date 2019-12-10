@@ -149,7 +149,7 @@ class EditModal extends Component {
         } else if (this.state.isDefinite == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');
         } else if (this.state.isDefinite == 'limited' && this.state.startDate > this.state.endDate) {
-            alert('The end time have to be later than the start time.');
+            alert('The end time has to be later than the start time.');
         } else {
             this.editOnePost(event);
         }
