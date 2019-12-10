@@ -27,6 +27,18 @@ class Dashboard extends Component {
     }
 
     changeDefinite = event => {
+        
+        // check the button and color more.
+        const button1 = document.getElementById('btn_limited');
+        const button2 = document.getElementById('btn_unlimited');
+        if (button1.id == event.target.id) {
+            button1.style.backgroundColor = 'blue';
+            button2.style.backgroundColor = 'gray';
+        } else {
+            button2.style.backgroundColor = 'blue';
+            button1.style.backgroundColor = 'gray';
+        }
+
         this.setState({
             isDefiniteSelected: event.target.value,
             searchCheck: 'no'

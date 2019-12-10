@@ -62,9 +62,6 @@ class Header extends Component {
                                         <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button>
                                     </InputGroup>
                                 </FormGroup>
-
-                                {/* <input id="search" type="text" placeholder="Search for freebies" className="edit_text" />
-                                <Button value="yes" variant="outline-info" onClick={this.props.searchDatabase}>Search</Button> */}
                             </Nav.Item>
 
                             <Nav.Item>
@@ -72,12 +69,12 @@ class Header extends Component {
                                 <div id="filterButton">
                                     <span class="b">
                                         <Nav.Item>
-                                            <Button variant="secondary" size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
+                                            <Button id='btn_limited' variant='primary' onPress size="sm" value="limited" onClick={this.props.changeDefinite}>Limited</Button>
                                         </Nav.Item>
                                     </span>
                                     <span class="b">
                                         <Nav.Item>
-                                            <Button variant="secondary" size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
+                                            <Button id='btn_unlimited' variant='secondary' size="sm" value="unlimited" onClick={this.props.changeDefinite}>Unlimited</Button>
                                         </Nav.Item>
 
                                     </span>
