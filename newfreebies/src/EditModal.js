@@ -143,8 +143,8 @@ class EditModal extends Component {
     }
 
     checkCondition = (event) => {
-        if (document.getElementById('inputEditTitle').value == '' || document.getElementById('inputEditLocation').value == '' ||
-            document.getElementById('inputEditDescription').value == '' || document.getElementById('inputEditTag').value == '') {
+        if (document.getElementById('inputEditTitle').value.trim() == '' || document.getElementById('inputEditLocation').value.trim() == '' ||
+            document.getElementById('inputEditDescription').value.trim() == '' || document.getElementById('inputEditTag').value.trim() == '') {
             alert('Please fill out all the missing fields!');
         } else if (this.state.isDefinite == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');

@@ -55,6 +55,8 @@ class CreateModal extends Component {
         if (image == null) {
             this.addNewPostWithDefaultImage();
         } else {
+            
+
             this.addNewPostWithUploadImage(image);
         }
     }
@@ -148,8 +150,8 @@ class CreateModal extends Component {
     }
 
     checkCondition = (event) => {
-        if (document.getElementById('inputTitle').value == '' || document.getElementById('inputLocation').value == '' ||
-            document.getElementById('inputDescription').value == '' || document.getElementById('inputTag').value == '') {
+        if (document.getElementById('inputTitle').value.trim() == '' || document.getElementById('inputLocation').value.trim() == '' ||
+            document.getElementById('inputDescription').value.trim() == '' || document.getElementById('inputTag').value.trim() == '') {
             alert('Please fill out all the missing fields!');
         } else if (this.state.selectedOption == 'limited' && (this.state.startDate == null || this.state.endDate == null)) {
             alert('Please fill out a start time and end time!');
@@ -185,10 +187,8 @@ class CreateModal extends Component {
                             <div>
                                 <p><span>Post image (optional):</span></p>
                                 <img src={this.state.imageToshow} height='100' width='150' />
-                                <input type='file' onChange={this.handleImageChange} />
+                                <input type='file' onChange={this.handleImageChange} accept="image/png, image/jpeg, image/jpg" />
                                 <progress className="mb-2" value={this.state.progress} max="100" />
-
-                                {/* <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height='300' width='400' /> */}
                             </div>
 
 
