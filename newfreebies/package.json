@@ -3,6 +3,10 @@
   "homepage": "https://wochen96.github.io/freebies/newfreebies/",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.12.1"
+  },
   "dependencies": {
     "@firebase/firestore": "^1.8.0",
     "axios": "^0.19.0",

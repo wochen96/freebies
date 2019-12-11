@@ -32,11 +32,15 @@ class Dashboard extends Component {
         const button1 = document.getElementById('btn_limited');
         const button2 = document.getElementById('btn_unlimited');
         if (button1.id == event.target.id) {
-            button1.style.backgroundColor = 'blue';
+            button1.style.backgroundColor = '#007bff';
+            button1.style.borderColor = '#007bff';
             button2.style.backgroundColor = 'gray';
+            button2.style.borderColor = 'gray';
         } else {
-            button2.style.backgroundColor = 'blue';
+            button2.style.backgroundColor = '#007bff';
+            button2.style.borderColor = '#007bff';
             button1.style.backgroundColor = 'gray';
+            button1.style.borderColor = 'gray';
         }
 
         this.setState({

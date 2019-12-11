@@ -32,12 +32,16 @@ class Landing extends Component {
     // Sign in using Google popup authentication
     signIn() {
         var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider).catch((error) => alert(error));
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                window.location = '/home';
-            }
-        })
+        if (firebase.auth().currentUser != null) {
+            window.location = '/home';
+        } else {
+            firebase.auth().signInWithPopup(provider);
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    window.location = '/home';
+                }
+            })
+        }
     }
     render() {
         return (
